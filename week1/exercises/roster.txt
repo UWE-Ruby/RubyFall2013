@@ -2,7 +2,7 @@
 0, Renee, renee@nird.us, reneedv, @nirdllc, renee
 1,
 2,
-3,
+3,Chris Billingham, cbillingham@gmail.com, caderache2014, @caderache2018, caderache2014
 4, Kumar, kbodana@yahoo.com, kumar76, N/A, kumar
 5,
 6, Scott Dodson, capourso@gmail.com, scottdodson, no_twiter, scottd
