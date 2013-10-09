@@ -4,15 +4,15 @@
 [Our chat room](http://uwe-ruby.herokuapp.com/)
 
 ####Week 1: Setup, Git, rSpec
-[Class slides](http://www.slideshare.net/reneedv/week1-14659732)
+Class slides (coming soon!)
 
 [Free Online Text-Book](http://www.ruby-doc.org/docs/ProgrammingRuby/) (older edition, but should be fine for this week's reading.)
 
 [Rspec Matchers](http://rubydoc.info/gems/rspec-expectations/2.4.0/RSpec/Matchers)
 
-[Git-Svn Crash Course](http://git.or.cz/course/svn.html)
+[Svn to Git Crash Course](http://git.or.cz/course/svn.html) - if you are switching to Git from Subversion
 
-[Git Immersion](http://gitimmersion.com/)
+[Git Immersion](http://gitimmersion.com/)- general Git course
 
 [ANSICON Instructions from Price](http://qastuffs.blogspot.com/2011/02/how-to-install-ansicon-for-cucumber-to.html)
 
