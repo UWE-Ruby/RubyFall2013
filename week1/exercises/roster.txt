@@ -23,7 +23,7 @@
 21,
 22,
 23,Alicia Quilez, alienor18@yahoo.com
-24,
+24,Pat Remy, pat@remy.cc, premy52, , subs@remy.cc
 25,
 26, Sean, sean@seansehr.com, xeraseth, @sean_sehr, Sean Sehr
 27, Paul Sheridan, paul.sheridan@me.com, @paulthesound, pasheridan
