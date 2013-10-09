@@ -8,7 +8,7 @@
 6, Scott Dodson, capourso@gmail.com, scottdodson, no_twiter, scottd
 7,
 8,
-9,
+9, jonas haskins, h20melonman@gmail.com, sanojsniksah, - , - .  
 10, Adam, adam@nird.us, vogelbek, VisionarysChin, vogelbek
 11,
 12,
@@ -32,4 +32,4 @@
 30,
 31,
 32,
-33,
+33, 
