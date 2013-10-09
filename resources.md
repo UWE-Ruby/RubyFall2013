@@ -16,6 +16,8 @@
 
 [ANSICON Instructions from Price](http://qastuffs.blogspot.com/2011/02/how-to-install-ansicon-for-cucumber-to.html)
 
+[Command line basics](http://linuxbloggen.dk/wp-content/gallery/cheat-sheets/clicommandsfull.jpg)
+
 ####Week 2: Strings, Variables, Classes, and Objects
 
 ####Week 3: Array and hash, Numbers / range, Modules / inheritance
