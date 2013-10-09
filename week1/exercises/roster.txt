@@ -10,8 +10,8 @@
 8, Ryan Harris, uw.rharris@neverbox.com, rlh6f, @rlh6f, rlh6f
 9, jonas haskins, h20melonman@gmail.com, sanojsniksah, - , - .  
 10, Adam, adam@nird.us, vogelbek, VisionarysChin, vogelbek
-11,
-12,
+11, Jordan Hudgens, jord4nhudgens@gmail.com, github.com/zarthustra, @judgenz, jhudgementday 
+12, David Husa, davidhusa@gmail.com, github.com/davidhusa, @davidhusa, davidhusa
 13,
 14,Elizabeth A. Kari, eakari@live.com, catfriend, no twitter, no chat
 15,
