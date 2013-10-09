@@ -12,7 +12,7 @@
 10, Adam, adam@nird.us, vogelbek, VisionarysChin, vogelbek
 11, Jordan Hudgens, jord4nhudgens@gmail.com, github.com/zarthustra, @judgenz, jhudgementday 
 12, David Husa, davidhusa@gmail.com, github.com/davidhusa, @davidhusa, davidhusa
-13,
+13,idil, ijama26@gmail.com, idiljay, idiljay 
 14,Elizabeth A. Kari, eakari@live.com, catfriend, no twitter, no chat
 15,
 16, Dave, davidlane2@mac.com, davejlane, n/a, davejlane
