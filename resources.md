@@ -1,8 +1,9 @@
+####General
 [Our Github repo](https://github.com/UWE-Ruby/RubyFall2012)
+
 [Our chat room](http://uwe-ruby.herokuapp.com/)
 
-Week 1: Setup, Git, rSpec
-
+####Week 1: Setup, Git, rSpec
 [Class slides](http://www.slideshare.net/reneedv/week1-14659732)
 
 [Free Online Text-Book](http://www.ruby-doc.org/docs/ProgrammingRuby/) (older edition, but should be fine for this week's reading.)
@@ -15,49 +16,20 @@ Week 1: Setup, Git, rSpec
 
 [ANSICON Instructions from Price](http://qastuffs.blogspot.com/2011/02/how-to-install-ansicon-for-cucumber-to.html)
 
-Week 2
-* Strings
-* Variables
-* Classes and Objects
+####Week 2: Strings, Variables, Classes, and Objects
 
-Week 3
-* Array and hash
-* Numbers / range
-* Modules / inheritance
+####Week 3: Array and hash, Numbers / range, Modules / inheritance
 
-Week 4
-* Range
-* Symbols
-* Blocks
-* Regexp
+####Week 4: Range, Symbols, Blocks, Regexp
 
-Week 5
-* Review
-* I/O
-* Files / Dir
-* Rake
+####Week 5: Review, I/O, Files/Dir, Rake
 
-Week 6
-* Mid-term due!
-* Projects intro
-* Gems
-* CI
+####Week 6: Gems, CI
 
-Week 7
-* Cucumber
-* Testing frameworks
-* Refactoring
+####Week 7: Cucumber, Testing frameworks, Refactoring
 
-Week 8
-* Metaprogramming
-* Duck typing
-* Monkey patching
+####Week 8: Metaprogramming, Duck typing, Monkey patching
 
-Week 9
-* Control
-* Exceptions
+####Week 9: Control, Exceptions
 
-Week 10
-* Final due!
-* Project due!
-* Interesting Stuff
+####Week 10: Interesting Stuff...
