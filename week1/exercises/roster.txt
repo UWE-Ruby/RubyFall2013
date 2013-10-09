@@ -1,4 +1,4 @@
-#, name, email, github, twitter, chat
+#, name, email, github, twitter, class chat 
 0, Renee, renee@nird.us, reneedv, @nirdllc, renee
 1,
 2,
@@ -32,4 +32,5 @@
 30, Rob, rob.whitehead@gmail.com, Thesoro, @RobCWhitehead, RobW
 31, Steven Xu, steven.b.xu@gmail.com, stevenbxu, @stevezoo, stevenbxu
 32,
-33, 
+33,
+34, Cheri Allen, cheri@nird.us, @cherimallen, cheri! 
