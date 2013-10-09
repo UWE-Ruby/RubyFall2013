@@ -18,8 +18,8 @@
 16, Dave, davidlane2@mac.com, davejlane, n/a, davejlane
 17,
 18,
-19,
-20, Martin Nash, martin.j.nash@gmail.com, MartinJNash, @MartinJNash, martin.j.nash
+19, Martin Nash, martin.j.nash@gmail.com, MartinJNash, @MartinJNash, martin.j.nash
+20, Thomas Osborn, trosborn@gmail.com, trosborn, joosushi, trosborn
 21, Vy Nguyen, vnguye36@gmail.com, github.com/shrsp
 22,
 23,Alicia Quilez, alienor18@yahoo.com
