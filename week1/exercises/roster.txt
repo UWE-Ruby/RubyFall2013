@@ -27,7 +27,7 @@
 25,
 26, Sean, sean@seansehr.com, xeraseth, @sean_sehr, Sean Sehr
 27,
-28,
+28, Kate, styerfoaming@gmail.com, @styerfoam, kates
 29,
 30,
 31,
