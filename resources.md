@@ -1,5 +1,5 @@
 ####General
-[Our Github repo](https://github.com/UWE-Ruby/RubyFall2012)
+[Our Github repo](https://github.com/UWE-Ruby/RubyFall2013)
 
 [Our chat room](http://uwe-ruby.herokuapp.com/)
 
