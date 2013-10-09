@@ -7,7 +7,7 @@
 5,
 6, Scott Dodson, capourso@gmail.com, scottdodson, no_twiter, scottd
 7,
-8,
+8, Ryan Harris, uw.rharris@neverbox.com, rlh6f, @rlh6f, rlh6f
 9, jonas haskins, h20melonman@gmail.com, sanojsniksah, - , - .  
 10, Adam, adam@nird.us, vogelbek, VisionarysChin, vogelbek
 11,
