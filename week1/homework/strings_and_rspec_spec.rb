@@ -14,7 +14,7 @@ describe String do
 		end
 		
 		it "should be able to count the charaters" do
-		  @my_string.length.should eq 66
+		  @my_string.count("R").should eq 2
 	  end
 	  
 		it "should be able to split on the . charater" do

@@ -4,11 +4,11 @@ p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
 
-- An object is an entity that has properties and behaviors; represents data.
+- An object is an instance of a class and is an entity that has properties and behaviors; represents data.
 
 2. What is a variable?
 
-- A variable is a reference to an object
+- A variable is a reference to an object (labeled container)
 
 3. What is the difference between an object and a class?
 
@@ -20,8 +20,8 @@ p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 5. What are three messages that I can send to a string object? Hint: think methods
 
-- .length, .encoding, .split
+- .concat, .upcase, .chomp
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
 
-- double and single quotes
+- double and single quotes. double quotes allow variable inerpolation e.g. "#{foobar}"
