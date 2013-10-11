@@ -21,7 +21,7 @@ describe String do
 			result.should have(2).items	
 		end
 		it "should be able to give the encoding of the string" do
-			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
+			@my_string.encoding.to_s.should include "UTF-8"
 		end
 	end
 end
