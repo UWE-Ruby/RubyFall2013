@@ -1,7 +1,7 @@
 #, name, email, github, twitter, chat
 0, Renee, renee@nird.us, reneedv, @nirdllc, renee
 1,
-2,
+2, David Baynes, dbaynes@gci.com, dbaynes, baynesDL, dbaynes
 3,
 4,
 5,
