@@ -3,13 +3,22 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+  A collection of data and behavior.
 
 2. What is a variable?
+  A label for an object held in memory.
 
 3. What is the difference between an object and a class?
+  A class is the way objects are defined.
 
 4. What is a String?
+  An array of characters.
 
 5. What are three messages that I can send to a string object? Hint: think methods
+  <<
+  +
+  capitalize
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+  'single quotes' => can escape with '\'
+  "double quotes" => can also escape with "#{}", \u03c0, etc
