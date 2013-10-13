@@ -15,12 +15,14 @@ describe String do
 		it "should be able to count the charaters"
 		it "should be able to split on the . charater" do
 			pending
-			result = #do something with @my_string here
+			result = @my_string.count
+			result = @my_string.split
 			result.should have(2).items	
+			return result
 		end
 		it "should be able to give the encoding of the string" do
 			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
+			result.encoding(UTF-8)
 		end
 	end
 end
-
