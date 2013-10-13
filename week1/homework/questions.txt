@@ -3,13 +3,25 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+    Objects are instances of a class. An object is defined by a class. A class is a blueprint from which individual objects are created. You typicallly define methods that let you access and manipulate the state of an object.
 
 2. What is a variable?
+   There are several different types of variables in Ruby:
+   Local Variable
+   Instance Variale 
+   Global variable 
+   Constant
+   
+   In general, a variable will vary or change, it is not fixed.
 
 3. What is the difference between an object and a class?
+   An object is an instance of a class, while a class is a blueprint from which individual objects are created.
 
 4. What is a String?
+Ruby strings are sequences of characters. They normally hold printable characters. Strings are objects of class String.
+Strings are aften created using string literals - sequences of characters between delimiters.
 
 5. What are three messages that I can send to a string object? Hint: think methods
+a statement, expression, here documents
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
