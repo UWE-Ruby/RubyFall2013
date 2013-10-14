@@ -1,6 +1,6 @@
 #, name, email, github, twitter, class chat 
 0, Renee, renee@nird.us, reneedv, @nirdllc, renee
-1,
+1, Craig, craigoryadams@comcast.net, craigadams, , craiga
 2,
 3,Chris Billingham, cbillingham@gmail.com, caderache2014, @caderache2018, caderache2014
 4, Kumar, kbodana@yahoo.com, kumar76, N/A, kumar

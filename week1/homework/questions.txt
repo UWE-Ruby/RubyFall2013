@@ -4,12 +4,45 @@ p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
 
+An object has three components: a set of flags, some instance variables, and an associated class.  In Ruby,
+everthing is an object.
+
 2. What is a variable?
+
+A variable is use to keep track of objects.  Each variable holds a reference to an object.  Its type is
+defined by the messages that the object referenced by the variable responds.  There are different types of
+variables like constant, global, instance, and class.
 
 3. What is the difference between an object and a class?
 
+Wow, that is a tought one.  In some respects, there is no real difference between them because they are actually
+the same thing at different points in time (taken from http://ruby.learncodethehardway.org/book/ex42.html).  In
+Ruby, everything is an object, hence there is no difference. With that said though, an object is a kind of class.
+Just like a Salmon (object) is a kind of Fish (class).	
+
+A Ruby class is an object of class Class
+
 4. What is a String?
+
+A String is a sequence of characters.  They normally hold printable characters, but they can also hold binary
+data.  Strings are objects of class String.  Strings are often created using string literals, i.e. sequences
+of characters between delimiters.
 
 5. What are three messages that I can send to a string object? Hint: think methods
 
+String#split
+String#chomp
+String#scan
+
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+
+Single quote
+Double quote
+
+The difference between them is significant.  Using single quotes, you can escape things like single characters,
+e.g. 'display one escape \\'.  "\\" will be replaced with a single "\".  Double quotes support lots of escape
+sequences.  For example, \n for newline character.  Also you can imbed #{expr} in double quoted strings.  This
+provides the ability to perform math, e.g. "#{4*5/2}", repeat sets of characters, e.g. "#{'Ho! '*3}", or use global,
+class, or instance variable, e.g. "#$SAFE".
+
+Ruby does much more processing on the string while constructing the literal when using double quotes.
