@@ -3,13 +3,24 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+		1a. An object is anything that can be manipulated. Classes, attributes within Classes, variables, CONSTANTS, strings, objects that contain other objects, 
 
 2. What is a variable?
+		2a. A variable, in Ruby beginning with a lower case letter, is an object that is assigned a value in a step structured with the variable name on the left followed by a single equal sign followed on the right by the value being placed into the variable. That value can be changed. 
 
 3. What is the difference between an object and a class?
+		3a. A class is an instance of the class object (loosely speaking); a class is a subset of the full set of objects, which also include variables, constants, strings, class attributs and whatever you can name (literally). A class is a particular type of object.
 
 4. What is a String?
+		4a. A string is an ordered collection of usually but not always printable individual characters in whatever encoding is present when they're put together. Simplisticaly and usually, a string is a series of letter and numbers. They can be typed in final form from a keyboard or assembled on the fly with code.
 
 5. What are three messages that I can send to a string object? Hint: think methods
+		5a. (1) .length returns the number of characters in the string; (2) .capitalize returns a string that copies the string and changes it so the first letter of the first word is capitalized and all other letters are lower case; (3) .capitalize! changes the original string stored in a variable name to capitalize the first letter of the first word and convert all other letters are lower case; if changes are made, it returns the changed string; if no changes are made, it returns nil. 
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+
+		6a. Single quotes and double quotes surrounding what, as a result of the presence of  those quotes, is defined as the string literal. 
+
+		6bonus. Single quotes allow for limited internal interpolation (substitution of processed information), identified so far as only an escape (backslash) before the single quote (so it doesn't end the literal) and an escape (backslash) before another backslash, so you can treat the backslash as a printable text character. Double quotes allow for a broader range of '\'-initiated escape sequences (like a new line feed, \n), as well as code-interpreted renderings of information, such as the values of variables, calculations, expressions and (presumably) anything that can be handled as an object. These interpolations--renderings of code--occur inside the '#{' opener and '}' closer. 
+
+		6c. ...and there are other ways to define string literals, but they're similar in function to these two biggies...
