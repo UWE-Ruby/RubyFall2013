@@ -16,7 +16,7 @@
 14,Elizabeth A. Kari, eakari@live.com, catfriend, no twitter, no chat
 15,
 16, Dave, davidlane2@mac.com, davejlane, n/a, davejlane
-17,
+17, Doug MacDowell, dougmac9@uw.edu, Doug-MacDowell, , doug-macdowell
 18,
 19, Martin Nash, martin.j.nash@gmail.com, MartinJNash, @MartinJNash, martin.j.nash
 20, Thomas Osborn, trosborn@gmail.com, trosborn, joosushi, trosborn
