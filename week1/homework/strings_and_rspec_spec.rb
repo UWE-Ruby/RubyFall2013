@@ -16,9 +16,9 @@ describe String do
 		it "should be able to split on the . charater" do
 			pending
 			result = @my_string.count
-			result2 = @my_string.split
+			result2 = @my_string.split(".")
 			result.should have(2).items	
-			return result + result2
+			return result + " " + result2
 		end
 		it "should be able to give the encoding of the string" do
 			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
