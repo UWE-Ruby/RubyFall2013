@@ -1,15 +1,22 @@
+
 Please read: 
 Chapter 3 Classes, Objects, and Variables 
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+An object is anything that can be manipulated in Ruby, and is created from a class.
 
 2. What is a variable?
+A variable is something that's used to keep track of- and refers to- objects in Ruby.
 
 3. What is the difference between an object and a class?
+A class is a collection of variables that are used to create objects, while an object is a piece of data that can be manipulated in Ruby.
 
 4. What is a String?
+Strings are sequences of characters or binary data.
 
 5. What are three messages that I can send to a string object? Hint: think methods
++chomp, squeeze, upcase
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+%q and %Q- %q starts a single-quoted string, while %Q starts a double-quoted string
