@@ -10,7 +10,7 @@
 describe String do
 	context "When a string is defined" do
 		before(:all) do
-			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language".force_encoding("UTF-8")
+			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
 		it "should be able to count the charaters" do
                         @my_string.should have(66).characters
