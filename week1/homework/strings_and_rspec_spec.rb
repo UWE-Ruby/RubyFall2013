@@ -13,15 +13,13 @@ describe String do
 			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
 		it "should be able to count the charaters" do
-			"Lets count chars".should have(16).charaters
+			@my_string.should have(66).charaters
 		end
 		it "should be able to split on the . charater" do
-			result = "should be able to split on the . charater".split('.') #do something with @my_string here
-			result.should have(2).items	
+			@my_string.split('.').should have(2).items	
 		end
 		it "should be able to give the encoding of the string" do
-			result = "This is UTF-8 in string".encoding
-			result.should eq Encoding.find("UTF-8")
+			(@my_string.encoding).should eq Encoding.find("UTF-8")
 			# pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
 
 		end
