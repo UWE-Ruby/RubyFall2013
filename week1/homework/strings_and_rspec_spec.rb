@@ -23,6 +23,7 @@ describe String do
 		it "should be able to give the encoding of the string" do
 			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
 			encoderesult = @my_string.encoding
+			encoderesult.encoding
 			encoderesult should eq Encoding.find("UTF-8")
 		end
 	end
