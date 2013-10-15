@@ -17,7 +17,7 @@ describe String do
 		it "should be able to split on the . charater" do
 			pending
 			result = @my_string.count
-			result = @my_string.split
+			result = str.split(@my_string)
 			result.should have(2).items	
 			return result
 		end
