@@ -20,7 +20,7 @@ describe String do
 			result.should have(2).items	
 		end
 		it "should be able to give the encoding of the string" do
-			#{@my_string.encoding} should eq "UTF-8"
+			"#{@my_string.encoding}".should eq "UTF-8"
 		end
 	end
 end
