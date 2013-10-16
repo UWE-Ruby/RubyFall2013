@@ -3,13 +3,28 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+1a. An object is an instance of a class.
 
 2. What is a variable?
+2a. A variable is used to keep track of an object -- it is a reference to an object. 
 
 3. What is the difference between an object and a class?
+3a. An object is an instance of a class; a class is simply a combination 
+of a state and methods that use that state. For example, a class may be a song, 
+and an object would be a specific song. All songs have the same actions that 
+can be applied to them -- i.e. they can all be played, recorded, deleted. 
 
 4. What is a String?
+4a. A string is a sequence of characters -- normally holding printable characters, but not necessarily so. They can also
+contain binary data. Strings are objects of the class String. 
 
 5. What are three messages that I can send to a string object? Hint: think methods
+5a. One can split a string into items by specific characters (.split), 
+trimming strings of repeated characters (.squeeze!), or similarly to split, using
+.scan to specify the pattern of character chunks to match before dividing the 
+string into said chunks. 
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+6a. String literals can be defined using single-quotes or double-quotes, the 
+difference between which are the escape sequences that are supported in each 
+case. 
