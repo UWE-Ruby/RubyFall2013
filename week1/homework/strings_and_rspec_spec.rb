@@ -16,13 +16,11 @@ describe String do
 			@my_string.should have(66).charaters
 		end
 		it "should be able to split on the . charater" do
-			result = @my_string.split(".") #do something with @my_string here
+			result = @my_string.split(".") #doing something with @my_string here
 			result.should have(2).items	
 		end
 		it "should be able to give the encoding of the string" do
 			@my_string.encoding.to_s.should include("UTF-8")
-			#encoding
-			
 		end
 	end
 end
