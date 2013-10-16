@@ -28,7 +28,7 @@
 26, Sean, sean@seansehr.com, xeraseth, @sean_sehr, Sean Sehr
 27, Paul Sheridan, paul.sheridan@me.com, @paulthesound, pasheridan
 28, Kate, styerfoaming@gmail.com, @styerfoam, kates
-29,
+29, Daniel Torres, danjt42@gmail.com, danjt42, , DanielT
 30, Rob, rob.whitehead@gmail.com, Thesoro, @RobCWhitehead, RobW
 31, Steven Xu, steven.b.xu@gmail.com, stevenbxu, @stevezoo, stevenbxu
 32,
