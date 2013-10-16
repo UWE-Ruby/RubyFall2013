@@ -3,13 +3,22 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+   Object is an instant of class to represent wh
 
 2. What is a variable?
-
+   Variable is reference to an object
 3. What is the difference between an object and a class?
+   Class is blueprint of type and we only should have one class of type.
+   Object is an instant of class where we can have multi of them.
 
 4. What is a String?
+   String is sequence of characters
 
 5. What are three messages that I can send to a string object? Hint: think methods
-
+   enconding
+   split
+   Concatenat
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+You can create string by surrowunding it with single quoted or double quoted.
+Sigle quote - Will take string as it is even if escaping chars 
+Double quote - Will escape chars where you can use \n for newline
