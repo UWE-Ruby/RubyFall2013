@@ -19,6 +19,15 @@ Class slides (coming soon!)
 [Command line basics](http://linuxbloggen.dk/wp-content/gallery/cheat-sheets/clicommandsfull.jpg)
 
 ####Week 2: Strings, Variables, Classes, and Objects
+[Ruby Docs](http://www.ruby-doc.org/core-1.9.3/String.html)
+
+[Pragmatic Programmers Guide](http://pragprog.com/book/ruby3/programming-ruby-1-9) (at the bottom is the link to the extending Ruby pdf I mentioned)
+
+[Travis CI (where open source projects are tested)](https://travis-ci.org)
+
+[grb](https://github.com/jinzhu/grb)
+
+[The Ruby ToolBox](https://www.ruby-toolbox.com/)
 
 ####Week 3: Array and hash, Numbers / range, Modules / inheritance
 
