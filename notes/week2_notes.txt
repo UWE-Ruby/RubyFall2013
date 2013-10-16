@@ -1,0 +1,17 @@
+"git remote -v" lists all repositories that are connected
+
+you can pass the git clone any .git directory you want
+
+git remote add other /Users/jon/test_git
+
+git remote add class_repo https://github.com/UWE-Ruby/RubyFall2013.git
+
+git pull origin master
+
+upstream
+
+git branch answers
+
+git checkout answers
+
+git log --oneline
