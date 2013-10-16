@@ -12,6 +12,7 @@ describe String do
 		before(:all) do
 			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
+<<<<<<< HEAD
 		it "should be able to count the charaters" do
 			result = @my_string.count @my_string
 			result.should eq 66
@@ -41,7 +42,17 @@ describe String do
 			 #puts "Encoding of #{@my_string.inspect} is  #{@my_string.encoding}"
 			 
 			 
+=======
+		it "should be able to count the characters" do
+			@my_string.should have(@my_string.size).characters
+		end
+		it "should be able to split on the . charater" do
+			result = @my_string.split('.')
+			result.should have(2).items	
+		end
+		it "should be able to give the encoding of the string" do
+			@my_string.encoding.should eq (Encoding.find("UTF-8"))
+>>>>>>> d807a506f7c7e5960a71a6175e218bb3317b4dc4
 		end
 	end
 end
-
