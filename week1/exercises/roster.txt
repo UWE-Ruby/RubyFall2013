@@ -21,7 +21,7 @@
 19, Martin Nash, martin.j.nash@gmail.com, MartinJNash, @MartinJNash, martin.j.nash
 20, Thomas Osborn, trosborn@gmail.com, trosborn, joosushi, trosborn
 21, Vy Nguyen, vnguye36@gmail.com, github.com/shrsp
-22,
+22, Chris Montes, chrismontes@about.me, mandelbro, @chrismontes, chrismontes
 23,Alicia Quilez, alienor18@yahoo.com
 24,Pat Remy, pat@remy.cc, premy52, , subs@remy.cc
 25, Mohamed Saeed, mahadi@gmail.com, wahshi, n/a, mahdi
