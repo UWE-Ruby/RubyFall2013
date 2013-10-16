@@ -8,6 +8,10 @@ class Book
 	end
 
 	def page_count
-		"Page count is #{@pages}"
+		@pages
 	end
+
+  def page_report
+    "#{@title} is #{@pages} pages long"
+  end
 end

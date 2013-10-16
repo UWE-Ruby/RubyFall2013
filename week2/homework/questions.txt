@@ -1,5 +1,5 @@
 Please Read The Chapters on: 
-Containers, Blocks, and Iterators 
+Containers, Blocks, and Iterators (45-68)
 Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
