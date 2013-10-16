@@ -13,9 +13,9 @@ describe String do
 			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
 		it "should be able to count the charaters"
-		it "should be able to split on the . charater" do
-			pending
-			result = #do something with @my_string here
+                        result.
+		it "should be able to split on the . characters"
+			result = @my_string.split(".") #do something with @my_string here
 			result.should have(2).items	
 		end
 		it "should be able to give the encoding of the string" do
