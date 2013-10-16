@@ -23,7 +23,7 @@ Class slides (coming soon!)
 
 [Pragmatic Programmers Guide](http://pragprog.com/book/ruby3/programming-ruby-1-9) (at the bottom is the link to the extending Ruby pdf I mentioned)
 
-[Travis CI (where open source projects are tested)](https://travis-ci.org)
+[Travis CI](https://travis-ci.org) (where open source projects are tested)
 
 [grb](https://github.com/jinzhu/grb)
 
