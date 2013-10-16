@@ -1,0 +1,13 @@
+Please Read The Chapters on: 
+Containers, Blocks, and Iterators 
+Sharing Functionality: Inheritance, Modules, and Mixins
+
+1. What is the difference between a Hash and an Array?
+
+2. When would you use an Array over a Hash and vice versa?
+
+3. What is a module? Enumerable is a built in Ruby module, what is it?
+
+4. Can you inherit more than one thing in Ruby? How could you get around this problem?
+
+5. What is the difference between a Module and a Class?
