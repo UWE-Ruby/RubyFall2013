@@ -15,3 +15,61 @@ git branch answers
 git checkout answers
 
 git log --oneline
+
+-----
+
+JRuby - converts ruby code into java code
+
+MRI == CRuby
+
+respond_to?
+what messages does the object respond to?
+* method calls or properties
+
+rather than checking the type, check to see if it 
+responds to the message you are sending it
+
+^this is the principle of duck typing
+
+sudo gem install grb
+
+simplies working with remote branches
+
+"Hello world".respond_to? "+"
+
+.inspect
+
+%q(hello world)
+%Q(hello world)
+
+ruby inherits smalltalk's thinking in that
+it treats methods as messages that are responded to.
+
+a # sign in front of a method in the docs indicates it is an instance
+:: in the docs indicates a class method
+
+"hello".send("size")
+"hello".size
+
+"hello".send("+", "world")
+
+my_name.chop!
+
+.object_id
+
+my_name = "Hello"
+other_name = my_name
+my_name = "Hello World"
+puts other_name
+# prints "Hello" and NOT "Hello World"
+# because other_name is pointing to the
+# original "Hello" string literal object
+
+
+
+
+
+
+
+
+

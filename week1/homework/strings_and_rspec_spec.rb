@@ -25,6 +25,10 @@ describe String do
 		it "should be able to give the encoding of the string" do
 			@my_string.encoding.should eq (Encoding.find("UTF-8"))
 		end
+		
+		it "should be equal the upper case version" do
+	    @my_string.upcase.should eq "RENéE IS A FUN TEACHER. RUBY IS A REALLY COOL PROGRAMMING LANGUAGE"
+	  end
 	end
 end
 
