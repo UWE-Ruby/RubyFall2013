@@ -1,7 +1,7 @@
 ####General
 [Our Github repo](https://github.com/UWE-Ruby/RubyFall2013)
 
-[Our chat room](http://uwe-ruby.herokuapp.com/)
+[Our chat room](https://uweruby.hipchat.com)
 
 ####Week 1: Setup, Git, rSpec
 Class slides (coming soon!)
