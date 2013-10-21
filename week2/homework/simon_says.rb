@@ -8,11 +8,8 @@ module SimonSays
   end
 
   def repeat(*args)
-    string = args[0]
-    args[1] ||= 2
-    string << " #{args[0]}"*(args[1]-1)
-
-    return string
+    args[1] ||= 2 # repeat twice unless specified
+    ([args[0]] * args[1]).join ' '
   end
 
   def start_of_word(string, number_characters)
