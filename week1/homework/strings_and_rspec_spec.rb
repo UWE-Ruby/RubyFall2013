@@ -15,6 +15,8 @@ describe String do
 		it "should be able to count the charaters" do
 			length = @my_string.length
 			@my_string.should have(length).charaters
+		it "should be able to count the characters" do
+			@my_string.should have(@my_string.size).characters
 		end
 		it "should be able to split on the . charater" do
 			result = @my_string.split('.')
@@ -22,7 +24,7 @@ describe String do
 		end
 		it "should be able to give the encoding of the string" do
 			@my_string.encoding.to_s.should include "UTF-8"
+			@my_string.encoding.should eq (Encoding.find("UTF-8"))
 		end
 	end
 end
-
