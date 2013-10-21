@@ -1,4 +1,4 @@
-require './book.rb'
+require 'C:\Sites\RubyFall2013\week2\exercises\book.rb'
 
 describe Book do
 	before :each do
