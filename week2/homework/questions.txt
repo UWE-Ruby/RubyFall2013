@@ -3,11 +3,33 @@ Containers, Blocks, and Iterators
 Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
-
+	Both are indexed collections.  An array is indexed by a non-negative integer.
+	A Hash is indexed by an object of any type.  A literal array is created with a list
+	of objects between square brackets.  A literal hash is created with a list of key 
+	and value pairs, coupled with one of these: =>.  There is also a shortcut that uses
+	symbol: 'value' syntax in the place of :symbol => 'value' syntax.
+	
 2. When would you use an Array over a Hash and vice versa?
+	An array is appropriate when an ordered list of objects is needed.  A hash is 
+	appropriate when a non-integer index is needed.  
 
 3. What is a module? Enumerable is a built in Ruby module, what is it?
-
+	Modules are a way to group methods, classes and constants.  They create a namespaces
+	that prevent identically named methods and constants from conflicting.  Modules also
+	enable Mixin functionality.  Mixins provide an alternative to class inheritance.  This
+	is especially useful when common, added functionality is needed in a class, but
+	a Parent-Child relationship would make for poor design, either because it would 
+	associate the classes more closely that makes sense, or because it would make for code
+	that is difficult to maintain.
+	
 4. Can you inherit more than one thing in Ruby? How could you get around this problem?
-
+	Ruby is a single-inheritance language.  A Ruby class can only inherit from one direct
+	Parent class.  When this poses an issue, it is resolved by using a mixin module.  This
+	provides similar functionality in a more controlled and less ambiguous manner.
+	
 5. What is the difference between a Module and a Class?
+	Both are objects that contain methods and constants, but they differ in how other 
+	classes may access those methods and constants.  Class inheritance allows for sharing
+	between classes, with a Child inheriting all methods of its Parent.  Modules allow for
+	similar sharing, but without imposing a Parent-Child relationship and potentially 
+	reducing code duplication.  
