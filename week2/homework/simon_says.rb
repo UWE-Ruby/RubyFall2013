@@ -13,8 +13,7 @@ module SimonSays
   end
 
   def start_of_word(string, number_characters)
-    last_character = number_characters - 1
-    string[0..last_character]
+    string.chars.first(number_characters).join
   end
 
   def first_word(string)
