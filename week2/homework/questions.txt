@@ -4,10 +4,45 @@ Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
 
+A hash is an indexed collection of object references.  You index a hash with object types like
+symbols, strings, regular expressions, etc.  When you store values in a hash, you supply two objects,
+the index (or key) and the entry to be stored with that key, e.g. a['salmon'] = 'fish.'  You can
+retrieve an object by indexing the hash with the key value you used to store it, e.g. a['salmon'].
+
+An array holds a collection of object references where each reference occupies a position in the array.
+That position is identified by a non-negative integer index that starts with 0.  When you store a single
+value in an array, you supply the integer position and the object for that position, e.g. a[0] = 10.  To
+retrieve an object from the array, you supply its position, e.g. a[0].  Arrays can also be indexed by
+supplying a pair of numbers [start, count] and a range where you provide a start and end positions.  The
+start and end positions are seperated by two or three dots.
+
 2. When would you use an Array over a Hash and vice versa?
+
+You would use an array over a hash when you wanted to treat the data as stacks, sets, queues, dequeues,
+and FIFO queues.  Arrays are ordered while Hashes are not.
+
+You would use a hash over an array when you want to use an object as the index.  
 
 3. What is a module? Enumerable is a built in Ruby module, what is it?
 
+A module is a way of grouping together methods, classes, and constraints.  Modules give you two major
+benefits: they provide a namespace and prevent name clashes and they support mixin facility.  They also
+define a namespace, a sandbox in which your methods and constraints can play without having to worry
+about being stepped on by other methods and constraints.  Modules eliminate the need for inheritance.
+
+Enumerable is a standard mixin, that implements a number of methods in terms of the host class's each
+method.  An example of a mixin is inject.  This method applies a function or operation to the first two
+elements in the collection and then applied the operation to the result of this computation and to the
+third element and so on until all elements in the collection have been used.
+
 4. Can you inherit more than one thing in Ruby? How could you get around this problem?
 
+No, Ruby is a single-inheritance language.  Ruby classes can include the functionality of any number of
+mixins.  A mixin is like a partial class definition.  This provides a controlled multiple-inheritance-like
+capability.
+
 5. What is the difference between a Module and a Class?
+
+A Module can't have instances, but a Class can.  A Module isn't a Class.  A Class can contain Modules.
+Modules can't be inherited, but Classes can.  A module can be included in a class definition.  When this
+occurs, all of the module's instance methods are available as methods in the class.
