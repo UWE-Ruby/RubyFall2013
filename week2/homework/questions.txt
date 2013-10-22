@@ -73,7 +73,7 @@ the hash is to be used.
 Modules are a way of grouping together methods, classes, and constants. By defining a namespace, methods
 and constants are accessible by classes without having to worry about being stepped on by other methods and constants.
 When a class includes a module to use its methods and constants, this is called a 'mixin.'
-Enumerable is a mixin that allows a class to use the large number of operations or methods supported by the
+Enumerable is a 'mixin' that allows a class to use the large number of operations or methods supported by the
 Ruby collection classes. For example, if a class adds an iterator 'each', functions such as map, include? 
 and find_all are now available. It that class also implements ordering semantics using the <=> method,
 methods such as min, max and sort are also available to the class as well. 
