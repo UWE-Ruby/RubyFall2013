@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.51">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #6435e2}
+    span.s1 {color: #6435e2}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Git Review Sheet</b></p>
+<p class="p2"><br></p>
+<p class="p3"><span class="s1"><b>mv RubyFall2012 OLDRubyFall2012</b></span> (moves your old repo out of the way, if your working directory is clean, you can just delete the old directory)</p>
+<p class="p2"><br></p>
+<p class="p3"><b>git clone git@github.com:YOURUSERNAME/RubyFall2012.git </b>(creates the RubyFall2012 directory and copies the files form your fork into it)</p>
+<p class="p4"><b>cd RubyFall2012</b></p>
+<p class="p3"><b>git remote add uwe-ruby git://github.com/UWE-Ruby/RubyFall2012.git </b>(add the remote for the uwe-ruby class version)</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="s1"><b>gem install grb</b></span> (install git remote branch if you don't have the gem already)</p>
+<p class="p3"><b>grb new answers</b> (make a new remote branch called answers, grb will put you on that branch once it's created)</p>
+<p class="p3"><b>git pull uwe-ruby master</b> (merge the uwe-ruby changes into your answers branch)</p>
+<p class="p3">You may have to resolve merge conflicts!</p>
+<p class="p2"><br></p>
+<p class="p3"><b>git push</b> (push the answers branch to your fork on github)</p>
+<p class="p2"><br></p>
+<p class="p3"><b>git checkout master </b>(go back to your main branch to do your work)</p>
+<p class="p2"><br></p>
+<p class="p3">When your working directory on master is clean do:</p>
+<p class="p3"><b>git merge answers</b></p>
+<p class="p2"><br></p>
+<p class="p3">Any conflicting files on master do this:</p>
+<p class="p3"><b>git checkout HEAD &lt;filename&gt;</b> (resets any conflicts to your version, keeping my answers on answers branch and your answers on master branch)</p>
+<p class="p2"><br></p>
+<p class="p3"><b>git push</b> (will update your fork on github)</p>
+</body>
+</html>
