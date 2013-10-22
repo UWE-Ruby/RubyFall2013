@@ -3,11 +3,39 @@ Containers, Blocks, and Iterators
 Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
+* Both have keys and values. The keys in an array must be integers and 
+must be sequential starting at 0. The keys in a hash can be any 
+object. Hashes are also called associative arrays and/or dictionaries
 
 2. When would you use an Array over a Hash and vice versa?
+* Arrays are great for storing things in a particular order; 
+a hash is great for retrieving things based on something
+other than order. If you don't know the position of an 
+element in an array, but you know the name of an element,
+you still have to enumerate through all of the elements to find 
+a particular element with an array. With a hash, you could retrieve the 
+desired element using the name, instead of the integer index
+that is used when retrieving elements out of an array. The reason you
+can do this is that a hash accepts any object as a key, rather than
+ an integer representing an's elements position--which is all
+you can do in the array.
 
 3. What is a module? Enumerable is a built in Ruby module, what is it?
+* A module allows you to organize code into namespaces. It also
+allows classes to mixin functionality without inheriting from a class.
 
 4. Can you inherit more than one thing in Ruby? How could you get around this problem?
+* No. You use modules. If you could inherit from more than one class you would
+have the diamond problem. If a class inherited from two classes that both defined a method named
+hello(), which superclass's method would be used if you called hello() on the child class? 
+Modules allow you to re-use code without inheritance.
 
 5. What is the difference between a Module and a Class?
+* "Classes are about objects; modules are about functions." (stole this from StackOverflow)
+* You can't inherit from a module
+* You can't instantiate a module
+* Modules can't have variables, but both modules and classes can have constants and methods
+* Modules can add instance methods to a class
+* You use modules for mixins and classes for inheritance and/or instantiation 
+* Modules let you create namespaces
+* Modules are like libraries in that you can use across multiple classes

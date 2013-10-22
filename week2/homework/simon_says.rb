@@ -1,9 +1,8 @@
 module SimonSays
-
   def echo(phrase)
     phrase
   end
-  
+
   def shout(phrase)
     phrase.upcase
   end
@@ -13,12 +12,18 @@ module SimonSays
         "#{args[0]} #{args[0]}"
     elsif args.length == 2
         ("#{args[0]} " * args[1]).strip  
+    else
+        #throw an error for wrong
+        #number of args
     end
   end
   
   def start_of_word(*args)
     if args.length == 2
         args[0][0..(args[1]-1)]
+    else
+      #throw an error for wrong
+      #number of args
     end
   end
   
