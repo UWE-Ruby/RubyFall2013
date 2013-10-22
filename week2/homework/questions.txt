@@ -3,11 +3,41 @@ Containers, Blocks, and Iterators
 Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
-
+	Arrays are ordered, integer-indexed collections of any object.  Each object reference occupies a position in the array, identified by a non-negative integer-index. Hashes, like arrays, are indexed collections of object references; however, while arrays are indexed with integers,  you index a hash with objects of any type: symbols, strings, regular expressions etc.
+	When storing a value in a hash, you store the key and the entry to be stored with the key.
+	
 2. When would you use an Array over a Hash and vice versa?
+	An example re: when you would use a hash would be: If you wanted to map musical instruments to their orchestral sections, you would use a hash: 
+		
+instSection = {
+  'cello'     => 'string',
+  'clarinet'  => 'woodwind',
+  'drum'      => 'percussion',
+  'oboe'      => 'woodwind',
+  'trumpet'   => 'brass',
+  'violin'    => 'string'
+}
+	
+	An example re: when you would use an array would be:
+	If you wanted to iterate single list of items or pull them out and list them as needed, you could use an array:
 
+	a = %w{ cat dog bird lion deer}
+	a[0] >> "cat"
+	a[3] >> "lion"
+	
+	
+	
 3. What is a module? Enumerable is a built in Ruby module, what is it?
-
+	modules are a way of grouping together methods, classes and constants. Modules give you two major benefits:
+    They prevent name clashes; modules support the min facility.
+ 
+ 	modules provide a namespace, a sandbox in which methods and constants can play without being stepped on by other methods and constants. Modules essentially eliminate the need for inheritance, providing a facility called a mixin.
+	
+	The Enumerable mixin provides collection classes with several traversal and searching methods, and with the ability to sort. The class must provide a method each, which yields successive members of the collection.
+	
 4. Can you inherit more than one thing in Ruby? How could you get around this problem?
+	No, multiple inheritance is not allowed in Ruby. You could get around this issue by creating a module and include it within a class. Once included within a class, you have access to all of the module's instance methods in the class as well. They get mixed in. Mixed-in modules behave as superclasses.
 
 5. What is the difference between a Module and a Class?
+	While a class has instances, a module cannot. A module can't have instances because a module is not a class. However, you can include a module within a class definition.
+
