@@ -1,13 +1,29 @@
-Please Read The Chapters on: 
-Containers, Blocks, and Iterators 
+Please Read The Chapters on:
+Containers, Blocks, and Iterators
 Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
 
+While there are some simlilariies between an Array and a Hash, in that they are both indexed collections of object references, the main difference is that an Array is indexed using integers, while a Hash is indexed using objects of any type, for example strings or symbols.
+
 2. When would you use an Array over a Hash and vice versa?
+
+You would use an Array over a Hash when you're unable, or do not know what type of object you will be using to index the contents.
+You would use an Array over a Hash when you require an integer key to index the contents.
+You would use a Hash over an Array when you need to use objects as indices.
+You would use a Hash over an Array when it is important to keep track of the order in which the items were entered into the Hash. (Ruby returns them in the order in which they were received).
+
 
 3. What is a module? Enumerable is a built in Ruby module, what is it?
 
+A module is a way of grouping together methods, classes and contstants. They also provide a way to nampespace their contents, which is helpful in avoiding naming clashes. Modules are also usefule in that things that would not necessarialy form a class can be grouped together.
+
+Enumerable is a mixin module, which supplies the class that requires it to with a number of methods that allow the class to traverse, sort and search it's contents, as long as the class in question provides an each(iterator) method.
+
 4. Can you inherit more than one thing in Ruby? How could you get around this problem?
 
+Ruby is a single-inheritance language, so a class has only one direct parent. However, a class in Ruby can include and use any number of mixins, which are like partial class definitions. So while a Ruby class has only one direct parent, it can behave like a class that supports multiple inheritance without the dangers that surround the kind of ambiguity that multiple inheritance can provide.
+
 5. What is the difference between a Module and a Class?
+
+A Module cannot have instances, as it is not a Class. A Module does not require instantiation, whereas a Class does. A Class has access to it's own intance variables, wheras a Module has access to any instance varibales of the Class it has been included in.
