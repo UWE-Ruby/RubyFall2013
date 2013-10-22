@@ -3,11 +3,16 @@ Containers, Blocks, and Iterators
 Sharing Functionality: Inheritance, Modules, and Mixins
 
 1. What is the difference between a Hash and an Array?
+	1a. An array is an ordered collection of objects, referenceable by its sequential position in the array, or just by looking for it or some characteristic of it. A hash is an unordered collection of objects, referenceable by a key that refers to the value following the key. In a hash, you use the key to 'search' for the value of the key.
 
 2. When would you use an Array over a Hash and vice versa?
+	2a. An array is a very efficient way to handle collections of objects that exist without reference to any other object. A hash is more useful when objects have another piece of information they relate to or are the values of, and that information is useful for identifying the related value.
 
 3. What is a module? Enumerable is a built in Ruby module, what is it?
+	3a. A module is a block of code that starts with the word 'module,' followed by the name of the module and ends with a matching 'end.' A module is way of grouping methods, classes and constants and defines a controllable namespace that can be called unambigously by defining referencable objects using the name of the module followed by a period followed by the  name of the referenceable object. Using the enter module.object combination, the names can be referenced unambiguously. Enumerable, as a standard mixin, is a module that doesn't need to be explicity included, and it brings a host of operations for dealing with collections of objects, including sorting, finding and testing conditions.
 
 4. Can you inherit more than one thing in Ruby? How could you get around this problem?
+	4a. An instance of a class can inherit the attributes and functionality of its parent class, but it can't inherit from multiple parents. This can be gotten around by using mixins, which reference modules with attributes and functionalities different from the parent class. 
 
 5. What is the difference between a Module and a Class?
+	5a. While both are constructed in Ruby code, and many of both exist in the standard Ruby library, a module is a general collection of code, and can include classes and other namespaced code blocks. A class is a generalize description of a type (class) of object, of which there will be many specific instances. Classes can also have subclasses (children) that inherit the attributes and functionality of the parent class. Modules are not designed to have instances that inherit. 
