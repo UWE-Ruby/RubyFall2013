@@ -1,7 +1,7 @@
 ####General
 [Our Github repo](https://github.com/UWE-Ruby/RubyFall2013)
 
-[Our chat room](http://uwe-ruby.herokuapp.com/)
+[Our chat room](https://uweruby.hipchat.com)
 
 ####Week 1: Setup, Git, rSpec
 Class slides (coming soon!)
@@ -19,6 +19,15 @@ Class slides (coming soon!)
 [Command line basics](http://linuxbloggen.dk/wp-content/gallery/cheat-sheets/clicommandsfull.jpg)
 
 ####Week 2: Strings, Variables, Classes, and Objects
+[Ruby Docs](http://www.ruby-doc.org/core-1.9.3/String.html)
+
+[Pragmatic Programmers Guide](http://pragprog.com/book/ruby3/programming-ruby-1-9) (at the bottom is the link to the extending Ruby pdf I mentioned)
+
+[Travis CI](https://travis-ci.org) (where open source projects are tested)
+
+[grb](https://github.com/jinzhu/grb)
+
+[The Ruby ToolBox](https://www.ruby-toolbox.com/)
 
 ####Week 3: Array and hash, Numbers / range, Modules / inheritance
 
