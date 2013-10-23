@@ -1,4 +1,5 @@
 module SimonSays
+<<<<<<< HEAD
   def echo(phrase)
     phrase
   end
@@ -31,3 +32,25 @@ module SimonSays
     phrase.split(' ')[0]
   end
 end
+=======
+	def echo(st)
+		st
+	end
+	
+	def shout(st)
+		st.upcase
+	end
+
+	def first_word(st)
+		st.split.first
+	end
+
+	def start_of_word(st,i)
+		st[0...i]
+	end
+	
+	def repeat(st, t=2)
+		([st]*t).join(' ')
+	end
+end
+>>>>>>> 02ccc7d94fdfc30a6d2d7e93c8bee3f07a3da618

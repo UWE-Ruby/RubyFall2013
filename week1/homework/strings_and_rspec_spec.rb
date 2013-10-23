@@ -12,11 +12,17 @@ describe String do
 		before(:all) do
 			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
+<<<<<<< HEAD
 		
 		it "should be able to count the charaters" do
 		  @my_string.count("R").should eq 2
 	  end
 	  
+=======
+		it "should be able to count the characters" do
+			@my_string.should have(@my_string.size).characters
+		end
+>>>>>>> 02ccc7d94fdfc30a6d2d7e93c8bee3f07a3da618
 		it "should be able to split on the . charater" do
 			result = @my_string.split('.')
 			result.should have(2).items	
@@ -31,4 +37,3 @@ describe String do
 	  end
 	end
 end
-
