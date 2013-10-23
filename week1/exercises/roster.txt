@@ -1,35 +1,36 @@
-#, name, email, github, twitter, chat
-0, 
-1,
-2,
-3,
-4,
-5,
-6,
-7,
-8,
-9,
-10,
-11,
-12,
-13,
+#, name, email, github, twitter, class chat 
+0, Renee, renee@nird.us, reneedv, @nirdllc, renee
+1, Craig, craigoryadams@comcast.net, craigadams, , craiga
+2, David Baynes, dbaynes@gci.com, dbaynes, baynesDL, dbaynes
+3,Chris Billingham, cbillingham@gmail.com, caderache2014, @caderache2018, caderache2014
+4, Kumar, kbodana@yahoo.com, kumar76, N/A, kumar
+5, Jameson Brown, jameson.brown@gmail.com, jamesonbrown, @jamesonbrown, jamesonbrown
+6, Scott Dodson, capourso@gmail.com, scottdodson, no_twiter, scottd
+7, Jon Faulkenberry, jon.faulkenberry@outlook.com, jonfaulkenberry, @jonfaulkenberry, jonfaulkenberry
+8, Ryan Harris, uw.rharris@neverbox.com, rlh6f, @rlh6f, rlh6f
+9, jonas haskins, h20melonman@gmail.com, sanojsniksah, - , - .  
+10, Adam, adam@nird.us, vogelbek, VisionarysChin, vogelbek
+11, Jordan Hudgens, jord4nhudgens@gmail.com, github.com/zarthustra, @judgenz, jhudgementday 
+12, David Husa, davidhusa@gmail.com, github.com/davidhusa, @davidhusa, davidhusa
+13,idil, ijama26@gmail.com, idiljay, idiljay 
 14,Elizabeth A. Kari, eakari@live.com, catfriend, no twitter, no chat
-15,
-16,
-17,
-18,
-19,
-20,
-21,
-22,
-23,
-24,
-25,
-26,
-27,
-28,
-29,
-30,
-31,
+15, Karen Kirr, kkirr77@yahoo.com, kirrk, @kirrk, Karen Kirr
+16, Dave, davidlane2@mac.com, davejlane, n/a, davejlane
+17, Doug MacDowell, dougmac9@uw.edu, Doug-MacDowell, , doug-macdowell
+18, Jordan Mayer, Jordan2210@gmail.com, jordanmayer, n/a, Jordanm
+19, Martin Nash, martin.j.nash@gmail.com, MartinJNash, @MartinJNash, martin.j.nash
+20, Thomas Osborn, trosborn@gmail.com, trosborn, joosushi, trosborn
+21, Vy Nguyen, vnguye36@gmail.com, github.com/shrsp
+22, Chris Montes, chrismontes@about.me, mandelbro, @chrismontes, chrismontes
+23,Alicia Quilez, alienor18@yahoo.com
+24,Pat Remy, pat@remy.cc, premy52, , subs@remy.cc
+25, Mohamed Saeed, mahadi@gmail.com, wahshi, n/a, mahdi
+26, Sean, sean@seansehr.com, xeraseth, @sean_sehr, Sean Sehr
+27, Paul Sheridan, paul.sheridan@me.com, @paulthesound, pasheridan
+28, Kate, styerfoaming@gmail.com, @styerfoam, kates
+29, Daniel Torres, danjt42@gmail.com, danjt42, , DanielT
+30, Rob, rob.whitehead@gmail.com, Thesoro, @RobCWhitehead, RobW
+31, Steven Xu, steven.b.xu@gmail.com, stevenbxu, @stevezoo, stevenbxu
 32,
-33, 
+33,
+34, Cheri Allen, cheri@nird.us, @cherimallen, cheri! 
