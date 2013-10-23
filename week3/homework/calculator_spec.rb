@@ -22,6 +22,7 @@ describe Calculator do
     it "computes the sum of an array of many numbers" do
       @calculator.sum([1,3,5,7,9]).should == 25
     end
+
   end
   
   # Once the above tests pass, 
@@ -38,8 +39,8 @@ describe Calculator do
   
   it "raises one number to the power of another number" do
   	p = 1
-	32.times{ p *= 2 } 
-	@calculator.pow(2,32).should eq p 
+  	32.times{ p *= 2 } 
+  	@calculator.pow(2,32).should eq p 
   end
   
   # http://en.wikipedia.org/wiki/Factorial
