@@ -6,5 +6,5 @@ puts "Please enter a past tense action verb"
 verb_past_tense = gets.chomp
 puts "What does the #{noun} say?"
 says = gets.chomp
-story = "The #{adjective} #{noun} #{verb_past_tense} past the graveyard and says #{says}"
+story = "The #{adjective} #{noun} #{verb_past_tense} past the graveyard and said #{says}"
 puts story
