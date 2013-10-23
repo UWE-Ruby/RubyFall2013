@@ -1,0 +1,15 @@
+Please Read: 
+ - Chapter 6 Standard Types
+ - Review Blocks
+ - Chapter 7 Regular Expressions
+ - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
+
+1. What is a symbol?
+
+2. What is the difference between a symbol and a string?
+
+3. What is a block and how do I call a block?
+
+4. How do I pass a block to a method? What is the method signature?
+
+5. Where would you use regular expressions?
