@@ -1,4 +1,5 @@
 module SimonSays
+	
 	def echo (input = "")
 		input
 	end		
