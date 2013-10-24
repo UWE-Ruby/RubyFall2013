@@ -1,23 +1,23 @@
 module SimonSays
 
-	def echo(greeting)
+	def echo greeting
 		greeting
 	end
 	
-	def shout(greeting)
+	def shout greeting
 		greeting.upcase
 	end
 	
-	def repeat(greeting, how_many=2)
-		long_greeting = ((greeting + " ") * how_many).rstrip
+	def repeat greeting, how_many=2
+		long_greeting = ((greeting + " ") * how_many).chop
 	end
 	
-	def start_of_word(word, range)
-		word[0..(range - 1)]
+	def start_of_word word, range
+		word[0,range]
 	end
 
-	def first_word(phrase)		
-		phrase[0..(phrase.index(" ") - 1 )]
+	def first_word phrase		
+		phrase.split.first
 	end
 
 end
