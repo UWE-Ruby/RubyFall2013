@@ -1,12 +1,26 @@
 require './book.rb'
 
 describe Book do
-	before :each do
-		@book = Book.new("Harry Potter", 200)
+
+	context "::book_count" do
+
+	it "should count how many books have been created" do
+		Book.new	
+		Book.new	
+		Book.new	
+		Book.book_count.should eq 3	
 	end
-	it "should respond to title" do
-		@book.should respond_to "title"
+end
+
+
+	
+	it "should should set some defaults" do
+		@book.new
 	end
+	it "should allow me to set the title" do
+	@boot.title = "Harry Potter"
+	@book.title.should eq "Harry Potter"
+
 
 	it "should return the page count" do
 		@book.page_count.should eq "Page count is 200"
