@@ -30,6 +30,17 @@ Class slides (coming soon!)
 [The Ruby ToolBox](https://www.ruby-toolbox.com/)
 
 ####Week 3: Array and hash, Numbers / range, Modules / inheritance
+[Enumerable](http://ruby-doc.org/core-1.9.3/Enumerable.html)
+
+[BigDecimal](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/bigdecimal/rdoc/BigDecimal.html)
+
+[Array](http://www.ruby-doc.org/core-1.9.3/Array.html)
+
+[Hash](http://www.ruby-doc.org/core-1.9.3/Hash.html)
+
+[Range](http://ruby-doc.org/core-1.9.3/Range.html)
+
+[Why's Poignant Guide](http://mislav.uniqpath.com/poignant-guide/)
 
 ####Week 4: Range, Symbols, Blocks, Regexp
 
