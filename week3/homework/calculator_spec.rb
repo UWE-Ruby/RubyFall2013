@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/calculator"
+require "./calculator.rb"
 
 describe Calculator do
   
@@ -28,11 +28,11 @@ describe Calculator do
   # write tests and code for the following:
   describe "#multiply" do
   	it "multiplies two numbers" do
-		@calculator.multiply(2,2).should eq 4
+		@calculator.multiply(7,2).should eq 14
 	end
 
   	it "multiplies an array of numbers" do
-		@calculator.multiply([2,2]).should eq 4
+		@calculator.multiply([2,7]).should eq 14
   	end
   end
   

@@ -1,16 +1,16 @@
 # what does this program need to do? repeat strings given to it. 
 
 module SimonSays
-  def echo(string)
-    p(string) 
+  def echo(string) # echo (input)
+    p(string) #input
   end
   
-  def shout(string)
-    p(string).upcase
+  def shout(string) #input
+    p(string).upcase #input.case
   end
   
-  def repeat(string, number)
-    a=(string)
+  def repeat(string, number) #input n=2
+    a=(string)    #((input.+ ' ') *n).chop ([input * n]).join(' ')
     # one cycle 
     b= a + " "
     c=b*number
@@ -18,14 +18,14 @@ module SimonSays
     p d
   end
   
-  def start_of_word(string, number)
-  letters=(string).scan(/./)
+  def start_of_word(string, number) #input, n
+  letters=(string).scan(/./)  #input[0, n]
   returned_letters= letters.first(number).join()
   p returned_letters
   end
   
-  def first_word(string)
-  words = (string).scan(/[\w']+/)
+  def first_word(string) #input
+  words = (string).scan(/[\w']+/) #input.split.first
   ret_words = words[0]
   end
   

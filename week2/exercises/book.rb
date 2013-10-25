@@ -2,12 +2,17 @@ class Book
 
 	attr_accessor :title, :pages
 
-	def initialize(title, pages)
-		@title = title
-		@pages = pages
-	end
+  def self.library_count
+    @@book_count
+  end
 
-	def page_count
-		"Page count is #{@pages}"
-	end
+  def test
+    @test= "hello!"
+  end
+
+  def out_put_test
+    puts @test
+    puts @@book_count
+  end
 end
+
