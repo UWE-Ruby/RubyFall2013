@@ -4,6 +4,9 @@ Please Read:
  - Chapter 7 Regular Expressions
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
+
+
+
 1. What is a symbol?
 
 A symbol is a named identifier. It corresponds to a string of characters. A symbol will have the same memory address regardless of when and where it is called during execution of your program.
@@ -28,6 +31,33 @@ A symbol exists at a fixed location in memory regardless of when you call it dur
 
 3. What is a block and how do I call a block?
 
+A block is a callable chunk of code that you can pass around as a parameter. A block is surrounded by curly braces or a do-end. Indisde the method, you invoke the block with the yield statement. A block will return the last executed method's return value, and you can capture that value inside your method definition. price = yield, for example.
+
+
+
+
 4. How do I pass a block to a method? What is the method signature?
 
+Put the block at the end of all the other parameters when calling a method. If you put an ampersand before the last variable in the method's argument list, that block will be turned into a Proc object that you can store it--perhaps as an instance variable--and call later.
+
+def da_bears(ditka, &da_block)
+    res = da_block.yield
+    puts "Da Bears win #{res}-0"
+
+    if ditka
+        puts "ditka rules"
+    end
+end
+
+da_bears(true) { 20 }
+
+
+
+
 5. Where would you use regular expressions?
+
+You use regular expressions when you want to discover and manipulate certain patterns in strings.
+
+
+
+
