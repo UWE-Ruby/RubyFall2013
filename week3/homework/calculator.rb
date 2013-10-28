@@ -7,15 +7,11 @@ class Calculator
 		[a, b].flatten.reduce(:*).to_f
 	end
 
-	def fac a
-		if a == 0
-			a=1
-			else
-			(1..a).inject(:*)
-		end
+	def fac a 
+		(1..(a.zero? ?  1 : a)).inject(:*) 
 	end
 
-	def pow (a, b)
+	def pow a, b
 		a**b 	
 	end
 
