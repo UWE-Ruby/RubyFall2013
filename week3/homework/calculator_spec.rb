@@ -1,5 +1,6 @@
 require "#{File.dirname(__FILE__)}/calculator"
 
+
 describe Calculator do
   
   before do
@@ -23,7 +24,7 @@ describe Calculator do
       @calculator.sum([1,3,5,7,9]).should == 25
     end
   end
-  
+  '''
   # Once the above tests pass, 
   # write tests and code for the following:
   describe "#multiply" do
@@ -64,5 +65,5 @@ describe Calculator do
     end
 
   end
-
+'''
 end
