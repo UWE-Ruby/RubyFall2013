@@ -5,11 +5,16 @@ Please Read:
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
 1. What is a symbol?
+	1a. A symbol, created and indicated by a preceding colon (e.g., :name) is the identifier of a string (e.g., name). What the string references (its value) can change, but the symbol doesn't change its value, and always returns the colon followed by the string name (e.g. in this example, it's value is always :name, even though the value of name may be "Pat" or change to something else).
 
 2. What is the difference between a symbol and a string?
+	2a. A symbol is an identifier of a string, the string possibly being a variable name; in that case it's the name of the name, "the thing called :thing". It is created by putting a colon at the end of the string to create its symbol. The "value" of the symbol (what's returned when you show it, is the name (not the value) of the string it references. A string is an object that is a series of characters, usually identified by single or double quotes around it. It can be referenced by a variable, and that variable can, with the addition of a preceding colon, have a symbol that identifies it.
 
 3. What is a block and how do I call a block?
+	3a. A block is a collection of code that either starts with "do" and ends with "end,"" or starts with an open brace "{" and ends with a closing brace "}". If a block starts with "def" it defines a named method consisting of that block, and it's called as a method by appending it to an object after a period ("."), if the method name is available in the range where the call is made, which can be done by "require"-ing the file it's in, then "include"-ing the name of the method or its parent module name.
 
 4. How do I pass a block to a method? What is the method signature?
+	4a. You pass a block to a method by specifying 'def' followed by the name of the method, followed by the code that specifies the method, followed by 'end' to indicate the end of the method. The code between 'def' and 'end' (or for shorter coding, usually an opening { and a closing } ), is the block. When the name of the method is invoked to act on an object ("called"), it passes the block to the location of the call to act on the object according to the code in the block. This call may include passing some parameters for the method to use. The value returned to the method is the last value rendered before 'end' unless other steps are taken to return other values. The method signature is the name of the method plus any arguments (parameters) that are passed to the method's block from the calling invocation of the method name. 
 
 5. Where would you use regular expressions?
+	5a. You would use a regular expression to identify whether (or not), and where a particular string or string pattern occurs within another string. Once identified, the first occurrence of that string can be changed (with the method ".sub" to "sub"stitute another string), either returning a new string that has the change, or changed within the original string (with the method ".sub!" to force the substitution into the original string). If you want to change all occurrences of the string use the ".gsub"("global sub") method to generate a new string, or ".gsub!" to change the original string.
