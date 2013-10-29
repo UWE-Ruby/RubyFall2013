@@ -4,14 +4,20 @@ class Calculator
   end
 
   def sum(*values)
-    values.flatten.inject(0) {|sum, value| sum + value}
+    repeated_operation(values, 0, :+)
   end
 
   def multiply(*values)
-    values.flatten.inject(1) {|product, value| product * value}
+    repeated_operation(values, 1, :*)
   end
 
   def fac(value)
     value.downto(1).inject(1) {|factorial, val| factorial * val}
+  end
+
+  private
+  def repeated_operation(array, start, operator)
+    array.flatten!
+    array.inject(start) {|operation, value| operation.send(operator, value) }
   end
 end
