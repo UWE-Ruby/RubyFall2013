@@ -3,8 +3,8 @@ class Calculator
     base**exp
   end
 
-  def sum(values)
-    values.inject(0) {|sum, value| sum + value}
+  def sum(*values)
+    values.flatten.inject(0) {|sum, value| sum + value}
   end
 
   def multiply(*values)
