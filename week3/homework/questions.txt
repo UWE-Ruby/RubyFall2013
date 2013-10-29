@@ -30,7 +30,7 @@ Please Read:
    of somewhat like the body of an anonymous method.  A block can also take parameters.
    Those parameters appear at the beginning of the block between to vertical bars.
    The body of the block is not executed when Ruby first sees it.  It is saved away
-   to be called later
+   to be called later.
 
    A block is called by a method that proceeds the block.  For example, lets say you
    have an array ["a", "b", "c"].  A block could be called by the "each" method once
