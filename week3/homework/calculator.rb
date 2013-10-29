@@ -20,6 +20,6 @@ class Calculator
   private
   def repeated_operation(array, start, operator)
     array.flatten!
-    array.inject(start) {|operation, value| operation.send(operator, value) }
+    array.inject start, operator
   end
 end
