@@ -16,8 +16,8 @@ class Calculator
 		end	
 	end
 
-	def pow (p)
-		(p).reduce(:**)
+	def pow (p, q)
+		p ** q
 	end	
 
 	def fac (f)
