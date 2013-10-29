@@ -1,7 +1,4 @@
 class Calculator
-  def initialize
-  end
-
   def pow(base, exp)
     base**exp
   end
