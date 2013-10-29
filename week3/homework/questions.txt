@@ -5,11 +5,16 @@ Please Read:
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
 1. What is a symbol?
+an immutable string preceded by a colon :
 
 2. What is the difference between a symbol and a string?
+symbols are immutable (cannot be changed once assigned)
 
 3. What is a block and how do I call a block?
+a block of code. yield.
 
 4. How do I pass a block to a method? What is the method signature?
+def myMethod(&blockOfCode)
 
 5. Where would you use regular expressions?
+To match and manipulate text!

@@ -43,11 +43,12 @@ describe "The Rspec ruby gem" do
 
       # When this example fails,
       # it will show "expected" as 2, and "actual" as 1
-      1.should eq 2
+      1.should_not eq 2
 
     end
 
-    it "supports placeholder examples that lack code (like this one)"
+    it "supports placeholder examples that lack code (like this one)" do
+    end
 
     it "requires that examples use expectations (like #should) to work properly" do
 
@@ -77,15 +78,23 @@ describe "The Rspec ruby gem" do
   		# Fix the Failing Test
   		# Order of Operations is Please Excuse My Dear Aunt Sally:
   		# Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
-  		(1+2-5*6/2).should eq -13
+  		(1+2-5*6/2).should eq -12
   	end
+  	
   	it "should count the characters in your name" do
-      pending
+      "Jonathan".should have(8).characters
+      "Jon".should_not have(4).characters
     end
   	
-  	it "should check basic math"
+  	it "should check basic math" do
+  	  (3 % 2).should eq 1
+  	  (33 * 3).should eq 99
+  	end
 
-  	it "should check basic spelling"
+  	it "should check basic spelling" do
+      "Jonathan".should_not include "Z"
+      "Jonathan".should include "Jon"
+	  end
 
   end
 
