@@ -1,6 +1,7 @@
 class Calculator
   def pow(base, exp)
-    base**exp
+    values = Array.new(exp, base)
+    repeated_operation(values, 1, :*)
   end
 
   def sum(*values)
@@ -12,7 +13,8 @@ class Calculator
   end
 
   def fac(value)
-    value.downto(1).inject(1) {|factorial, val| factorial * val}
+    values = value.downto(1).to_a
+    repeated_operation(values, 1, :*)
   end
 
   private
