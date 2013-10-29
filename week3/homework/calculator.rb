@@ -15,7 +15,6 @@ class Calculator
   end
 
   def fac(value)
-    value = 1 if value < 2
     value.downto(1).inject(1) {|factorial, val| factorial * val}
   end
 end
