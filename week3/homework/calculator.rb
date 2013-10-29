@@ -22,4 +22,5 @@ module Calculator
 
 	def factorial(arg)
 		multiply((1..arg).to_a)
+	end
 end
