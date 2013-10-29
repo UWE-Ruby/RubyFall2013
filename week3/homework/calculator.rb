@@ -7,15 +7,10 @@ class Calculator
 	end
 
     # multiplies two numbers or an array of numbers
-	 #def multiply(*numbers)
-	 #	result = 1
-	 #	numbers.each {|n| result = result * n}
-     #  result
-	 #end
 	 def multiply(*numbers)
 	 	#numbers.inject(:*)
 	 	#numbers.inject(1){|product, n| product * n}
-	 	puts numbers.inspect
+	 	#numbers.reject(&:zero?).inject(:*)
         numbers.flatten.inject(:*)
 	 end
 
@@ -25,8 +20,9 @@ class Calculator
 	end
 
     # http://en.wikipedia.org/wiki/Factorial
-	def factorial(n)
-        #?????  
+	def fac(n) # http://www.rodrigoalvesvieira.com/the-most-beautiful-factorial-method/
+        return 1 if n.zero?
+        1.upto(n).inject(:*)
     end
 
 end
