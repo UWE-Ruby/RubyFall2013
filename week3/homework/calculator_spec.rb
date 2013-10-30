@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/calculator"
+require "#{File.dirname(__FILE__)}/calculator.rb"
 
 describe Calculator do
   
