@@ -18,6 +18,6 @@ module SimonSays
 	end
 
 	def first_word(sentence)
-		sentence.split[0]	
+		sentence.0[split]	
 	end
 end
