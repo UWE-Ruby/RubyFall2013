@@ -4,8 +4,3 @@ class Vampire < Monster
 		super(noc,legs,name,vul,dangers)
 	end
 end
-
-
-# this interacts with named_thing.rb 
-# and monster.rb. The named_thing is mixed into the monster 
-# then vampire inherts from monster
