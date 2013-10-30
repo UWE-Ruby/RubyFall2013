@@ -20,14 +20,33 @@ require './book'
 
 ###
 describe Book do
-  
+  context "::book_count" do
+    it "should count how many books have been created" do
+      Book.new
+      Book.new
+      Book.new
+      Book.book_count.should eq 3
+    end    
+  end
+  context "::new" do  #::new indicates Book.new :: befowre a method indicates a class level 
+    it "should set some defaults" do
+      Book.new.title.should eq "Not Set"
+    end
+    it "should allow us to set the page count" do
+      @book = Book.new "Harry Potter", 5
+      @book.page_count.should eq 5
+    end  
+  end
   context "#title" do  # lb sign refers to instance method
-    
+    before :each do
+      @book = Book.new
+    end
     it "should have a title" do
-      book = Book.new("Harry Potter", 200)
-      book.title.should_not be_nil 
-      # or
-      #G book.title.should respond_to "title"  # that title method exists
+      @book.should respond_to "title"
+    end
+    it "should allow me to set the title" do  
+      @book.title = "Harry Potter"
+      @book.title.should eq "Harry Potter" 
     end
   end
 end
