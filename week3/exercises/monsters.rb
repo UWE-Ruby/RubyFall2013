@@ -35,3 +35,20 @@ $monsters << {
 	:vulnerabilities => ['CO2', 'ice', 'cold'],
 	:legs => 0
 }
+
+
+puts "How many monsters are nocturnal?"
+puts $monsters.count{|m| m[:nocturnal]}
+
+puts "What are the names of the monsters that are nocturnal?"
+puts $monsters.select{|m| m[:nocturnal]}.map{|m| m[:name]}
+
+puts "How many legs do all our monsters have?"
+puts $monsters.map{|m| m[:legs]}.inject(:+)
+
+puts "What are the 2 most common dangers and vulnerabilities of our monsters?"
+puts "2 most common dangers:"
+puts $monsters.map{|m| m[:dangers]}.flatten.inject(Hash.new(0)){|h,d| h[d] += 1; h}.sort_by{|k,v| v}[-2..-1].map{|a| a[0]}
+puts "2 most common vulnerabilities:"
+puts $monsters.map{|m| m[:vulnerabilities]}.flatten.inject(Hash.new(0)){|h,v| h[v] += 1; h}.sort_by{|k,v| v}[-2..-1].map{|a| a[0]}
+
