@@ -12,7 +12,7 @@ module SimonSays
 
     # repeat a string n times
     def repeat(string, int = 2)
-	   ([string] * int).join ' '
+	   ([string] * int).join (' ')
 	end
 
 	# return start of word

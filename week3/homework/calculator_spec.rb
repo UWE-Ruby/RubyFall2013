@@ -2,6 +2,7 @@ require "#{File.dirname(__FILE__)}/calculator"
 
 describe Calculator do
   
+  # create new instance of Calculator class
   before do
     @calculator = Calculator.new
   end
