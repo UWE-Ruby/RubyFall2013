@@ -5,6 +5,7 @@ Please Read:
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
 1. What is a symbol?
+
 	A symbol is a identifier defined by a series of characters preceded by a colon.  
 	A symbol can be created by putting a colon before any string literal.  Construction 
 	follows interpolation rules for double quoted strings.  
@@ -32,3 +33,4 @@ Please Read:
 	include verifying that input meets validation criteria, whether a string includes some 
 	piece of text, or substituting some relevant portion of a string.
 	
+
