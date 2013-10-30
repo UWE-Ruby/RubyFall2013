@@ -1,28 +1,34 @@
 class Calculator
-	attr_accessor  :array, :array_prod, :product, :num, :num_val, :power
+	
 
-	def sum (array=0)
-		@array = array
-		array.inject{|memo, n| memo + n}
+	def sum array 
+#		array.inject(0){|memo, n| memo + n}
+		array.inject(0, :+)
 	end
 
+# def sum input
+# 	result = 0 
+# 	input.each do | i |
+# 		result += i
+# 	end
+# 	result
 
-	def multiply (array_prod)
-		@array_prod = array_prod
-		@product = product
-		@product = array_prod.inject{|memo, n| memo * 2}
+	# def multiply (array_prod)
+	# 	@array_prod = array_prod
+	# 	@product = product
+	# 	@product = array_prod.inject{|memo, n| memo * 2}
 
-	end
+	# end
 
- 	def fac(num)
- 		@num = num
- 		(1..num).inject (:*)  
+	def multiply *args
+		args.flatten.inject(:*)
 	end
 
 	def pow (num_val, power)
-		@num_val = num_val
-		@power = power
 		num_val ** power
 	end
-	
+
+ 	def fac(num)
+ 		(1..num).to_a.inject (:*)  
+	end
  end
