@@ -1,13 +1,23 @@
 class Book
 
-	attr_accessor :title, :pages
-
-	def initialize(title, pages)
-		@title = title
-		@pages = pages
+	attr_accessor :title
+	
+	#Class level method:
+	def self.book_count
+	# can also use ClassName. (in this case, Book.book_count)
+	
+		#Viewable at class level, without an instance
+		@@book_count
+		
+	
+	
 	end
-
-	def page_count
-		"Page count is #{@pages}"
+	
+	def test
+		@test = "hello"
 	end
+		
+	def out_put_test
+		puts @test
+		puts @@book_count
 end

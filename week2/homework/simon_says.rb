@@ -13,16 +13,24 @@ module SimonSays
 		((@thing_to_repeat << ' ')*times_to_repeat).chop
 	end
 	
+	#
+	
 	def start_of_word(word, number_of_chars)
 		@word = word
 		@number_of_chars = number_of_chars
 		@word_start = @word.slice(0..(@number_of_chars - 1))	
 	end
 	
+	#def start_of_word input, n
+	#    input[0,n]
+	
 	def first_word(foo)
 		@foo = foo
 		@bar = @foo.split	
 		@bar[0]
 	end
+	
+	#def first input
+	#   input.split.first
 	
 end
