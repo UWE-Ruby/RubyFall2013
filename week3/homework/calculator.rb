@@ -1,6 +1,6 @@
 class Calculator
 	def sum  input
-		input.reduce(:+).to_f
+		input.reduce(:+)#.to_f # Class notes ( result = 0, input.each do  |i| result +=1
 	end
 	
 	def multiply a, b=1
