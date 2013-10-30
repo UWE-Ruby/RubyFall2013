@@ -1,0 +1,5 @@
+p = 1 
+32.times{ p *= 2 } 
+foo = p
+
+puts foo
