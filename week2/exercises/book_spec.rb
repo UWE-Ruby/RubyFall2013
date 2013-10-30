@@ -1,25 +1,49 @@
-require './book.rb'
+require './book'
 
-# describe the Book class
 describe Book do
 
-  before :each do
-    @book = Book.new("Harry Potter", 200)
+  
+  context "::book_count" do
+
+    it "should count how many books have been created" do
+      Book.new
+      Book.new
+      Book.new
+      Book.book_count.should eq 3
+    end
+
   end
 
-  it "should have a title" do
-    @book.should respond_to(:title)
-    @book.should_not be_nil
-  end
+  context "::new" do
 
-  it "should have page count" do
-    @book.should respond_to(:page_count)
-    @book.page_count.should be_integer
-    @book.page_count.should be > 0
-  end
+    it "should set some defaults" do
+      Book.new.title.should eq "Not Set"
+    end
 
-  it "should FUUUUUUUUUUU" do
-    @book.should respond_to(:╯°□°╯︵┻━┻)
+    it "should allow us to set the page count" do
+      book = Book.new "Harry Potter", 5
+      book.page_count.should eq 5
+    end
+
+  end
+  
+  context "#title" do
+
+    before :each do
+      @book = Book.new
+    end
+
+    it "should have a title" do
+      @book.should respond_to "title"
+    end
+
+    it "should allow me to set the title" do
+      @book.title = "Snow Crash"
+      @book.title.should eq "Snow Crash"
+    end
+
+
+
   end
 
 end
