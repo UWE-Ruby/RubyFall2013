@@ -6,10 +6,22 @@ Please Read:
 
 1. What is a symbol?
 
+A symbol is the unique name given to a string. 
+
 2. What is the difference between a symbol and a string?
+
+A symbol cannot be modified, whereas a string's value can change.
 
 3. What is a block and how do I call a block?
 
+A block is a set of instructions that are inserted between curly brackets: {} or a 'def...end.' This code can then be passed to a method. A block can be invoked through 'yield.'
+
 4. How do I pass a block to a method? What is the method signature?
 
+A) Put the block after the arguments in a do...end block or betwixt curly brackets.
+
+B) A method signature is the definition of the parameters, which sets the way a method accepts blocks.
+
 5. Where would you use regular expressions?
+
+Searching for a substring, validating a string in various contexts, or parsing file data, among others.
