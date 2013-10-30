@@ -24,11 +24,11 @@ Week 3
 Week 4
 * Range
 * Symbols
+* Control
 * Blocks
-* Regexp
 
 Week 5
-* Review
+* Regexp
 * I/O
 * Files / Dir
 * Rake
@@ -50,8 +50,8 @@ Week 8
 * Monkey patching
 
 Week 9
-* Control
 * Exceptions
+* Review
 
 Week 10
 * Final due!
