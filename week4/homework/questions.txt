@@ -1,0 +1,9 @@
+Please Read: 
+Chapter 10 Basic Input and Output
+The Rake Gem: http://rake.rubyforge.org/
+
+1. How does Ruby read files?
+2. How would you output "Hello World!" to a file called my_output.txt?
+3. What is the Directory class and what is it used for?
+4. What is an IO object?
+5. What is rake and what is it used for? What is a rake task?

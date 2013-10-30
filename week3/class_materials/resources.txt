@@ -1,4 +1,4 @@
-Slides: http://www.slideshare.net/reneedv/week3-14857194
+
 Enumerable: http://ruby-doc.org/core-1.9.3/Enumerable.html
 BigDecimal: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/bigdecimal/rdoc/BigDecimal.html
 Array: http://www.ruby-doc.org/core-1.9.3/Array.html
