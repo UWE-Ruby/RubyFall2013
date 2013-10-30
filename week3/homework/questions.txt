@@ -6,10 +6,20 @@ Please Read:
 
 1. What is a symbol?
 
+A symbol is an immutable representation of a string.
+
 2. What is the difference between a symbol and a string?
+
+A string is mutable, a symbol is not.
 
 3. What is a block and how do I call a block?
 
+A block is code that is called with curly braces or do ... end.
+
 4. How do I pass a block to a method? What is the method signature?
 
+A block can be passed to a method with yield or it can be instantiated with an ampersand.
+
 5. Where would you use regular expressions?
+
+A regular express is useful for matching text against the contents of a string, such as when verifying the contents of a string or substituting pieces of the string.
