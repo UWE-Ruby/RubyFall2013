@@ -1,8 +1,52 @@
 Please read: 
 Chapter 3 Classes, Objects, and Variables 
+
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+<<<<<<< HEAD
+a instance of a class. 
+
+2. What is a variable?
+a reference to a object
+
+3. What is the difference between an object and a class?
+a class is a combination of state and methods. an object is a instance of that class ( class instance ).  
+
+
+4. What is a String?
+A sequence of characters.  
+
+5. What are three messages that I can send to a string object? Hint: think methods
+chomp, count, delete, empty? , length, upcase, downcase, split, squeeze! ... woah there are alot. 
+
+
+6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+
+single or double quotation marks. 
+
+single quotes 'foo', foo becomes the value. 
+For Double quotes, "foo\nbar" ruby looks for substitutions, interpolation "#{foo}" and escape sequences "Foo \nBar"
+
+also %q ( single quotes ), %Q ( double quotes ) 
+
+%q/foo bar/
+%Q!oh no #{crap}!
+
+you can choose a delimiter. 
+
+Finally here documents. 
+
+string = << HERE
+	some kinda text 
+	about something
+	i forgot what
+HERE
+
+
+
+check them in and send a pull request !!
+=======
 An object is a representation in memory of a specific concept or thing that the Ruby interpreter knows about. 
 
 2. What is a variable?
@@ -21,3 +65,4 @@ split  - returns an array of strings made up of the original string separated on
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
 Single quotes ex: '' and Double quotes ex: "". The single quotes allow for 2 escape characters: \' and \\ . The double quoted string literal allows for many different escaped special characters (like \n is a line break) and allows for string interpolation, or the injection of evaluated Ruby code into the string ex: "Hello #{my_name}". The single quoted string takes up much less memory than a double quoted string with interpolation. Without interpolation, both are about the same.
+>>>>>>> d807a506f7c7e5960a71a6175e218bb3317b4dc4
