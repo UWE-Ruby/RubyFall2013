@@ -30,10 +30,26 @@ Class slides (coming soon!)
 [The Ruby ToolBox](https://www.ruby-toolbox.com/)
 
 ####Week 3: Array and hash, Numbers / range, Modules / inheritance
+[Enumerable](http://ruby-doc.org/core-1.9.3/Enumerable.html)
 
-####Week 4: Range, Symbols, Blocks, Regexp
+[BigDecimal](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/bigdecimal/rdoc/BigDecimal.html)
 
-####Week 5: Review, I/O, Files/Dir, Rake
+[Array](http://www.ruby-doc.org/core-1.9.3/Array.html)
+
+[Hash](http://www.ruby-doc.org/core-1.9.3/Hash.html)
+
+[Range](http://ruby-doc.org/core-1.9.3/Range.html)
+
+[Why's Poignant Guide](http://mislav.uniqpath.com/poignant-guide/)
+
+####Week 4: Range, Symbols, Blocks, Control
+[Blocks, Procs, Lambdas, and Closures](http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/)
+
+####Week 5: Regexp, I/O, Files/Dir, Rake
+[Rubular](http://www.rubular.com/)
+[ASCII Table](http://www.asciitable.com/)
+
+[Breaking up Regular expressions](http://stackoverflow.com/questions/3833787/making-a-small-regular-expression-a-bit-more-readable)
 
 ####Week 6: Gems, CI
 
@@ -41,6 +57,6 @@ Class slides (coming soon!)
 
 ####Week 8: Metaprogramming, Duck typing, Monkey patching
 
-####Week 9: Control, Exceptions
+####Week 9: Review, Exceptions
 
 ####Week 10: Interesting Stuff...
