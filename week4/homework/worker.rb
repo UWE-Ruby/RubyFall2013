@@ -1,4 +1,4 @@
 class Worker
-  def work
+  def self.work
   end
 end
