@@ -3,7 +3,7 @@ Chapter 11 Basic Input and Output
 The Rake Gem: http://rake.rubyforge.org/
 
 1. How does Ruby read files?
-The File class, it allows for the use of the same I/O methods we have been using for other objections.
+The File class, it allows for the use of the same I/O methods we have been using for other objects.
 
 2. How would you output "Hello World!" to a file called my_output.txt?
 File.open("my_output.txt", "w") {|file| file.puts "Hello World!"}
