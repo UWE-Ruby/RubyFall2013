@@ -3,7 +3,40 @@ Chapter 10 Basic Input and Output
 The Rake Gem: http://rake.rubyforge.org/
 
 1. How does Ruby read files?
+Ruby defines a single base class, IO, to handle input and output. The same
+methods we use for 'simple' i/o from irb, puts, gets, are available for all file
+objects:
+  	 while line = gets
+ 	 	puts line
+	 end
+There are I/O iterators for reading. I/O#each_byte invokes a block with next 8-bit
+byte from the IO object. String#dump can also be used
+	File.open("tesfile") do |file|
+		file.each_line {|line| puts "got #{line.dump}"}
+	end	
+
 2. How would you output "Hello World!" to a file called my_output.txt?
+
+	File.open("output.txt", "w") do |file|
+		file.puts "Hello World!"
+	end
+
 3. What is the Directory class and what is it used for?
+
+Objects of class Dir are directory streams representing directories in the 
+underlying file system. They provide a variety of ways to list directories and 
+their contents.
+
 4. What is an IO object?
+
+Ruby defines a single base class, IO, to handle input and output. An IO object is 
+a bidirectional channel between a Ruby program and some external resource. Bidirectional
+as in read/write, puts/gets.
+
+
 5. What is rake and what is it used for? What is a rake task?
+Rake is a simple ruby build program with capabilities similar to 'make.' Tasks or jobs can be written in ruby
+and executed via the ruby Rake command. Files containg ruby code can also be part of the execution. In rails, 
+rake db:migrate is used to run a database migration script that executes ruby code to build tables according 
+to the database and table specifications. To view the 'routes' that a ruby application may be configured to run, 
+the 'rake routes' command will display what the ruby program or application will respond to. 
