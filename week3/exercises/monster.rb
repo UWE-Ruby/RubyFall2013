@@ -12,3 +12,16 @@ class Monster
 		@legs = legs
 	end
 end	
+$monsterss.select{|m| m[:legs] == 2}.count
+
+$monsters.count{|m| m[:nocturnal]}
+
+$monsters.count{|m| m[:nocturnal]}.each{|m| puts m[:name|}
+
+$monsters.each{|m| legs += m[:legs]}
+
+$monsters.inject(0) {|legs, m| legs += m}
+
+$monsters.map{|m| m[:legs]}.inject(:+)
+
+dangers = $monsters.map{|m| m[:dangers]}
