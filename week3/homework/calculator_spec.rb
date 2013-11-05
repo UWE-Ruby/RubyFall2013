@@ -38,8 +38,8 @@ describe Calculator do
   
   it "raises one number to the power of another number" do
   	p = 1
-	32.times{ p *= 2 } 
-	@calculator.pow(2,32).should eq p 
+	  32.times{ p *= 2 } 
+	  @calculator.pow(2,32).should eq p 
   end
   
   # http://en.wikipedia.org/wiki/Factorial
