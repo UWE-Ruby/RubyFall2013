@@ -5,9 +5,15 @@ The Rake Gem: http://rake.rubyforge.org/
 1. How does Ruby read files?
 	'gets' reads a line from standard input and file.gets reads a line from the file 	object file
 2. How would you output "Hello World!" to a file called my_output.txt?
-	File.open("my_output.txt", "w") do |file|
-	file.puts "Hello World!"
-     end	
+	File.open("my_output.txt", "w") { |f| f.puts "Hello World!" }	
+
 3. What is the Directory class and what is it used for?
+	Allows you to manipulate directories as required via the command line. This is assists with creating new paths and directories as well as changing
+	and/or removing current directories. 
+
 4. What is an IO object?
+	It is a bidirectional channel between a Ruby program and and an external resource. You simply write to it and read to it. A single IO object contains both a read pipe and a write pipe. 
+
 5. What is rake and what is it used for? What is a rake task?
+	Rake allows you to automate items, modify files, move data. Both file tasks and regular tasks exist with Rake. Task is a keywod that introduces 
+	a task definition. Rake is a build language. It is a Domain Specific Language. It allows you to specify tasks and describe dependencies as well as to group tasks in a namespace.
