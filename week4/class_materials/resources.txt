@@ -1,0 +1,3 @@
+Blocks, Procs, Lambdas, and Closures: http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/
+
+
