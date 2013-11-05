@@ -1,0 +1,24 @@
+Please Read: 
+Chapter 11 Basic Input and Output
+The Rake Gem: http://rake.rubyforge.org/
+
+1. How does Ruby read files?
+	1a. Ruby reads files by invoking the open method on an object of the File class; e.g. File.open(filename), then doing some operation that does something with what's there, such as file.gets, which reads a line from the file (the string up to a CR or other defined line ending. 
+
+2. How would you output "Hello World!" to a file called my_output.txt?
+	2a. I would (and did to see if it worked) write and test the following code in .rb file:
+	
+		File.open("my_output.txt", "w") do |file|
+			file.puts "Hello World!"
+		end
+
+3. What is the Directory class and what is it used for?
+	3a. The Directory class is used to instantiate objects that contain information about the contents of the file system. It's used to manipulate the contents of directories as objects, or move the current directory location between directories. Used in a rake file, it can use Ruby code to deliver commands to the command line as if they were being typed in manually, but as a batch file. 
+
+4. What is an IO object?
+	4a. An IO object is an instance of the IO class, a two way channel between Ruby code and a file, the console or some other external read/write resource, including some other resource on the Internet. 
+
+5. What is rake and what is it used for? What is a rake task?
+	5a. Rake is a domain specific language Ruby(like Rspec) gem that sends commands to the console (command line/terminal), either by typing them in the console or by running a file (named Rakefile as a default if no file name is specified) to send file creation/alteration tasks to the console. In general, it's used to build file structures needed for some program. 
+
+	A rake task is defined by a method name preceded by a colon, invoked by using that method name after the rake command at the console line or some other place that has access to the file, rake tasks can also call other rake tasks. 
