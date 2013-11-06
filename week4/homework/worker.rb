@@ -1,21 +1,22 @@
-module Worker  
+#@module Worker  
+class Worker
 
-#=begin       trivial case 
+=begin       trivial case 
 	def work no_of_times=1
 		yield
 		yield
 		yield
 	end
 
-#=end
-
-=begin       named block, iterative case FAIL ==> returns value of no_of_times in every test
-	def self.work no_of_times=1, &block_given
-		no_of_times.times do
-		block_given.call
-		end
-	end
 =end
+
+#=begin       named block, iterative case FAIL ==> returns value of no_of_times in every test
+	def self.work no_of_times=1
+		result = ""
+		no_of_times.times {	result = yield if block_given? }
+		result
+	end
+#=end
 
 =begin       named block, trivial case
 	def self.work no_of_times=1
@@ -24,10 +25,8 @@ module Worker
 =end
 
 =begin       named block, trivial case
-	def self.work no_of_times=1, &block_given
-		block_given.call
-		block_given.call
-		block_given.call
+	def self.work no_of_times=1
+		1.upto(no_of_times) { yield }
 	end
 =end
 
