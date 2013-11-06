@@ -3,7 +3,16 @@ Chapter 10 Basic Input and Output
 The Rake Gem: http://rake.rubyforge.org/
 
 1. How does Ruby read files?
+ file = File.open("filetoRead", "r")
+ 
 2. How would you output "Hello World!" to a file called my_output.txt?
+ file = File.new("my_output.txt", w) { file.puts "Hello World!" } file.close
+
 3. What is the Directory class and what is it used for?
+Directory class is on of the IO classes; it gives filenames that passed to it.
+
 4. What is an IO object?
+IO object is bidirectional channel between Ruby program and external resource. Its function is to write to it and read from it.
+
 5. What is rake and what is it used for? What is a rake task?
+It is program to build ruby files and it uses anonymous function blocks. it is similar to make and maven. Rake is task management tool
