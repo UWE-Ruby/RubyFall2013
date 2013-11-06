@@ -6,10 +6,24 @@ Please Read:
 
 1. What is a symbol?
 
+A.  A symbol is an identifier corresponding to a string of characters, often a name.  Symbol objects are constructed using by preceding the name with a colon. Arbitrary strings can be symbolized by preceding the string literal with a colon.
+
 2. What is the difference between a symbol and a string?
+
+A. A symbol is actually a string, but the difference is that a symbol is immutable. That is, unlike a string, a symbol can be overwritten but not changed.  The receiver methods we can use on strings won't work with a symbol.
 
 3. What is a block and how do I call a block?
 
+A. A block is basically a chunk of Ruby code that can be associated with method invocations. The code in the block is not executed as it is encountered, but Ruby instead remembers the context in which the block appears and then enters the associated method. Blocks consist of code that runs under some sort of transactional control.
+
+A block is called when associated with a method. The content of a block can be placed between braces, or between a "do" and "end". A block may also be invoked within a method by using the "yield" statement.
+
 4. How do I pass a block to a method? What is the method signature?
 
+A. When executing a method, you can add a block of code by surrounding the block in braces. An iterator method can also target and invoke a block. 
+
+A method signature defines the number and order in which arguments are to be passed into the method.
+
 5. Where would you use regular expressions?
+
+A. Regular expressions are useful when working with strings. There are times when the Ruby String class does not support what is needed in practice, such as testing for pattern matches, searching and replacing specific pieces of a string, or extracting particular parts of a string. These are tasks that regular expressions are designed for.
