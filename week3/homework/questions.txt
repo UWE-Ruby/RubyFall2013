@@ -6,10 +6,18 @@ Please Read:
 
 1. What is a symbol?
 
+An identifier cooresponding to a string. 
+
 2. What is the difference between a symbol and a string?
+
+A string is just a "string". A symbol is a string serves the purpose of identifying an object. 
 
 3. What is a block and how do I call a block?
 
+A set of code that is inside {} or the keywords do and end. A block can be thought of as a method itself that is called a yield statement. 
+
 4. How do I pass a block to a method? What is the method signature?
+Be defining a method that used yield to invoke the code inside the block when that method is used.  The method signature is the name of the method.
 
 5. Where would you use regular expressions?
+To sort through various strings searching for patterns. 

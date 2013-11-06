@@ -4,6 +4,14 @@ class Book
 
   @@book_count = 0
 
+<<<<<<< HEAD
+  def self.library_count
+    @@book_count
+  end
+
+  def test
+    @test= "hello!"
+=======
   def self.book_count
     @@book_count
   end
@@ -17,11 +25,17 @@ class Book
 
   def test
     @test = "Hello!"
+>>>>>>> fde8a74b427aa79cd14a4014401682c12225e82b
   end
 
   def out_put_test
     puts @test
     puts @@book_count
   end
+<<<<<<< HEAD
+end
+
+=======
 
 end
+>>>>>>> fde8a74b427aa79cd14a4014401682c12225e82b
