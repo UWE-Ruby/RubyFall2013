@@ -8,6 +8,7 @@ describe Calculator do
 
   describe "#sum" do
     it "computes the sum of an empty array" do
+      Calculator.new
       @calculator.sum([]).should == 0
     end
     
