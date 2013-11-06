@@ -6,8 +6,8 @@ module SimonSays
 		@the_string = the_string
 	end
 
-	def echo(the_string)
-		the_string.to_s
+	def echo the_string
+		the_string
 	end
 
 	def shout(the_string)
