@@ -1,0 +1,9 @@
+class CodeTimer
+
+ def self.time_code
+   start = Time.now
+   yield
+   finish = Time.now
+   finish - start
+ end
+end
