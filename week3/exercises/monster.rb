@@ -1,14 +1,14 @@
 require './named_thing.rb'
-class Monster
+
+class Monsters
 	include NamedThing
-	attr_accessor :vulnerabilities, :dangers
-    attr_reader :nocturnal, :legs
-	
-	def initialize(noc, legs, name="Monster", vul = [], dangers = [])
-		super(name)
-		@nocturnal = noc
-		@vlunerabilities = vul
+	attr_accessor :names, :legs, :dangers, :vulnerabilities, :nocturnal
+
+	def initialize legs, nocturnal, name="Monster", dangers=[], vulnerabilities=[]
+		@leg = legs
+		@nocturnal = nocturnal
 		@dangers = dangers
-		@legs = legs
+		@vulnerabilities = vulnerabilities
+		super name
 	end
-end	
+end

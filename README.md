@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 RubyFall2013
 ============
 
@@ -57,3 +58,9 @@ Week 10
 * Final due!
 * Project due!
 * Interesting Stuff
+=======
+jonashaskins_midterm
+====================
+
+keeps my midter
+>>>>>>> a909850fc83ae544cc25011759e2c6217f254bb5
