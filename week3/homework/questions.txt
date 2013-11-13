@@ -6,10 +6,31 @@ Please Read:
 
 1. What is a symbol?
 
+	A symbol is a identifier defined by a series of characters preceded by a colon.  
+	A symbol can be created by putting a colon before any string literal.  Construction 
+	follows interpolation rules for double quoted strings.  
+	
 2. What is the difference between a symbol and a string?
+	Strings are mutable.  They can be changed after assignment.  Symbols are immutable.
+	Each String object holds its own place in memory.  A symbol of a given name occupies
+	only one place in memory; a new variable assignment to a symbol of an already assigned
+	name points to the object id of the original.  
 
 3. What is a block and how do I call a block?
+	A block is a segment of code enclosed in curly braces({}) or the words do and end.
+	Stylistically, a code block that can fit on one line is enclosed between {} and 
+	a code block across multiple lines is enclosed between do and end.  Usually.
+	A block can take parameters which are placed between vertical bars at the block start.
+	A block can be called with an iterator.  
 
 4. How do I pass a block to a method? What is the method signature?
+	A block is invoked every time a yield statement is encountered within a method.
+	A method signature is the named set of parameters that must be passed in order for it
+	to successfully be called.  
 
 5. Where would you use regular expressions?
+	Regular expressions are used in matching patterns in strings.  Useful applications 
+	include verifying that input meets validation criteria, whether a string includes some 
+	piece of text, or substituting some relevant portion of a string.
+	
+

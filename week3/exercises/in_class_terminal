@@ -1,0 +1,166 @@
+Last login: Tue Oct 22 18:00:06 on ttys000
+d-173-250-179-140:~ ChrystaGoto$ ls
+DanRuby		Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	RubyFall2013
+d-173-250-179-140:~ ChrystaGoto$ cd rubyfall2013
+d-173-250-179-140:rubyfall2013 ChrystaGoto$ ls
+LICENSE		resources.md	week2
+README.md	week1		week3
+d-173-250-179-140:rubyfall2013 ChrystaGoto$ cd week2
+d-173-250-179-140:week2 ChrystaGoto$ ls
+class_materials	exercises	homework
+d-173-250-179-140:week2 ChrystaGoto$ cd exercises
+d-173-250-179-140:exercises ChrystaGoto$ ls
+book.rb			book_spec_in_class.rb	mad_libs_in_class.rb
+book_spec.rb		mad_libs.rb
+d-173-250-179-140:exercises ChrystaGoto$ rspec book_spec_in_class.rb
+No examples found.
+
+
+Finished in 0.00006 seconds
+0 examples, 0 failures
+d-173-250-179-140:exercises ChrystaGoto$ rspec book_spec_in_class.rb --color --format nested
+No examples found.
+
+Finished in 0.00006 seconds
+0 examples, 0 failures
+d-173-250-179-140:exercises ChrystaGoto$ rspec book_spec_in_class.rb --color --format nested
+No examples found.
+
+Finished in 0.00006 seconds
+0 examples, 0 failures
+d-173-250-179-140:exercises ChrystaGoto$ irb
+1.9.3-p392 :001 > []
+ => [] 
+1.9.3-p392 :002 > array.new
+NameError: undefined local variable or method `array' for main:Object
+	from (irb):2
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :003 > Array.new
+ => [] 
+1.9.3-p392 :004 > [1, 'two', 45]
+ => [1, "two", 45] 
+1.9.3-p392 :005 > a = _
+ => [1, "two", 45] 
+1.9.3-p392 :006 > a.first
+ => 1 
+1.9.3-p392 :007 > a.last
+ => 45 
+1.9.3-p392 :008 > a[2]
+ => 45 
+1.9.3-p392 :009 > a.size
+ => 3 
+1.9.3-p392 :010 > a*3
+ => [1, "two", 45, 1, "two", 45, 1, "two", 45] 
+1.9.3-p392 :011 > a*a
+TypeError: can't convert Array into Integer
+	from (irb):11:in `*'
+	from (irb):11
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :012 > a[7] = "Foo"
+ => "Foo" 
+1.9.3-p392 :013 > a.size
+ => 8 
+1.9.3-p392 :014 > a.length
+ => 8 
+1.9.3-p392 :015 > exit
+d-173-250-179-140:exercises ChrystaGoto$ irb
+1.9.3-p392 :001 > {}
+ => {} 
+1.9.3-p392 :002 > hsh=_
+ => {} 
+1.9.3-p392 :003 > hsh["hello"] = "world"
+ => "world" 
+1.9.3-p392 :004 > hsh
+ => {"hello"=>"world"} 
+1.9.3-p392 :005 > hsh["one"] = 1
+ => 1 
+1.9.3-p392 :006 > hsh
+ => {"hello"=>"world", "one"=>1} 
+1.9.3-p392 :007 > {hello: "world"}
+ => {:hello=>"world"} 
+1.9.3-p392 :008 > exit
+d-173-250-179-140:exercises ChrystaGoto$ cd 
+d-173-250-179-140:~ ChrystaGoto$ ls
+DanRuby		Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	RubyFall2013
+d-173-250-179-140:~ ChrystaGoto$ cd rubyfall2013
+d-173-250-179-140:rubyfall2013 ChrystaGoto$ ls
+LICENSE		resources.md	week2
+README.md	week1		week3
+d-173-250-179-140:rubyfall2013 ChrystaGoto$ cd week3
+d-173-250-179-140:week3 ChrystaGoto$ ls
+class_materials	exercises	homework
+d-173-250-179-140:week3 ChrystaGoto$ cd exercises
+d-173-250-179-140:exercises ChrystaGoto$ ls
+monster.rb	monsters.rb	named_thing.rb	vampire.rb
+d-173-250-179-140:exercises ChrystaGoto$ irb
+1.9.3-p392 :001 > load 'monsters.rb'
+ => true 
+1.9.3-p392 :002 > $monsters
+ => [{:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2}, {:name=>"Mummy", :nocturnal=>false, :dangers=>["bites", "scratches", "curses"], :vulnerabilities=>["fire", "decapitation", "cats"], :legs=>2}, {:name=>"Vampire", :nocturnal=>true, :dangers=>["bites", "hypnosis"], :vulnerabilities=>["wood", "decapitation", "crosses", "holy_water", "garlic", "daylight"], :legs=>2}, {:name=>"Werewolf", :nocturnal=>true, :dangers=>["bites", "scratches"], :vulnerabilities=>["silver"], :legs=>4}, {:name=>"Blob", :nocturnal=>false, :dangers=>["suffocation"], :vulnerabilities=>["CO2", "ice", "cold"], :legs=>0}] 
+1.9.3-p392 :003 > $monsters.first[:name]
+ => "Zombie" 
+1.9.3-p392 :004 > $monsters.first
+ => {:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2} 
+1.9.3-p392 :005 > $monsters.select{|k,v| k= :nocturnal}
+ => [{:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2}, {:name=>"Mummy", :nocturnal=>false, :dangers=>["bites", "scratches", "curses"], :vulnerabilities=>["fire", "decapitation", "cats"], :legs=>2}, {:name=>"Vampire", :nocturnal=>true, :dangers=>["bites", "hypnosis"], :vulnerabilities=>["wood", "decapitation", "crosses", "holy_water", "garlic", "daylight"], :legs=>2}, {:name=>"Werewolf", :nocturnal=>true, :dangers=>["bites", "scratches"], :vulnerabilities=>["silver"], :legs=>4}, {:name=>"Blob", :nocturnal=>false, :dangers=>["suffocation"], :vulnerabilities=>["CO2", "ice", "cold"], :legs=>0}] 
+1.9.3-p392 :006 > $monsters
+ => [{:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2}, {:name=>"Mummy", :nocturnal=>false, :dangers=>["bites", "scratches", "curses"], :vulnerabilities=>["fire", "decapitation", "cats"], :legs=>2}, {:name=>"Vampire", :nocturnal=>true, :dangers=>["bites", "hypnosis"], :vulnerabilities=>["wood", "decapitation", "crosses", "holy_water", "garlic", "daylight"], :legs=>2}, {:name=>"Werewolf", :nocturnal=>true, :dangers=>["bites", "scratches"], :vulnerabilities=>["silver"], :legs=>4}, {:name=>"Blob", :nocturnal=>false, :dangers=>["suffocation"], :vulnerabilities=>["CO2", "ice", "cold"], :legs=>0}] 
+1.9.3-p392 :007 > monsters.first
+NameError: undefined local variable or method `monsters' for main:Object
+	from (irb):7
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :008 > $monsters.first
+ => {:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2} 
+1.9.3-p392 :009 > $monsters.count{|m| m[:nocturnal]}
+ => 2 
+1.9.3-p392 :010 > $monsters.select{|m| m[:nocturnal]}.each{|m| m[:name]}
+ => [{:name=>"Vampire", :nocturnal=>true, :dangers=>["bites", "hypnosis"], :vulnerabilities=>["wood", "decapitation", "crosses", "holy_water", "garlic", "daylight"], :legs=>2}, {:name=>"Werewolf", :nocturnal=>true, :dangers=>["bites", "scratches"], :vulnerabilities=>["silver"], :legs=>4}] 
+1.9.3-p392 :011 > legs = 0
+ => 0 
+1.9.3-p392 :012 > $monsters.each {|m| legs +=[:legs]}
+TypeError: Array can't be coerced into Fixnum
+	from (irb):12:in `+'
+	from (irb):12:in `block in irb_binding'
+	from (irb):12:in `each'
+	from (irb):12
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :013 > $monsters.each{|m| legs += m[:legs]}
+ => [{:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2}, {:name=>"Mummy", :nocturnal=>false, :dangers=>["bites", "scratches", "curses"], :vulnerabilities=>["fire", "decapitation", "cats"], :legs=>2}, {:name=>"Vampire", :nocturnal=>true, :dangers=>["bites", "hypnosis"], :vulnerabilities=>["wood", "decapitation", "crosses", "holy_water", "garlic", "daylight"], :legs=>2}, {:name=>"Werewolf", :nocturnal=>true, :dangers=>["bites", "scratches"], :vulnerabilities=>["silver"], :legs=>4}, {:name=>"Blob", :nocturnal=>false, :dangers=>["suffocation"], :vulnerabilities=>["CO2", "ice", "cold"], :legs=>0}] 
+1.9.3-p392 :014 > legs
+ => 10 
+1.9.3-p392 :015 > $monsters.inject(0){|legs, m| legs += m[:legs]}
+ => 10 
+1.9.3-p392 :016 > legs
+ => 10 
+1.9.3-p392 :017 > $monsters.map{|m| m[:legs]}.inject(:+)
+ => 10 
+1.9.3-p392 :018 > dangers = map{|m| m[:dangers]}
+NoMethodError: undefined method `map' for main:Object
+	from (irb):18
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :019 > dangers = $monsters.map{|m| m[:dangers]}
+ => [["bites", "scratches"], ["bites", "scratches", "curses"], ["bites", "hypnosis"], ["bites", "scratches"], ["suffocation"]] 
+1.9.3-p392 :020 > dangers.flatten!
+ => ["bites", "scratches", "bites", "scratches", "curses", "bites", "hypnosis", "bites", "scratches", "suffocation"] 
+1.9.3-p392 :021 > dangers.inject(Hash.new(0)){hist, danger| hist[danger]+=1 hist}
+SyntaxError: (irb):21: syntax error, unexpected '|', expecting '='
+dangers.inject(Hash.new(0)){hist, danger| hist[danger]+=1 hist}
+                                         ^
+(irb):21: syntax error, unexpected tIDENTIFIER, expecting '}'
+dangers.inject(Hash.new(0)){hist, danger| hist[danger]+=1 hist}
+                                                              ^
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :022 > dangers.inject(Hash.new(0)){hist, danger| hist[danger]+=1
+1.9.3-p392 :023?>   hist}
+SyntaxError: (irb):22: syntax error, unexpected '|', expecting '='
+dangers.inject(Hash.new(0)){hist, danger| hist[danger]+=1
+                                         ^
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :024 > dangers.inject(Hash.new0)){|hist, danger| hist[danger]+=1; hist}
+SyntaxError: (irb):24: syntax error, unexpected ')', expecting $end
+dangers.inject(Hash.new0)){|hist, danger| hist[danger]+=1; hist}
+                          ^
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3-p392 :025 > dangers.inject(Hash(0)) do
