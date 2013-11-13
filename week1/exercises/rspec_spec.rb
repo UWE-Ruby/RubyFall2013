@@ -41,7 +41,7 @@ describe "The Rspec ruby gem" do
 
     it "alerts you when examples fail" do
 
-      # When this example fails,
+      # When this example fails,  
       # it will show "expected" as 2, and "actual" as 1
       1.should eq 2
 
@@ -53,7 +53,7 @@ describe "The Rspec ruby gem" do
 
       # The following expression is false.
       # However, this example PASSES because no expectation was created.
-      true == false
+      true.should eq true
 
       # The following line of code is correct, and would cause the example to fail:
       # true.should == false
@@ -77,15 +77,25 @@ describe "The Rspec ruby gem" do
   		# Fix the Failing Test
   		# Order of Operations is Please Excuse My Dear Aunt Sally:
   		# Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
-  		(1+2-5*6/2).should eq -13
+  		(1+2-5*6/2).should eq -12
   	end
   	it "should count the characters in your name" do
-      pending
+      "Kate".should have(4).characters
     end
   	
-  	it "should check basic math"
+  	it "should check basic math" do
+    
+      (14*2).should eq 28
 
-  	it "should check basic spelling"
+    end
+
+
+  	it "should check basic spelling" do
+    
+      "Fox".should eq "Fox"
+
+    end
+
 
   end
 

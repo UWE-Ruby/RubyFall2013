@@ -18,9 +18,9 @@ describe Timer do
 	end
 
 	it "should run our code multiple times" do
-		counter = 0
+		counter = 3
 		result = Timer.time_code(17) {counter += 1}
-		counter.should equal 17
+		counter.should equal 20
 	end
 
 	it "should give the average time" do

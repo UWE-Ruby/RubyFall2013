@@ -17,11 +17,11 @@ describe Worker do
 	end
 
 	it "executes a block in the context of the calling method" do
-		n = 1
+		n = 3
 		result = Worker.work do
 			n + 4
 		end
-		result.should == 5
+		result.should == 7
 	end
 
 

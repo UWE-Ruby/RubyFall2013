@@ -34,14 +34,17 @@ describe Calculator do
   	it "multiplies an array of numbers" do
 		@calculator.multiply([2,2]).should eq 4
   	end
-  end
   
-  it "raises one number to the power of another number" do
-  	p = 1
-	32.times{ p *= 2 } 
-	@calculator.pow(2,32).should eq p 
   end
-  
+
+  describe "#pow" do
+    it "raises one number to the power of another number" do
+  	 p = 1
+	   32.times{ p *= 2 } 
+	   @calculator.pow(2,32).should eq p 
+    end
+ end
+
   # http://en.wikipedia.org/wiki/Factorial
   describe "#factorial" do
     it "computes the factorial of 0" do
