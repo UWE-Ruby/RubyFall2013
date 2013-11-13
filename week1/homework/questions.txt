@@ -4,12 +4,26 @@ p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
 
+An object is an instance of a class which contains a value.
+
 2. What is a variable?
+
+A variable is a reference to that object/value.
 
 3. What is the difference between an object and a class?
 
+A class is the source material which objects are derived from. It is used to create instances, or objects.
+
 4. What is a String?
+
+A string is any number of characters.
 
 5. What are three messages that I can send to a string object? Hint: think methods
 
+1) Encode
+2) Chomp
+3) Length
+
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+
+You can use either a single quote or a double quote to define a string literally. Double permits escape sequences and interpolation.
