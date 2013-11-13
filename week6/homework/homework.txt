@@ -1,0 +1,2 @@
+Release a test gem to RubyGems.org and email me your gem name
+E-mail me your project idea 
