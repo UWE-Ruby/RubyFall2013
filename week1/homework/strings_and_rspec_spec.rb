@@ -1,3 +1,4 @@
+#using ARGV
 # encoding: utf-8
 
 # Please make these examples all pass
@@ -14,13 +15,18 @@ describe String do
 		end
 		it "should be able to count the charaters"
 		it "should be able to split on the . charater" do
-			pending
-			result = #do something with @my_string here
+			
+			
+			result = str.count(@my_string)
+			result2 = @my_string.split(".")
 			result.should have(2).items	
+			return result + " " + result2
 		end
 		it "should be able to give the encoding of the string" do
-			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
+		  
+			encoderesult = @my_string.encoding
+			encoderesult.encoding
+			encoderesult should eq Encoding.find("UTF-8")
 		end
 	end
 end
-
