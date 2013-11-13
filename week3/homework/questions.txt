@@ -5,11 +5,22 @@ Please Read:
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
 1. What is a symbol?
+An identifier that represents a unique name for an object
 
 2. What is the difference between a symbol and a string?
+Symbols are unique constants, so they cannot be changed. New instances of a symbol refers to the same object. Strings can be changed, and new instances make a new object.
 
 3. What is a block and how do I call a block?
+Code that is basically a method that can be passed to iterators and enumerators. The iterator or enumerator then runs the code for each item in the array/hash. Blocks can be called after a method that accepts a block (such as an enumerator method). You must wrap the block braces or inbetween do/end.
 
 4. How do I pass a block to a method? What is the method signature?
+Object.each ​{|value| code to run }
+or
+Object.each do |value|
+  code to run
+end
+
+Method signature is the variable(s) being passed to the block (whatever is inbetween the pipes).
 
 5. Where would you use regular expressions?
+When you need to find a series of characters within a string.
