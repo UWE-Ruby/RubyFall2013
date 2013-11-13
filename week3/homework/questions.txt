@@ -6,10 +6,53 @@ Please Read:
 
 1. What is a symbol?
 
+   A symbol is an identifier that corresponds to a string of characters, often a
+   name.  A symbol is constructed for a name by proceeding the name with a colon.
+   A symbol can be constructed for an arbitrary string by proceeding a string
+   literal with a colon.  A particular string or name will always generate the
+   same symbol, regardless of how the name is used within the program.  To create
+   a symbol, you can use the %s delimited notation.
+
 2. What is the difference between a symbol and a string?
+
+   A string can be changed while a symbol can not.  A string is mutable.  When a
+   new string is created, it creates a new object with a new object id.  The same
+   symbol on the other hand, will always use the same object id.
+
+   A great discuss of the differences can be found here:
+   http://www.robertsosinski.com/2009/01/11/the-difference-between-ruby-symbols-and-strings
 
 3. What is a block and how do I call a block?
 
+   A block is a chunk of code enclosed between either braces or the keywords do
+   and end. Typically, braces are used for blocks that fit on one line and do/end
+   keywords are used when the block spans multiple lines.  A block can be thought
+   of somewhat like the body of an anonymous method.  A block can also take parameters.
+   Those parameters appear at the beginning of the block between to vertical bars.
+   The body of the block is not executed when Ruby first sees it.  It is saved away
+   to be called later.
+
+   A block is called by a method that proceeds the block.  For example, lets say you
+   have an array ["a", "b", "c"].  A block could be called by the "each" method once
+   for each element in the array.  Each element would be passed to the block via a
+   parameter, e.g. ["a", "b", "c"].each do | letter |.  
+
 4. How do I pass a block to a method? What is the method signature?
 
+   A block may be invoked within a method using the yield statement.  When yield
+   is executed, it invokes the code in the block.
+
+   The method signature look like this:
+
+   def hi_there
+     yield
+   end
+
+   hi_there {"Hi there!"}
+
 5. Where would you use regular expressions?
+
+   Regular expressions are great for testing a string to see if it matches a pattern.
+   They can be used to extract from a string the sections that match all or part of a
+   pattern. They can also be used to change the string, replacing parts that match a
+   pattern.
