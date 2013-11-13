@@ -1,15 +1,33 @@
-Please Read: 
+Please Read:
  - Chapter 6 Standard Types
  - Review Blocks
  - Chapter 7 Regular Expressions
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
 1. What is a symbol?
+Symbols are unique constant names, which are declared by prepending a string of characters or a string literal with a : (colon). They are often used as hash names or for unique method arguments.
 
 2. What is the difference between a symbol and a string?
+Symbols are unique constants--meaning their values cannot be changed, and any new instance of the same symbol refers to the same object. Strings, on the other hand, can be edited and modified (unless they are frozen), and any new instance of the same string refers to a new object.
 
 3. What is a block and how do I call a block?
+A block is a chunk of code that acts as an anonymous method that can be passed to iterators and enumerators, allowing you to invoke the code chunk for each item in the iteration. Blocks are called immediately after the invocation of a method that accepts a block, by placing the code chunk between braces ({}) or the do/end keywords.
 
 4. How do I pass a block to a method? What is the method signature?
 
+Blocks are passed to a method like so:
+
+[1, 2, 3, 4].each ​{|value| p value}
+
+or, if you're not into the whole brevity thing:
+
+[1, 2, 3, 4].each ​do​ |value|
+
+  p value
+​ 
+​end​
+
+The method signature of the block is the parameter definition between the pipes, in this case |value|.
+
 5. Where would you use regular expressions?
+Parsing data from a file, validating form inputs, searching for substrings within a string, validating input formatting, replacing or extracting a pattern in a string.
