@@ -43,11 +43,14 @@ describe "The Rspec ruby gem" do
 
       # When this example fails,
       # it will show "expected" as 2, and "actual" as 1
-      1.should eq 2
+      1.should eq 1
 
     end
-
-    it "supports placeholder examples that lack code (like this one)"
+	
+	# jhjh
+    it "supports placeholder examples that lack code (like this one)" do
+	1.should eq 1
+    end
 
     it "requires that examples use expectations (like #should) to work properly" do
 
@@ -71,21 +74,32 @@ describe "The Rspec ruby gem" do
     end
 
   end
+  
+  ## JHJH added class tests      
+  context "When Somethings Happens When I'm Logged In" do
+                it "should say Something" do
+                        "Something".should eq "Something"
+                end
+        end
+
 
   context "Examples for in-class test exploration" do
   	it "should know order of operations" do
   		# Fix the Failing Test
   		# Order of Operations is Please Excuse My Dear Aunt Sally:
   		# Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
-  		(1+2-5*6/2).should eq -13
+  		(1+2-5*6/2).should eq -12
   	end
-  	it "should count the characters in your name" do
-      pending
+  	
+    context "Count my name" do	
+	it "should count the characters in your name" do
+	"Jonas".should have(5).characters
+	end
     end
   	
-  	it "should check basic math"
+  	it "should check basic math" 
 
-  	it "should check basic spelling"
+  	it "should check basic spelling" 
 
   end
 
