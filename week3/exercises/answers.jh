@@ -1,0 +1,27 @@
+1.9.3-p392 :001 > load 'monsters.rb'
+ => true 
+1.9.3-p392 :002 > $monsters.count{|m| m[:nocturnal]}
+ => 2 
+1.9.3-p392 :005 > $monsters.select{|m| m[:nocturnal]}.map{|m| m[:name]}
+ => ["Vampire", "Werewolf"] 
+
+1.9.3-p392 :007 > $monsters.select{|m| m[:nocturnal]}.map{|m| m[:name]}
+ => ["Vampire", "Werewolf"] 
+
+1.9.3-p392 :009 > legs = 0
+ => 0 
+
+1.9.3-p392 :011 > $monsters.each{|m| legs += m[:legs]}
+ => [{:name=>"Zombie", :nocturnal=>false, :dangers=>["bites", "scratches"], :vulnerabilities=>["fire", "decapitation"], :legs=>2}, {:name=>"Mummy", :nocturnal=>false, :dangers=>["bites", "scratches", "curses"], :vulnerabilities=>["fire", "decapitation", "cats"], :legs=>2}, {:name=>"Vampire", :nocturnal=>true, :dangers=>["bites", "hypnosis"], :vulnerabilities=>["wood", "decapitation", "crosses", "holy_water", "garlic", "daylight"], :legs=>2}, {:name=>"Werewolf", :nocturnal=>true, :dangers=>["bites", "scratches"], :vulnerabilities=>["silver"], :legs=>4}, {:name=>"Blob", :nocturnal=>false, :dangers=>["suffocation"], :vulnerabilities=>["CO2", "ice", "cold"], :legs=>0}] 
+1.9.3-p392 :012 > legs
+ => 10 
+1
+
+counts the legs. shorthand. adds ( sum ) numbers in the array.
+$monsters.map{|m| m[:legs]}.inject(:+)
+
+
+
+1.9.3-p392 :031 > dangers.inject(Hash.new(0)){|hist, danger| hist[danger]+=1 ;hist}
+ => {["bites", "scratches"]=>2, ["bites", "scratches", "curses"]=>1, ["bites", "hypnosis"]=>1, ["suffocation"]=>1} 
+1
