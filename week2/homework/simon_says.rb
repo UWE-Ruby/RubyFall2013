@@ -12,7 +12,7 @@ module SimonSays
 
 	def repeat(word_to_repeat, times_to_repeat = 2)
 		@word_to_repeat = word_to_repeat
-		(@word_to_repeat + " ") * times_to_repeat + "\n"
+		(@word_to_repeat + " ") * times_to_repeat
 	end
 
 	def start_of_word(return_letters, number_of_letters)
@@ -26,3 +26,5 @@ module SimonSays
 		@result = @word_to_break.split
 		@result[0]
 	end
+
+end
