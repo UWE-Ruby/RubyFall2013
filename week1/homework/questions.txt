@@ -16,7 +16,7 @@ A string is one or more characters.  A string object is an object that is a memb
 
 5. What are three messages that I can send to a string object? Hint: think methods
 length (return length of string)
-index (return first character location of a hit on asubstring or regex pattern)
+index (return first character location of a hit on a substring or regex pattern)
 encode (convert character encoding)
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
