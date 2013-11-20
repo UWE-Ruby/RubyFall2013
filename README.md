@@ -34,15 +34,14 @@ Week 5
 * Rake
 
 Week 6
-* Mid-term due!
 * Projects intro
 * Gems
 * CI
 
 Week 7
+* Mid-term due!
 * Cucumber
 * Testing frameworks
-* Refactoring
 
 Week 8
 * Metaprogramming
@@ -51,6 +50,7 @@ Week 8
 
 Week 9
 * Exceptions
+* Refactoring
 * Review
 
 Week 10
