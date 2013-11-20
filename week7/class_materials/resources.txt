@@ -1,0 +1,10 @@
+Slides: http://www.slideshare.net/reneedv/week7-15273981
+
+BDD: http://en.wikipedia.org/wiki/Behavior-driven_development#Principles_of_BDD
+cucumber: cukes.info
+cucumber wiki: https://github.com/cucumber/cucumber/wiki
+Given-When-Then: https://github.com/cucumber/cucumber/wiki/Given-When-Then
+Step Definitions: https://github.com/cucumber/cucumber/wiki/Step-Definitions
+
+MiniTest: https://github.com/seattlerb/minitest
+
