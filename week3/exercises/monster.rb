@@ -1,4 +1,4 @@
-require './named_thing.rb'
+require_relative 'named_thing.rb'
 class Monster
 	include NamedThing
 	attr_accessor :vulnerabilities, :dangers
