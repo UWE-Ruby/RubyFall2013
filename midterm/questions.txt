@@ -1,0 +1,56 @@
+Instructions for Mid-Term submission and Git Review (10pts):
+ - Create a git repository for your answers
+ - Add and Commit as you work through the questions and programming problems
+ - Your git log should reflect your work, don't just commit after you have finished working
+ - Use .gitignore to ignore any files that are not relevant to the midterm
+ - E-mail me your ssh public key
+ - I will email you back with your repository name
+ - Add a remote to your git repository: git@nird.us:RubyFall2012/YOURREPOSITORYNAME.git
+ - Push your changes to the remote
+ - After 6pm Tuesday November 13th you will not be able to push to your remote repository (or clone).
+ 
+ Questions (20pts):
+ - What are the three uses of the curly brackets {} in Ruby?
+ 1. String interpolation: "#{1+1}"
+ 2. Hash instantiation: {:key => "value"}
+ 3. Block/lambda notation: {puts "hello"}
+
+ - What is a regular expression and what is a common use for them?
+ A Regular expression is a pattern used to search text. A common use for them is for verifying the format of user input, like email addresses or phone numbers. 
+
+ - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
+A String is stored as a collection of characters (bytes) and the value of a string instance can change. A Symbol is a fixed name in ruby and is stored as an integer, so it takes up much less space than a string. A FixNum is an integer in Ruby and does not change its value. It is stored the same way as a symbol (you can think of symbols as Fixed Strings). Floats can have their value change and are stored like a string: each byte of the float is stored and can change individually (This has changed with Floats in Ruby 2.0.0 - floats with a precision of less than 32 bits are now stored like Fixnum and retain the same object_id for subsequent calls. Also, floats with greater than 32 bits in their decimal are rounded down to the closest fixed float of 32 bits. You should play with this in irb with Ruby 1.9.3 and Ruby 2.0.0 to see the difference.)
+
+ - Are these two statements equivalent? Why or Why Not?
+   1. x, y = "hello", "hello"
+   2. x = y = "hello"
+No, in the first example x and y point to different objects, in the second they point to the same object. In # 2 if y changes x will change and vice versa. In # 1 if y changes x does not change and vice versa.
+
+- What is the difference between a Range and an Array?
+A Range is an object that denotes a sequence between two objects (lower/min and higher/max). It does not store every element of the sequence, only the min and max. An array is an ordered list of many objects. Each object in an array is stored and cannot necessarily be determined by the prior object in the array.
+
+- Why would I use a Hash instead of an Array?
+If I had data which I wanted to reference by meta-data instead of by order I would use a hash. For example, if I had a set of attributes common to a collection of things, I would use a hash so I could look across my data (or search) by the data's attribute dimensions.
+
+- What is your favorite thing about Ruby so far?
+.map
+
+- What is your least favorite thing about Ruby so far?
+nil.object_id => 4
+
+ Programming Problems (10pts each):
+ - Write a passing rspec file called even_number_spec.rb that tests a class called EvenNumber.
+    - The EvenNumber class should:
+       - Only allow even numbers
+       - Get the next even number
+       - Compare even numbers
+       - Generate a range of even numbers
+- Make the rspec tests in wish_list_spec.rb pass by writing a WishList class
+   - The WishList class should:
+      - Mixin Enumerable
+      - Define each so it returns wishes as strings with their index as part of the string
+
+Mid-Term Spec (50pts):
+- Make the tests pass.
+ 
+ 
