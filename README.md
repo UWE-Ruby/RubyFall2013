@@ -57,3 +57,7 @@ Week 10
 * Final due!
 * Project due!
 * Interesting Stuff
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/UWE-Ruby/rubyfall2013/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
