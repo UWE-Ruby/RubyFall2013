@@ -4,27 +4,15 @@ class Book
 
   @@book_count = 0
 
-<<<<<<< HEAD
-	@@book_count = 0
-
-	def initialize(title, pages)
-		@title = title
-		@pages = pages
-
-		@@book_count += 1
-	end
-=======
   def self.book_count
     @@book_count
   end
->>>>>>> upstream/master
 
   def initialize title = "Not Set", page_count = 0
     @@book_count += 1
     @page_count = page_count
     @title = title
   end
-
 
   def test
     @test = "Hello!"

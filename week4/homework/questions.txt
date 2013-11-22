@@ -3,7 +3,13 @@ Chapter 10 Basic Input and Output
 The Rake Gem: http://rake.rubyforge.org/
 
 1. How does Ruby read files?
+	Ruby uses same methods for basic I/O for all file object.  I.e. gets, puts, etc
 2. How would you output "Hello World!" to a file called my_output.txt?
+	File.open("my_output.txt") do |file|
+	file.puts "Hello World!"
+	end
 3. What is the Directory class and what is it used for?
+	
 4. What is an IO object?
 5. What is rake and what is it used for? What is a rake task?
+	
