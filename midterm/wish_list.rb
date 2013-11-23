@@ -1,6 +1,6 @@
 class WishList
   include Enumerable
-  attr_accessor :wishes
+  attr_writer :wishes
 
   def each
     @wishes.each_with_index do |w,i|

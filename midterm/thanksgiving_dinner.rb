@@ -34,7 +34,7 @@ class Dinner
     @menu = find_menu(kind)
   end
   def seating_chart_size
-    guests.inject(0){|sum,g| sum += g.size}
+    guests.inject(0){|sum,g| sum + g.size}
   end
 
   def proteins
@@ -51,6 +51,7 @@ class Dinner
 end
 
 class ThanksgivingDinner < Dinner
+
   def number_of_desserts
     @menu[:desserts].map{|k,v| v}.flatten.count
   end

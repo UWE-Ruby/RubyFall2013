@@ -1,12 +1,11 @@
 class Animal
-end
-
-class Turkey < Animal
 	attr_accessor :weight
 	def initialize(weight)
 		@weight = weight
 	end
-	
+end
+
+class Turkey < Animal
 	def gobble_speak(monkey_talk)
 	  monkey_talk.gsub(/\b\w*/) do |w|
 	  	if w[0] =~ /[A-Z]/
