@@ -11,7 +11,9 @@ Questions:
 	We could use ducktyping to add a customers name to a file
 
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
-	Class methods: you define class methods in one class and then use them in subclasses of that class. 
+	Class methods: you define class methods in one class and then use them in subclasses of that class.  Instance Methods: object's "methods" are the instance methods of its class, plus the instance methods of the superclass, the superclass of the superclass, etc.
+
+	Class_eval sets up the environment as if you were in the body of a class definition; instance_eval, when called on a class, acts as if youwere working inside the singleton class of self. Therefore, any methods defined will become class methods.
 
 5. What is the difference between a singleton class and a singleton method?
-	Singleton Class only that has only one instance.
+	Singleton Class only that has only one instance. It will inherit both instance and singleton methods. Singleton methods are only available for a specific object.
