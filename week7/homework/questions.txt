@@ -3,7 +3,23 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+
+method_missing is a method that can be used when and object is sent a message that it cannot find a method for. method_missing will override the defauly  error that gets raised, and depending on the code you write within method_missing, handles the exception in a more graceful manner.
+
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+
+An EignenClass is a metaclass of an object that is used to store class methods and singleton methods. When a Singleton method is created in an object, Ruby creates an Eigenclass class and stores the method there.
+
+Use duck typing when operating on collections containing objects from different classes. Duck typing helps you to reuse code, and reduces the amount of code you have to maintain.
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+
+You can use ducktyping to accept different data types in your methods so that you have more reusable code, for example a method that can accept either and array or a hash as an argument means you don't have to check type, or write for different data types, resulting in longer, less maintainable code.
+
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+A Class method will run on the class object itself, wheras an instance method will run on the instance of a class object, and have access to the data of that specific instance.
+class_eval allows you to evaluate code on the class object, where instance_eval allows you to evaluate code with an particular instance of a class.
+
 5. What is the difference between a singleton class and a singleton method?
+When you add a method to a specific object Ruby inserts a new anonymous class into the inheritance hierarchy as a container to hold these types of methods. A singleton method is a method that is given to only a single object.
