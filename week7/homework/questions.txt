@@ -3,7 +3,18 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
-2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
-3. When would you use DuckTypeing? How would you use it to improve your code?
+	1a. method_missing is a hook method called by the Ruby interpreter when a called method is not defined. That missing method can be defined by us to handle the method_missing condition with something useful to us, such as delivering a clearer diagnostic message or defining what the method should be in the absence of a definition. The method_missing definition substitutes itself as the (previously undefined) method that was called. This definition and substitution can be made conditional, but failures to all conditions should lead to an explicit call to "super" to forward the call to superclasses so that the failure to find the called method results in an error message rather than being silently ignored. method_missing can also be used to create customized methods on the fly using conditions (such as pattern recognition with Regexp's) that analyze incoming arguments to build or choose the method that becomes the called method.
+
+2. What is an Eigenclass and what is it used for? Where Do Singleton methods live?
+	2a. An eigenclass--also known as a singleton class--is an unnamed class created on the fly when a method is defined for an object and that method doesn't exist in the object's class or any of its superclasses. The singleton methods live in this anonymous (unnamed) class. This singleton class becomes the object's immediate class, placing itself between the object and what would have been--in the absence of these method definitions--the object's class, which then becomes the object's superclass. 
+
+3. When would you use DuckTyping? How would you use it to improve your code?
+	3a. You'd use DuckTyping when you want to maintain modularity and flexibility in what's being done with some object, since DuckTyping enables behavior based on what methods objects can respond to, and different classes of objects can respond to the same methods. An obvious example is the << (append) method, which can work on files, strings and arrays. DuckTyping could be used to improve code by enabling this flexibility and abstraction about the objects to which methods are passed, enabling modular adaptations for code testing or reusing code for structurally different (in terms of the objects manipulated) but operationally similar (in terms of the methods used) needs. 
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+	4a. Class methods are methods called on a class and instance methods are called on an instance of a class. Class methods are commonly identified in the class definitions with the "self." prefixed, and can be called with the class name without creating a new instance of the class. Instance methods don't have the ".self" prefix in their definition, and can only be called after an instance of the class is created, and the call to the method in the class must be made with the instance created. 
+
+	instance_eval sets "self" to an object and evaluates code in a block, creating singleton methods in the object's singleton class. class_eval sets "self" to an object and evaluates code in a block, creating instance methods as if it were working within the singleton class. 
+
 5. What is the difference between a singleton class and a singleton method?
+	5a. A singleton class is created by a singleton method. The singleton class "houses" the method that created it, so it can be called within the bounds of its closure. The singleton method is defined by the coder; the singleton class is created by the Ruby interpreter.
