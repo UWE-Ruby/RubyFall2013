@@ -1,3 +1,80 @@
+-----------------
 notes from week4
 -----------------
+require "#{File.dirname(__FILE__)}/worker"
+you can say require './named_thing.rb'
 
+this will require a file called worker in the same directory
+as the file that is being run
+
+# summing numbers with inject
+input.inject(0, :+)
+
+# this will sum
+# start with 0 and apply this method to each method and the result
+
+# multiplying with
+splat args -- (*args)
+
+# you can use flatten to Returns a new array that is a one-dimensional flattening of self (recursively).
+# That is, for every element that is an array, extract its elements into the new array.
+# The optional level argument determines the level of recursion to flatten.
+
+def fac n
+  product = 1
+  1.upto(n){ |i| product *= 1 }
+  product
+end
+
+recursive functions
+
+statement modifiers -- see below
+
+def fac 1
+  return 1 if n==0 # one of the only times you are going to call return
+  n * fac(n-1)
+end
+
+money gem
+
+BigDecimal class
+
+to_s and to_sym methods
+
+.cover? 
+
+(2..200000).cover? 6
+
+does this range include the value 6?
+
+.. is inclusive 
+
+... is inclusive 
+
+1..5 is 1 through 5 and 1...5 is 1 through 4
+
+('a'..'z').cover? 'B' => false
+
+def <==> (other)
+  @value <==> other.value
+end
+
+The Comparable module
+
+block_given? --- was there a block given?
+
+you can pass a bloc kto any method in ruby, whether or not it does anything with it 
+
+passing parameters to block
+
+yield(paramA, paramB)
+
+call(x)
+
+when you use the syntax &myBlock you are turning it into a lambda by giving it a name
+
+def test hello, world, &my_code 
+  my_code.call
+end
+
+test "bonjour", "world", {puts "hi"}
