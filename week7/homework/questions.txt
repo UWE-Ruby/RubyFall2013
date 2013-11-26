@@ -3,7 +3,46 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+Ruby tries to lookup methods along the inheritance chain by checking
+each ancestor of an object to see if it contains a definition for the 
+method called. You can define a method called method_missing on any object
+that will be called if there is no matching definition for the called
+method. You can use this like Rails' find_by_* methods which use the method_missing
+method to perform call other functions if the method name begins with "find_by_". For instance,
+if I call "find_by_first_name" the missing_method function would call something like 
+find(first_name). In this way, you can respond to methods you haven't even defined, since
+the method_missing is called when there is no matching definition and the method_missing function has a
+reference to the method name and arguments that are being looked up in the inheritance chain when it was called.
+
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+Singleton methods are defined at the object, not the class, level. For instance,
+if I have a class called "Pizza" and two instances of Pizza called "pepperoni" and "mushroom", I
+could define a Singleton method by defining a method called "spicy?" on the pepperoni instance,
+not the Pizza class. If I try to call mushroom.spicy? Ruby would not find the method
+definition, but pepperoni.spicy? would work. Ruby does this by replacing the Pizza class object
+in the inheritance chain with an Eigenclass, which is an anonymous class that contains all of
+the code from Pizza plus the new method spicy? . When I define a new method on the pepperoni instance,
+the pepperoni instance stops inheriting from the Pizza class object and starts inheriting from a new
+class that is made specially for the pepperoni object.
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+Duck typing means types don't matter. What matters is whether the object responds to a message. How that 
+message is responded to doesn't really matter either. Polymorphism is awesome, but it means that the objects
+must share a common inheritance. Duck typing allows you to pass in any object as long as it responds_to? 
+the message you are sending. For instance, rather than checking the type of an object returned by a method
+you can simply check whether the object returned by the method responds_to? the messages you will be sending
+and only require the object to meet the minimum requirements. The method can then be changed to pass back
+whatever (something that inherits from a totally different class, for instance) and as long as the object
+continues to respond to the messages that are sent to it, its all good.
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+You call instance methods on the instance object, and you call class methods on the class object.
+You can pass a string or block to the class_eval method on a Class instance and it will add to the class's definition.
+You can pass a string or block to an object's instance_eval method and it will add it to the object's definition (not shared by other objects from with the same class)
+If you pass a string or block to an object's instance_eval method and the object happens to be a Class, you are essentially creating a class method (like class_eval)
+
+
 5. What is the difference between a singleton class and a singleton method?
+Singleton classes only allow once instance to be instantiated. This automatically happens
+when you define a singleton method (a method on the object itself, not the class). In question 2,
+pepperoni is a singleton class single it has the singleton method spicy?

@@ -11,4 +11,4 @@ class Monster
 		@dangers = dangers
 		@legs = legs
 	end
-end	
+end
