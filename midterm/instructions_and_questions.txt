@@ -1,4 +1,4 @@
-Instructions for Mid-Term submission and Git Review (10pts):
+ Instructions for Mid-Term submission and Git Review (10pts):
  - Create a git repository for your answers
  - Add and Commit as you work through the questions and programming problems
  - Your git log should reflect your work, don't just commit after you have finished working
@@ -11,15 +11,31 @@ Instructions for Mid-Term submission and Git Review (10pts):
  
  Questions (20pts):
  - What are the three uses of the curly brackets {} in Ruby?
+Curly brackets are used for string interpolation, to begin and end a block as well as for hashes.
+
  - What is a regular expression and what is a common use for them? 
+Regular expressions are tools used to match patterns against a string.  They describe the contents of a string and iterate over the string to find matching patterns if any exist.
+
  - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
+Strings and Floats create a new spot in memory each time they are invoked, whereas a FixNum and Symbol use the same chunk of memory.
+
  - Are these two statements equivalent? Why or Why Not?
    1. x, y = "hello", "hello"
    2. x = y = "hello"
+The two statements are not equivalent.  In the first example, two objects are created.  X and y both point to different spots in memory containing the string “hello”.  In the second example, both x and y point to the same object that contains “hello”.
+
 - What is the difference between a Range and an Array?
+A range doesn’t contain a set of numbers the way an array does.  It knows a starting and ending point and can generate numbers in-between.  An array contains a set of things including numbers, strings etc. that can be modified and changed.  It remembers everything within it, rather than a set of boundaries.
+
 - Why would I use a Hash instead of an Array?
+Whenever you’d need the objects you’re storing to be associated with a particular key.  The book uses the example of counting the number of times each word appears in a string; using the words themselves as keys and the entry to keep count.
+
 - What is your favorite thing about Ruby so far?
+Compared to C#, it makes sense and can be read like english most of the time.  The syntax is clear and simple compared to C and C#.  I’ve learned more in five weeks of Ruby than I did in 4 months of C#.
+
 - What is your least favorite thing about Ruby so far?
+Now that we’ve gotten into the specifics of github, testing gems and using external tools, I am lost completely.  Whereas .NET has a simple set of tools through Visual Studio, Ruby’s are disparate and complex.  I’m spending less time learning to write good code and more time wrestling with the command line or github.
+
 
  Programming Problems (10pts each):
  - Write a passing rspec file called even_number_spec.rb that tests a class called EvenNumber.
