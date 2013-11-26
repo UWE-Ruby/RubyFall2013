@@ -4,11 +4,7 @@ class PirateTranslator
       @pirate_string = "Ahoy Matey\n Shiber Me Timbers You Scurvey Dogs!!"
   end
 
-  def say(args)
-    return args
-  end
-
-  def translate
+  def send(*args)
     return @pirate_string
   end
 end
