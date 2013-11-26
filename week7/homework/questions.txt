@@ -3,7 +3,24 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
-2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+  method_missing is a kind of safety net, if a message sent to an object cannot find a method with same name as as is in the message an error is raised unless there is method_missing object provided. This object can be used as an internal integrity check to catch when a sequence of logic is missing a presumed value.
+
+2. What is and Eigenclass and what is it used for? Where Do Singleton methods live? 
+  Singleton methods exist within instances of a given class which are not accessible to other instances of the same class... this is done by creating an anonymous class to hold the objects singleton method with the original class being designated as its superclass... these anonymous classes are known as Eignclasses... Eigen roughly means "ones very own" in german.
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+  Well, I am not sure about how to use this but I am getting there...
+  DuckTyping is a programming technique which you can use in dynamically typed languages such as Ruby. With DuckTyping you can write less code and produce more which means you have less to create and maintain to acheive a given end. 
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+  The simplest way I have seen this put is class methods are methods called on a class and instance methods are methods called on an instance of a class. The difference between instance_eval is that you can use instance_eval on any object and class_eval can only be called on classes and modules and in doing so only evaluates the class/module creating instance methods.
+
 5. What is the difference between a singleton class and a singleton method?
+  ...metaprogramming is confusing me...
+
+# helpfull http://madebydna.com/all/code/2011/06/24/eigenclasses-demystified.html
+# http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
+# http://pragprog.com/book/ppmetr/metaprogramming-ruby
+# http://stackoverflow.com/questions/19165430/how-to-work-with-ruby-duck-typing
+# http://rubylearning.com/satishtalim/duck_typing.html
+# http://lesseverything.com/blog/archives/2012/08/01/the-difference-between-instance_eval-and-class_eval-in-ruby/
