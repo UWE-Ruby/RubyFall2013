@@ -3,12 +3,15 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+   The method_missing method is passed the symbol of the non-existent method, an array of the arguments that were passed in the original call and any block passed to the original method.
+
+   Method_missing is in part a safety net: It gives you a way to intercept unanswerable messages and handle them. It prevents an  exception from being thrown if the method called is missing.
 
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
 	Singleton methods are specific to a particular object.  When a Singleton method is defined for an object, Ruby creates an annonymous class and defines the given method in that class. The annonymous class is sometimes called a singleton class or eigenclass.
 
 3. When would you use DuckTypeing? How would you use it to improve your code?
-	We could use ducktyping to add a customers name to a file
+	We could use ducktyping to add a customers name to a file. I can pass any object to a method foo(a) that calls a.bar as long as a.responds_to?(:bar). You don't need a type in order to invoke an existing method on an object - if a method is defined on it, you can invoke it. Essentially, it gives you more flexiblity in your code.
 
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
 	Class methods: you define class methods in one class and then use them in subclasses of that class.  Instance Methods: object's "methods" are the instance methods of its class, plus the instance methods of the superclass, the superclass of the superclass, etc. 
@@ -16,4 +19,4 @@ Questions:
 	Class_eval sets up the environment as if you were in the body of a class definition, so method definitions will define instance methods; instance_eval, when called on a class, acts as if you were working inside the singleton class of self. Therefore, any methods defined will become class methods. So, class_defines instance methods and instance_eval defines class methods.
 
 5. What is the difference between a singleton class and a singleton method?
-	Singleton Class only that has only one instance. It will inherit both instance and singleton methods. Singleton methods are only available for a specific object.
+	Singleton Class has only one instance. It will inherit both instance and singleton methods. Singleton methods are only available for a specific object.
