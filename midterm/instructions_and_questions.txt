@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  Instructions for Mid-Term submission and Git Review (10pts):
+=======
+Instructions for Mid-Term submission and Git Review (10pts):
+>>>>>>> upstream/master
  - Create a git repository for your answers
  - Add and Commit as you work through the questions and programming problems
  - Your git log should reflect your work, don't just commit after you have finished working
@@ -11,6 +15,7 @@
  
  Questions (20pts):
  - What are the three uses of the curly brackets {} in Ruby?
+<<<<<<< HEAD
 Curly brackets are used for string interpolation, to begin and end a block as well as for hashes.
 
  - What is a regular expression and what is a common use for them? 
@@ -36,6 +41,17 @@ Compared to C#, it makes sense and can be read like english most of the time.  T
 - What is your least favorite thing about Ruby so far?
 Now that we’ve gotten into the specifics of github, testing gems and using external tools, I am lost completely.  Whereas .NET has a simple set of tools through Visual Studio, Ruby’s are disparate and complex.  I’m spending less time learning to write good code and more time wrestling with the command line or github.
 
+=======
+ - What is a regular expression and what is a common use for them? 
+ - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
+ - Are these two statements equivalent? Why or Why Not?
+   1. x, y = "hello", "hello"
+   2. x = y = "hello"
+- What is the difference between a Range and an Array?
+- Why would I use a Hash instead of an Array?
+- What is your favorite thing about Ruby so far?
+- What is your least favorite thing about Ruby so far?
+>>>>>>> upstream/master
 
  Programming Problems (10pts each):
  - Write a passing rspec file called even_number_spec.rb that tests a class called EvenNumber.
