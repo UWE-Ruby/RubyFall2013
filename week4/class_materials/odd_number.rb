@@ -15,8 +15,8 @@ class OddNumber
 		new_val
 	end
 
-	def <=> (other)
-		@value <=> other.value
+	def <=> (other_odd_number)
+		@value <=> other_.value
 	end
 end
 
