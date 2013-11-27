@@ -10,16 +10,16 @@ Instructions for Mid-Term submission and Git Review (10pts):
  - After 6pm Tuesday November 19th you will not be able to push to your remote repository (or clone).
  
  Questions (20pts):
- - What are the three uses of the curly brackets {} in Ruby?
+ - What are the three uses of the curly brackets {} in Ruby? blocks, hashes, lambdas
  - What is a regular expression and what is a common use for them? 
- - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
+ - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby? Strings are stored using the string object. 
  - Are these two statements equivalent? Why or Why Not?
    1. x, y = "hello", "hello"
    2. x = y = "hello"
 - What is the difference between a Range and an Array?
 - Why would I use a Hash instead of an Array?
 - What is your favorite thing about Ruby so far?
-- What is your least favorite thing about Ruby so far?
+- What is your least favorite thing about Ruby so far? rspec with git a very close second
 
  Programming Problems (10pts each):
  - Write a passing rspec file called even_number_spec.rb that tests a class called EvenNumber.
