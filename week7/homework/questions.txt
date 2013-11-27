@@ -6,7 +6,7 @@ Questions:
   It is automatically called when a method is called on a class where it isn't defined. The default is that it should then search the parent class to see if it's there (possibly tripping that method_missing). At the top of the tree, Object throws an error if method_missing is called.
 
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
-  An Eigenclass (or Singleton) class is an anonomous class that hosts the Singleton methods defined for a particular object. It is itself a child of the class that the object would be a child of.
+  An Eigenclass (or Singleton class) is an anonomous class that hosts the Singleton methods defined for a particular object. It is itself a child of the class that the object would be a child of.
 
 3. When would you use DuckTypeing? How would you use it to improve your code?
   I can imagine having a method adding content to the end of a string, but it might be reusable to append an array. So long as my code is still readable, it is good to maintain less code.
@@ -15,4 +15,4 @@ Questions:
   The class method is applied for the entire collection of class objects, whereas an instance method is only applicable for a particular object.
 
 5. What is the difference between a singleton class and a singleton method?
-  There doesn't seem to be much difference. In both cases, an anonymous class is defined that contains the methods in question. Class methods are actually singleton methods of one of the object of the anonymous class above it.
+  A singleton method is defined on a particular object. A singleton class is the parent class created automatically to host the singleton methods of the particular object.
