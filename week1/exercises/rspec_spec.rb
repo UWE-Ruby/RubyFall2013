@@ -59,7 +59,6 @@ describe "The Rspec ruby gem" do
       # true.should == false
 
       # Lesson: It's easy to write bad tests.
-
     end
 
     it "should count the characters in my name" do
@@ -69,7 +68,6 @@ describe "The Rspec ruby gem" do
     it "should check how to spell my name" do
 	    "Renée".should include("ée") 
     end
-
   end
 
   context "Examples for in-class test exploration" do
@@ -77,16 +75,19 @@ describe "The Rspec ruby gem" do
   		# Fix the Failing Test
   		# Order of Operations is Please Excuse My Dear Aunt Sally:
   		# Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
-  		(1+2-5*6/2).should eq -13
+  		(1+2-5*6/2).should eq -12
   	end
+
   	it "should count the characters in your name" do
-      pending
+      "Scott".should have(5).characters
     end
   	
-  	it "should check basic math"
+  	it "should check basic math" do
+      (5*5).should eq 25
+    end
 
-  	it "should check basic spelling"
-
+  	it "should check basic spelling" do
+      "Scott".should include("Scott")
+    end
   end
-
 end
