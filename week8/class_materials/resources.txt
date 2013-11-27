@@ -1,0 +1,17 @@
+Slides: http://www.slideshare.net/reneedv/week8
+
+Metaprogramming:
+http://ruby-metaprogramming.rubylearning.com/
+http://ruby-metaprogramming.rubylearning.com/html/seeingMetaclassesClearly.html
+http://deepakprasanna.blogspot.com/2011/07/objects-dynamism-awesomeness-ruby.html
+http://www.trottercashion.com/2011/02/08/rubys-define_method-method_missing-and-instance_eval.html
+
+Ruby Call Chain:
+http://railstips.org/blog/archives/2009/08/20/lookin-on-up-to-the-east-side/
+
+EigenClass & Call Chain:
+http://madebydna.com/all/code/2011/06/24/eigenclasses-demystified.html
+http://www.devalot.com/articles/2008/09/ruby-singleton
+
+Changing Self:
+http://pragdave.blogs.pragprog.com/pragdave/2007/11/changing-self-i.html
