@@ -2,8 +2,38 @@
 Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
+
 1. What is method_missing and how can it be used?
-2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+
+This is called when instance doesn't respond to a method and all of its superclasses also don't respond to the same method. method_missing is then called in the original class, and moves up its inheritance heirarchy until something responds. BaseObject does respond by throwing a method missing error.
+
+
+
+2. What is an Eigenclass and what is it used for? Where Do Singleton methods live?
+
+An Eigenclass is an anonymous class created when you add a method to a single instance of a class.The new class is a subclass of the instance's original class.
+
+
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+
+Duck typing makes it possible for programmers to not worry about what kind of object they are working with. Really, the more important questions is if an object responds to a particular method. So if your method takes a parameter and performs the << method on it, it doesn't matter what kind of object it is. All it has to do is respond to the << method. So you can interchange arrays and strings since they both respond to <<.
+
+
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+
+You call a class method on the class itself, not an object. Instance methods are called on instances of classes.
+
+class_eval and instance_eval let you set self to an arbitrary object, evaluate code in a block, and then reset self.
+
+class_eval sets up the context of inside the body of a class definition. So you can add instance methods to a class by calling class_eval on a class and defining a new method inside of the block.
+
+instance_eval can add class methods to a class by defining methods inside of the passed in block.
+
+
+
 5. What is the difference between a singleton class and a singleton method?
+
+Singleton methods are methods that are available to only a single instance of a class. When you add a singleton method to an object, a singleton anonymous class is inserted into the receiver's inheritance strucuture.
+

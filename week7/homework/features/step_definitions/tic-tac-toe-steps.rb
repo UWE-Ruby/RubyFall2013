@@ -17,7 +17,7 @@ Then /^randomly chooses who goes first$/ do
 end
 
 Then /^who is X and who is O$/ do
-  TicTacToe::SYMBOLS.should include @game.player_symbol, @game.computer_symbol
+  TicTacToe::SYMBOLS.should include @game.computer_symbol, @game.computer_symbol
 end
 
 Given /^I have a started Tic\-Tac\-Toe game$/ do
@@ -35,7 +35,7 @@ end
 
 Then /^the computer prints "(.*?)"$/ do |arg1|
   @game.should_receive(:puts).with(arg1)
-  @game.indicate_palyer_turn
+  @game.indicate_player_turn
 end
 
 Then /^waits for my input of "(.*?)"$/ do |arg1|
@@ -51,7 +51,7 @@ end
 Then /^the computer randomly chooses an open position for its move$/ do
   open_spots = @game.open_spots
   @com_move = @game.computer_move
-  open_spots.should include(@com_move)
+  open_spots.should_not include(@com_move)
 end
 
 Given /^the computer is playing X$/ do
@@ -68,8 +68,12 @@ Given /^I am playing X$/ do
 end
 
 When /^I enter a position "(.*?)" on the board$/ do |arg1|
+
+  # what was previously there
   @old_pos = @game.board[arg1.to_sym]
+
   @game.should_receive(:get_player_move).and_return(arg1)
+
   @game.player_move.should eq arg1.to_sym
 end
 

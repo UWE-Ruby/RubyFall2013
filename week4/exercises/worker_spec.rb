@@ -9,6 +9,15 @@ describe Worker do
 		result.should == "hello"
 	end
 
+	it "executes a block twice and returns a concatenated string" do
+		llo = "hello"
+		str = ""
+		result = Worker.work(2) do
+			str += llo
+		end
+		result.should == "hellohello"
+	end
+
 	it "executes a block and returns a number" do
 		result = Worker.work do
 			3 + 4
@@ -31,6 +40,12 @@ describe Worker do
 			n += 1
 		end
 		result.should == 8
+	end
+
+	it "executes a block 5 times, multiplying by 2 each iteration" do
+		n = 1
+		result = Worker.work(5) { n *= 2 }
+		result.should == 32
 	end
 
 end
