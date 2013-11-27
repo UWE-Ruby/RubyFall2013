@@ -2,8 +2,8 @@ Given /^I have entered (\d+) into the converter$/ do |arg1|
 	@converter = Converter.new(arg1)
 end
 
-Given /^I set the type to Fahrenheit$/ do
-	@converter.type = "Fahrenheit"
+Given /^I set the type to (\w*)$/ do |arg1|
+	@converter.type = arg1
 end
 
 When /^I press convert$/ do
