@@ -1,3 +1,4 @@
+
 #require './features/step_definitions/tic-tac-toe_steps.rb'
 
 class TicTacToe
@@ -109,7 +110,6 @@ class TicTacToe
   def over?
     player_won? || computer_won? || draw?
   end
-
 end
 
 def play
