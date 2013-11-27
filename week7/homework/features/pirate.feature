@@ -1,3 +1,5 @@
+require './pirate_translator'
+
 # language: en-pirate
 
 Ahoy matey!: Pirate Speak
