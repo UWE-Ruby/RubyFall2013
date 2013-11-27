@@ -22,28 +22,28 @@ end
 
 Given /^I have a started Tic\-Tac\-Toe game$/ do
   @game = TicTacToe.new(:player)
-  @game.player = "Renee"
+  @game.player = "David"
 end
 
 Given /^it is my turn$/ do
-  @game.current_player.should eq "Renee"
+  @game.current_player.should eq "David"
 end
 
-Given /^the computer knows my name is Renee$/ do
-  @game.player.should eq "Renee"
+Given /^the computer knows my name is David$/ do
+  @game.player.should eq "David"
 end
 
 Then /^the computer prints "(.*?)"$/ do |arg1|
-  @game.should_receive(:puts).with(arg1)
-  @game.indicate_palyer_turn
+  @game.should_receive(:puts).with(arg1)  #
+  @game.indicate_player_turn#
 end
 
 Then /^waits for my input of "(.*?)"$/ do |arg1|
   @game.should_receive(:gets).and_return(arg1)
-  @game.get_player_move
+  @game.get_player_move #
 end
 
-Given /^it is the computer's turn$/ do
+Given /^it is the computer''s turn$/ do
   @game = TicTacToe.new(:computer, :O)
   @game.current_player.should eq "Computer"
 end
