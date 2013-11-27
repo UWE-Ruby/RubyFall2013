@@ -3,7 +3,30 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+it's a method, called method_missing. 
+
+it can by used to intercept the use of a undefined method and handle it. 
+you can also use it to intercept all the calls to methods, but only handle
+some of them ( glob? ) 
+
+
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+A eigenclass is a hidden class associated with each specific instance of another class.. 
+
+Singleton methods are specific to a single object. 
+They are defined on the object it's self and not the class.
+Usually they are defined in a Eigenclass. 
+
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+if you were coding in C# or Java or Perl. Readability?. I did Perl in DuckTyping. 
+I wouldn't use it in Ruby.
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+Class methods are methods that are called on a class, and instance methods are methods that are called on a instance of a class.
+instance_eval defines class methods and class_eval defines instance methods. 
+
 5. What is the difference between a singleton class and a singleton method?
+
+a singleton method is a method that is defined only for a single object,
+and a singleton class is defined ON the object. 
