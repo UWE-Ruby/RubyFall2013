@@ -58,7 +58,7 @@ describe ThanksgivingDinner do
 
    # Dinners don't always have dessert, but ThanksgivingDinners always do!
    it "should have desserts" do
-     @t_dinner.menu[:desserts].should eq({:pies => [:pumkin_pie], :other => ["Chocolate Moose"], :molds => [:cranberry, :mango, :cherry]})
+     @t_dinner.menu[:desserts].should eq({:pies => [:pumpkin_pie], :other => ["Chocolate Moose"], :molds => [:cranberry, :mango, :cherry]})
    end
 
  end
@@ -69,6 +69,6 @@ describe ThanksgivingDinner do
  end
 
  it "should return what is on the dessert menu" do
-   @t_dinner.whats_for_dessert.should eq "Tonight we have 5 delicious desserts: Pumkin Pie, Chocolate Moose, and 3 molds: Cranberry and Mango and Cherry."
+   @t_dinner.whats_for_dessert.should eq "Tonight we have 5 delicious desserts: Pumpkin Pie, Chocolate Moose, and 3 molds: Cranberry and Mango and Cherry."
  end
 end
