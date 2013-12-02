@@ -61,7 +61,7 @@ class TicTacToe
   end
 
   def current_state
-    current_state = "-----\n "+"#{@board[:A1]}"+"#{@board[:A2]}"+"#{@board[:A3]}"+"\n "+"#{@board[:B1]}"+"#{@board[:B2]}"+"#{@board[:B3]}"+"\n "+"#{@board[:C1]}"+"#{@board[:C2]}"+"#{@board[:C3]}"+"\n-----"
+    current_state = "   1 2 3\n   -----\n "+"A|#{@board[:A1]} "+"#{@board[:A2]} "+"#{@board[:A3]}|"+"\n "+"B|#{@board[:B1]} "+"#{@board[:B2]} "+"#{@board[:B3]}|"+"\n "+"C|#{@board[:C1]} "+"#{@board[:C2]} "+"#{@board[:C3]}|"+"\n   -----"
   end
 
   def over?
