@@ -4,11 +4,15 @@ require './features/step_definitions/tic-tac-toe.rb'
 puts "What is your name?"
 @game.player = gets.chomp
 puts @game.welcome_player
+puts "#{@game.player}, who plays 'X', who plays 'O' and who moves first is randomly selected"
+puts "The board positions are A1-3, B1-3 and C1-3"
+puts @game.drawboard
 
 until @game.over?
 	case @game.current_player
 	when "Computer"
 		@game.computer_move
+		puts "My move"
 	when @game.player
 		@game.indicate_palyer_turn
 		@game.player_move
