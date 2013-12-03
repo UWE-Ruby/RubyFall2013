@@ -1,7 +1,7 @@
 require 'rspec/mocks/standalone'
 require 'rspec/expectations'
 Given /^I start a new Tic\-Tac\-Toe game$/ do
-  @game = TicTacToe.new
+  @game = TicTacToe.new("dingus")
 end
 
 When /^I enter my name (\w+)$/ do |name|
