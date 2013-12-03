@@ -1,27 +1,18 @@
 class TicTacToe
   SYMBOLS = [:X,:O]
-  attr_accessor :player
+  attr_accessor :player, :board
 
-  def initialize(player,player_s=nil)
+  def initialize(current_player=nil,player_s=nil)
   	@player = player
-  	#@board = Array.new(10)
-  	#@free_moves = (1..9).to_s
-  	@turn = [:computer, :human]
-  	@humans_symbol = nil
-  	@computers_symbol = nil
-  	#@symbols = [ "X", "O"]
   	@current_player = current_player || [:player, :computer].sample
   	choose_symbols(player_s)
-
+  	@board = {
+    :A1 => ' ', :A2 => ' ', :A3 => ' ',
+  	:B1 => ' ', :B2 => ' ', :B3 => ' ',
+  	:C1 => ' ', :C2 => ' ', :C3 => ' ',
+  	}
+  	@unplayed_moves = [:A1, :A2, :A3, :B1, :B2, :B3, :C1, :C2, :C3]
   end
- 
-  #def whose_turn
-  #	@turn = rand(2).to_s
-  #	puts "#{@turn}"
-  #	@turn.gsub!(/[0]/, 'humans first')
-  #	@turn.gsub!(/[1]/, 'computers first')
-  #	puts "#{@turn}"
-  #end
 
   def choose_symbols(player_s)
   	player_s ||=SYMBOLS.sample
@@ -30,23 +21,10 @@ class TicTacToe
 
   def player_symbol
   	@player_symbol[:player]
-  	#@humans_symbol_num = rand(2)
-  	#puts "#{@humans_symbol_num}"
-  	#@humans_symbol = @humans_symbol_num.to_s.gsub(/[0]/, 'humans plays X')
-  	#@humans_symbol = @humans_symbol_num.to_s.gsub(/[1]/, 'human plays O')
-  	#puts "#{@humans_symbol}"
-  	##@humans_symbol = @symbols
-  	##@humans_symbol = @humans_symbol.sample
-  	#puts "human plays #{@humans_symbol}"
   end
 
   def computer_symbol
   	@player_symbol[:computer]
-  	#@computers_symbol = @humans_symbol_num.gsub!(/[0]/, 'computer plays O')
-  	#@computers_symbol = @humans_symbol_num.gsub!(/[1]/, 'computer plays X')
-  	#puts "#{@computers_symbol}"
-  	##@computers_symbol = @symbols.reject{|s| s==@humans_symbol}.first
-  	#puts "computer plays #{@computers_symbol}"
   end
 
   def current_player
@@ -58,30 +36,63 @@ class TicTacToe
   end
 
   def drawboard
-  	puts "A1|A2|A3\n"
-  	puts "--+--+--\n"
-  	puts "B1|B2|B3\n"
-  	puts "--+--+--\n"
-  	puts "C1|C2|C3\n"
+  	puts "A1|A2|A3 #{@board[:A1]}|#{@board[:A2]}|#{@board[:A3]}\n"
+  	puts "--+--+-- -+-+-\n"
+  	puts "B1|B2|B3 #{@board[:B1]}|#{@board[:B2]}|#{@board[:B3]}\n"
+  	puts "--+--+-- -+-+-\n"
+  	puts "C1|C2|C3 #{@board[:C1]}|#{@board[:C2]}|#{@board[:C3]}\n"
   end
 
-  def human_move
+  def current_state
+  	"#{@board[:A1]}|#{@board[:A2]}|#{@board[:A3]}\n
+  	-+-+-\n
+  	#{@board[:B1]}|#{@board[:B2]}|#{@board[:B3]}\n
+  	-+-+-\n
+  	#{@board[:C1]}|#{@board[:C2]}|#{@board[:C3]}\n"
+  end
+
+  def player_move
+  	move = get_player_move.to_sym
+  	until open_spots.include?(move)
+  	  puts "that move is taken"
+  	  move = get_player_move.to_sym
+  	end
+  	@board[move] = player_symbol
+  	@unplayed_moves.reject!{|m| m==move}
+    move
+  end
+
+  def get_player_move
+  	gets.chomp
   end
 
   def computer_move
+  	move = get_computer_move.to_sym
+  	@board[move] = computer_symbol
+  	@unplayed_moves.reject!{|m| m==move}
+  	move
+  end
+
+  def get_computer_move
+  	ai_dumb
+  end
+
+  def open_spots
+  	@unplayed_moves
   end
 
   def ai_dumb
+  	open_spots.sample
   end
 
-  def ai_line_full
-  end
+  #def ai_line_full
+  #end
 
-  def ai_line_friend
-  end
+  #def ai_line_friend
+  #end
 
-  def ai_line_block
-  end
+  #def ai_line_block
+  #end
 
 end
 #www.eecs.berkeley.edu/~bh/pdf/v1ch06.pdf
