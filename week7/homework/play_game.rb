@@ -14,7 +14,7 @@ until @game.over?
 		@game.computer_move
 		puts "My move"
 	when @game.player
-		@game.indicate_palyer_turn
+		@game.indicate_player_turn
 		@game.player_move
 	end
 	puts @game.current_state
