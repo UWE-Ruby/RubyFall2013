@@ -8,7 +8,7 @@ class PirateTranslator
 
   def translate
     if ( @what =~ /Hello Friend/)
-      @what = 'Ahoy Matey'
+      @what = 'Ahoy Matey' + "/n Shiber Me Timbers You Scurvey Dogs!!"
     end
   end
   
