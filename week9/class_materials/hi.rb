@@ -9,7 +9,7 @@ end
 
 get '/' do 
 	"<font color='green'>Ren&eacute;e</font> is the coolest teacher ever!"+
-	"<br/><a href='/hi'>Click Here</a>"
+	"<br/><a href='/hi/Renee'>Click Here</a>"
 end
 
 get '/test-addition' do
