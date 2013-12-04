@@ -1,24 +1,18 @@
 class TicTacToe
   attr_accessor :board, :player
   attr_reader :player_symbol, :computer_symbol
-  SYMBOLS = ["X", "O"]
+  SYMBOLS = [:X, :O]
 
-  def initialize player = "Player"
-    @player = player
-
-    @computers_turn = rand() > 0.5 ? true : false
-    if @computers_turn
-      @computer_symbol = SYMBOLS[0]
-      @player_symbol = SYMBOLS[1]
-    else
-      @computer_symbol = SYMBOLS[1]
-      @player_symbol = SYMBOLS[0]
-    end
+  def initialize current_player = (rand() > 0.5 ? :computer : :player), symbol = SYMBOLS.sample
+    @player = "Player"
+    @computers_turn = current_player == :computer ? "Computer" : @player
+    @player_symbol = symbol.to_sym
+    @computer_symbol = @player_symbol == SYMBOLS[0] ? SYMBOLS[1] : SYMBOLS[0];
 
     @board = {
-      :A1 => false, :A2 => false, :A3 => false,
-      :B1 => false, :B2 => false, :B3 => false,
-      :C1 => false, :C2 => false, :C3 => false
+      :A1 => " ", :A2 => " ", :A3 => " ",
+      :B1 => " ", :B2 => " ", :B3 => " ",
+      :C1 => " ", :C2 => " ", :C3 => " "
     }
   end
 
@@ -36,7 +30,7 @@ class TicTacToe
   end
 
   def computer_find_spot
-    find_empty_spots.sample
+    open_spots.sample
   end
 
   def indicate_player_turn
@@ -49,21 +43,35 @@ class TicTacToe
     move(input)
   end
 
-  def find_empty_spots
+  def open_spots
     spots = []
-    @board.each{|k, v| spots << k if v == false }
+    @board.each{|k, v| spots << k if v == " " }
     spots
   end
 
   def move spot
-    if @board[spot] == false
+    r = spot
+    if @board[spot] == " "
       symbol = @computers_turn ? @computer_symbol : @player_symbol
       @board[spot] = symbol
       next_turn
     end
+    r
   end
 
   def next_turn
     @computers_turn = !@computers_turn
+  end
+
+  def current_state
+    <<-eos
+        a   b   c"
+
+     1   #{@board[:A1]} | #{@board[:B1]} | #{@board[:C1]}
+        --- --- ---
+     2   #{@board[:A2]} | #{@board[:B2]} | #{@board[:C2]}
+        --- --- ---
+     3   #{@board[:A3]} | #{@board[:B3]} | #{@board[:C3]}
+    eos
   end
 end
