@@ -1,0 +1,7 @@
+Slides: http://www.slideshare.net/reneedv/week10
+
+Sinatra: http://www.sinatrarb.com/intro
+Struct: http://www.ruby-doc.org/core-1.8.7/Struct.html
+Sinatra page: https://github.com/sinatra/sinatra.github.com
+More Info on Struct: http://blog.grayproductions.net/articles/all_about_struct
+Sinatra Reloader: http://www.sinatrarb.com/contrib/reloader
