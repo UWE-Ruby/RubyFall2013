@@ -5,7 +5,7 @@ class TicTacToe
 
   def initialize current_player = (rand() > 0.5 ? :computer : :player), symbol = SYMBOLS.sample
     @player = "Player"
-    @computers_turn = current_player == :computer ? "Computer" : @player
+    @computers_turn = current_player == :computer ? true : false
     @player_symbol = symbol.to_sym
     @computer_symbol = @player_symbol == SYMBOLS[0] ? SYMBOLS[1] : SYMBOLS[0];
 
@@ -26,7 +26,9 @@ class TicTacToe
 
   def computer_move
     spot = computer_find_spot
-    move(spot)
+    @board[spot] = @computer_symbol
+    @computers_turn = !@computers_turn
+    spot
   end
 
   def computer_find_spot
@@ -38,9 +40,13 @@ class TicTacToe
   end
 
   def get_player_move
-    STDOUT.flush
-    input = gets.chomp.upcase.to_sym
-    move(input)
+    @input = gets.chomp.upcase.to_sym
+    player_move
+  end
+
+  def player_move
+    @board[@input] = @player_symbol
+    @input
   end
 
   def open_spots
@@ -49,29 +55,15 @@ class TicTacToe
     spots
   end
 
-  def move spot
-    r = spot
-    if @board[spot] == " "
-      symbol = @computers_turn ? @computer_symbol : @player_symbol
-      @board[spot] = symbol
-      next_turn
-    end
-    r
-  end
-
-  def next_turn
-    @computers_turn = !@computers_turn
-  end
-
   def current_state
     <<-eos
         a   b   c"
 
-     1   #{@board[:A1]} | #{@board[:B1]} | #{@board[:C1]}
+     1   #{@board[:A1].to_s} | #{@board[:B1].to_s} | #{@board[:C1].to_s}
         --- --- ---
-     2   #{@board[:A2]} | #{@board[:B2]} | #{@board[:C2]}
+     2   #{@board[:A2].to_s} | #{@board[:B2].to_s} | #{@board[:C2].to_s}
         --- --- ---
-     3   #{@board[:A3]} | #{@board[:B3]} | #{@board[:C3]}
+     3   #{@board[:A3].to_s} | #{@board[:B3].to_s} | #{@board[:C3].to_s}
     eos
   end
 end
