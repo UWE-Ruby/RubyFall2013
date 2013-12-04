@@ -14,7 +14,7 @@ until @game.over?
 		@game.player_move
 	end
 	puts @game.current_state
-	puts ""
+	# puts ""
 	# @game.determine_winner
 end
 
