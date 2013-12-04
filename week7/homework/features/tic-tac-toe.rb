@@ -10,6 +10,6 @@ class TicTacToe
     [@player, "Computer"].sample
   end
 
-  def initialize name
+  def initialize *name
   end
 end
