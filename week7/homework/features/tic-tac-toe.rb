@@ -1,6 +1,7 @@
 class TicTacToe
-  attr_accessor :player
-  
+  attr_accessor :player, :player_symbol, :computer_symbol
+  SYMBOLS = @player_symbol, @computer_symbol
+
   def welcome_player
     "Welcome #{@player}"
   end
