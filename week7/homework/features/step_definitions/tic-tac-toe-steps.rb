@@ -101,11 +101,12 @@ Given /^there are not three symbols in a row$/ do
       :B1 => :X, :B2 => :O, :B3 => :X,
       :C1 => :O, :C2 => :X, :C3 => :O
     }
+    @unplayed_moves = []
     @game.determine_winner
 end
 
 When /^there are no open spaces left on the board$/ do
-  @game.spots_open?.should be_false
+  @game.spots_open?.should be_true
 end
 
 Then /^the game is declared a draw$/ do

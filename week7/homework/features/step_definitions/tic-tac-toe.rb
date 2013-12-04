@@ -40,7 +40,7 @@ class TicTacToe
   	"Welcome #{@player}"
   end
 
-  def drawboard #used in irb for testing
+  def current_state 
   	puts "A1|A2|A3 #{@board[:A1]}|#{@board[:A2]}|#{@board[:A3]}\n"
   	puts "--+--+-- -+-+-\n"
   	puts "B1|B2|B3 #{@board[:B1]}|#{@board[:B2]}|#{@board[:B3]}\n"
@@ -48,12 +48,8 @@ class TicTacToe
   	puts "C1|C2|C3 #{@board[:C1]}|#{@board[:C2]}|#{@board[:C3]}\n"
   end
 
-  def current_state
-  	"A1|A2|A3 #{@board[:A1]}|#{@board[:A2]}|#{@board[:A3]}\n
-  	--+--+-- -+-+-\n
-  	B1|B2|B3 #{@board[:B1]}|#{@board[:B2]}|#{@board[:B3]}\n
-  	--+--+-- -+-+-\n
-  	C1|C2|C3 #{@board[:C1]}|#{@board[:C2]}|#{@board[:C3]}\n"
+  def indicate_player_turn
+    puts "#{@player}'s Move:"
   end
 
   def player_move
@@ -64,6 +60,7 @@ class TicTacToe
   	end
   	@board[move] = player_symbol
   	@unplayed_moves.reject!{|m| m==move} # remove the move from available moves
+    @current_player = :computer
     move
   end
 
@@ -75,6 +72,7 @@ class TicTacToe
   	move = get_computer_move.to_sym
   	@board[move] = computer_symbol
   	@unplayed_moves.reject!{|m| m==move}
+    @current_player = :player
   	move
   end
 
@@ -87,7 +85,7 @@ class TicTacToe
   end
 
   def spots_open? #defined for cucumber tests - refactor
-    @unplayed_moves
+    !open_spots.empty?
   end
 
   def board_full?
@@ -97,15 +95,6 @@ class TicTacToe
   def ai_dumb
   	open_spots.sample
   end
-
-  #def ai_line_full
-  #end
-
-  #def ai_line_friend
-  #end
-
-  #def ai_line_block
-  #end
 
   def determine_winner
   	# test diagonals, verticals and horizontals for uniform value
@@ -123,7 +112,7 @@ class TicTacToe
   	end
   end
 
-  def win_sets #used in irb for testing
+  def win_sets # arrays of horizontal, vertical and diagonal positions
     @winning_sets
   end
 
@@ -141,14 +130,6 @@ class TicTacToe
   	board[win_sets[set][2]] != " "
   end
 
-  # def win_set_player #used in irb for testing
-  # 	@winning_sym = @player_symbol
-  # end
-
-  #def win_set_computer #used in irb for testing
-  #	@winning_sym = @computer_symbol
-  #end
-
   def winning?
   	# if either computer or player have a winning set
   	@winning_sym == player_symbol || @winning_sym == computer_symbol
@@ -159,17 +140,18 @@ class TicTacToe
   end
 
   def player_won?
-  	@winning_sym == @player_symbol
+  	@winning_sym == player_symbol
   end
 
   def computer_won?
-  	@winning_sym == @computer_symbol
+  	@winning_sym == computer_symbol
+  end
+
+  def no_winner?
+    @winning_sym != player_symbol && @winning_sym != computer_symbol
   end
 
   def draw?
-  	board_full? && @winning_sym==([:NW])
+  	board_full? && no_winner?
   end
-
 end
-#www.eecs.berkeley.edu/~bh/pdf/v1ch06.pdf
-#AI - http://edais.mvps.org/Tutorials/TTTAI/

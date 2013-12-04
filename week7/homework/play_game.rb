@@ -6,7 +6,9 @@ puts "What is your name?"
 puts @game.welcome_player
 puts "#{@game.player}, who plays 'X', who plays 'O' and who moves first is randomly selected"
 puts "The board positions are A1-3, B1-3 and C1-3"
-puts @game.drawboard
+puts " "
+puts "You are playing #{@game.player_symbol}"
+puts @game.current_state
 
 until @game.over?
 	case @game.current_player
