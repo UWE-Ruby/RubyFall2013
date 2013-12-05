@@ -1,7 +1,10 @@
 class TicTacToe
-  attr_accessor :player, :computer, :player_symbol, :computer_symbol
+  attr_accessor :player, :computer, :player_symbol, :computer_symbol, :board
   SYMBOLS = []
   @current
+  @board = {A1: ' ', A2: ' ', A3: ' ', 
+            B1: ' ', B2: ' ', B3: ' ', 
+            C1: ' ', C2: ' ', C3: ' '}
 
   def welcome_player
     "Welcome #{@player}"
