@@ -8,8 +8,11 @@ class TicTacToe
   end
 
   def current_player
-    @current = @player if @current == "Computer"
-    @current = "Computer" if @current == @player
+    if @current == "Computer"
+      @current = @player
+    else
+      @current = "Computer"
+    end
     @current
   end
 
