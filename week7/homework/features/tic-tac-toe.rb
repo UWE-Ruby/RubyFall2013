@@ -1,6 +1,6 @@
 class TicTacToe
   attr_accessor :player, :computer, :player_symbol, :computer_symbol
-  SYMBOLS = [@player_symbol, @computer_symbol]
+  SYMBOLS = []
   @current
 
   def welcome_player
@@ -19,9 +19,10 @@ class TicTacToe
   def initialize *name
     symbols = [:X, :O]
     name[1] ||= symbols.sample
-    @player_symbol = symbols.fetch(symbols.index(name[1]))
-    @computer_symbol = symbols.delete(symbols.index(@player_symbol))
+    @player_symbol = (symbols.reject {|s| s != name[1]}).first
+    @computer_symbol = (symbols.reject {|s| s == @player_symbol}).first
     @player = name.first.to_s.capitalize
+    SYMBOLS << @player_symbol << @computer_symbol
   end
 
   def indicate_player_turn
