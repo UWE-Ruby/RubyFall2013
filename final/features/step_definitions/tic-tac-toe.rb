@@ -36,17 +36,28 @@ class TicTacToe
   end
 
   def indicate_player_turn
-    "#{@player}'s Move:"
+    print "#{@player}'s Move:"
   end
 
-  def get_player_move
-    @input = gets.chomp.upcase.to_sym
-    player_move
+  def get_player_move i = gets
+    indicate_player_turn
+    i.chomp.upcase.to_sym
   end
 
   def player_move
-    @board[@input] = @player_symbol
-    @input
+    spot = get_player_move.to_sym
+    r = spot
+    if @board[spot] != " "
+      r = spot_taken
+    else
+      @board[spot] = @player_symbol
+    end
+    r
+  end
+
+  def spot_taken
+    print "spot already taken"
+    player_move
   end
 
   def open_spots

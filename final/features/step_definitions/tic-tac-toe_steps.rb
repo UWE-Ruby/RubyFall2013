@@ -69,8 +69,7 @@ end
 
 When(/^I enter a position "(.*?)" on the board$/) do |arg1|
   @old_pos = @game.board[arg1.to_sym]
-  @game.should_receive(:gets).and_return(arg1)
-  @game.get_player_move
+  @game.should_receive(:get_player_move).and_return(arg1)
   @game.player_move.should eq arg1.to_sym
 end
 
