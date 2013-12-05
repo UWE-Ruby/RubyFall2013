@@ -1,7 +1,7 @@
 class TicTacToe
   attr_accessor :player, :player_symbol, :computer_symbol
   SYMBOLS = @player_symbol, @computer_symbol
-  @current = "Computer"
+  @current
 
   def welcome_player
     "Welcome #{@player}"
@@ -9,9 +9,9 @@ class TicTacToe
 
   def current_player
     if @current == "Computer"
-      @current = @player
-    else
       @current = "Computer"
+    else
+      @current = @player
     end
     @current
   end
