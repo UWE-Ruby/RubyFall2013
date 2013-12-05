@@ -9,6 +9,19 @@ class TicTacToe
     @player_symbol = symbol.to_sym
     @computer_symbol = @player_symbol == SYMBOLS[0] ? SYMBOLS[1] : SYMBOLS[0];
 
+    @wins = [      
+      [:A1,:A2,:A3],
+      [:B1,:B2,:B3],
+      [:C1,:C2,:C3],
+      
+      [:A1,:B1,:C1],
+      [:A2,:B2,:C2],
+      [:A3,:B3,:C3],
+      
+      [:A1,:B2,:C3],
+      [:C1,:B2,:A3]
+    ]
+
     @board = {
       :A1 => " ", :A2 => " ", :A3 => " ",
       :B1 => " ", :B2 => " ", :B3 => " ",
@@ -64,6 +77,36 @@ class TicTacToe
     spots = []
     @board.each{|k, v| spots << k if v == " " }
     spots
+  end
+
+  def determine_winner
+    @wins.each do |win|
+      if @board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]]
+        @player_won = @board[win[0]] == @player_symbol ? true : false
+      end
+    end
+  end
+
+  def spots_open?
+    @board.values.inject(false){|r, v| r = true if v == " "}
+  end
+
+  def player_won?
+    determine_winner
+    @player_won || nil
+  end
+
+  def over?
+    !spots_open? || player_won? != nil ? true : false
+  end
+
+  def draw?
+    r = false
+    if over? && player_won? == nil
+      puts "test"
+      r = true
+    end
+    r
   end
 
   def current_state
