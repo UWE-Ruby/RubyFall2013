@@ -19,4 +19,10 @@ class TicTacToe
   def initialize *name
     @current = [@player, "Computer"].sample unless name[0]
   end
+
+  def indicate_player_turn
+  end
+
+  def get_player_move
+  end
 end
