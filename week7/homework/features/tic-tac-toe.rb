@@ -31,4 +31,13 @@ class TicTacToe
 
   def get_player_move
   end
+
+  def computer_move
+    # Should sample all the open spots, and fill it on the board with the computer_symbol
+  end
+
+  def open_spots
+    # Should work through the board, making an array of all open spots
+
+  end
 end
