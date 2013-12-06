@@ -1,0 +1,489 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"displ",
+				"display"
+			],
+			[
+				"main",
+				"Main_Menu"
+			],
+			[
+				"file",
+				"file_path"
+			],
+			[
+				"org",
+				"org_info"
+			],
+			[
+				"or",
+				"org_info"
+			],
+			[
+				"type",
+				"type_4"
+			],
+			[
+				"typ",
+				"type_1"
+			],
+			[
+				"Ty",
+				"type_1"
+			],
+			[
+				"ty",
+				"type_4"
+			],
+			[
+				"we",
+				"when	when …"
+			],
+			[
+				"ans",
+				"answer"
+			],
+			[
+				"dow",
+				"downcase"
+			],
+			[
+				"add",
+				"add_visitor"
+			],
+			[
+				"ad",
+				"add_visitor"
+			],
+			[
+				"gem",
+				"gem_project"
+			],
+			[
+				"ve",
+				"veggies"
+			],
+			[
+				"wish",
+				"wish_list"
+			],
+			[
+				"E",
+				"Enumerable"
+			],
+			[
+				"diet",
+				"diet_type"
+			],
+			[
+				"time",
+				"time_code"
+			],
+			[
+				"fla",
+				"flag"
+			],
+			[
+				"n",
+				"name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "untitled.rb",
+			"settings":
+			{
+				"buffer_size": 172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pirate_translator.rb",
+			"settings":
+			{
+				"buffer_size": 56,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "play_game.rb",
+			"settings":
+			{
+				"buffer_size": 506,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "questions.txt",
+			"settings":
+			{
+				"buffer_size": 1626,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TicTacToe_game.rb",
+			"settings":
+			{
+				"buffer_size": 179,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 44,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"Snippet: def",
+				"Snippet: def … end"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 327.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/adam/Documents/dev/jamii_project/lib/jamii_spec.rb",
+		"/Users/adam/Documents/dev/jamii_project/lib/#{org_name}_roster.csv",
+		"/Users/adam/Documents/dev/jamii_project/jamii.sublime-project",
+		"/Users/adam/Documents/dev/jamii_project/.travis.yml",
+		"/Users/adam/Documents/dev/jamii_project/lib/.travis.yml",
+		"/Users/adam/Documents/dev/senatra-rb/hello.rb",
+		"/Users/adam/Documents/dev/jamii_project/roster.csv",
+		"/Users/adam/Documents/dev/jamii_project/lib/roster.csv",
+		"/Users/adam/Documents/dev/jamii_project/lib/jamii.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/untitled.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/questions.txt",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/features/pirate.feature",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/features/step_definitions/pirate_steps.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/pirate_translator.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/play_game.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/features/tic-tac-toe.feature",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/features/step_definitions/tic-tac-toe-steps.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/TicTacToe_game.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/Gemfile",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/Gemfile.rb",
+		"/Users/adam/Documents/dev/midterm results /README.md",
+		"/Users/adam/Documents/dev/gem_project/lib/gem_project.gemspec",
+		"/Users/adam/Documents/dev/gem_project/gem_project.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/wish_list.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/thanksgiving_dinner.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/even_number.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/wish_list_spec.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week1/exercises/rspec_spec.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/mid_term_spec.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/turkey.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/even_number_spec.rb",
+		"/Users/adam/Documents/dev/midterm_adam_bell/List of questions-ignore.txt",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/midterm/mid_term_spec.rb",
+		"/Users/adam/Library/Application Support/Sublime Text 2/Packages/User/Ruby.sublime-settings",
+		"/Users/adam/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week3/homework/calculator_spec.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week3/homework/calculator.rb",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week3/homework/questions.txt",
+		"/Users/adam/Documents/Git_Repos/RubyFall2013-1/week3/homework/untitled.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"standard_text_enter",
+			"type"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Standard_text_enter",
+			"Type"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "untitled.rb",
+					"settings":
+					{
+						"buffer_size": 172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pirate_translator.rb",
+					"settings":
+					{
+						"buffer_size": 56,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "play_game.rb",
+					"settings":
+					{
+						"buffer_size": 506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "questions.txt",
+					"settings":
+					{
+						"buffer_size": 1626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "TicTacToe_game.rb",
+					"settings":
+					{
+						"buffer_size": 179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true
+}

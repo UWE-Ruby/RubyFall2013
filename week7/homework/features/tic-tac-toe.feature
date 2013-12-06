@@ -3,7 +3,7 @@ Feature: Tic-Tac-Toe Game
 	In order to up my skills 
 	I would like to play agaist the computer
 
-Scenario: Begin Game
+Scenario: Begin Game 
 	Given I start a new Tic-Tac-Toe game
 	When I enter my name Renee
 	Then the computer welcomes me to the game with "Welcome Renee"

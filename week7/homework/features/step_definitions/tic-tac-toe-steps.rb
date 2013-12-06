@@ -1,64 +1,65 @@
 require 'rspec/mocks/standalone'
 require 'rspec/expectations'
+require '/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/TicTacToe_game.rb'
 Given /^I start a new Tic\-Tac\-Toe game$/ do
   @game = TicTacToe.new
 end
 
 When /^I enter my name (\w+)$/ do |name|
-  @game.player = name
+  @game.player = name #
 end
 
 Then /^the computer welcomes me to the game with "(.*?)"$/ do |arg1|
-  @game.welcome_player.should eq arg1
+  @game.welcome_player.should eq arg1 # 
 end
 
 Then /^randomly chooses who goes first$/ do
-  [@game.player, "Computer"].should include @game.current_player
+  [@game.player, "Computer"].should include @game.current_player #
 end
 
 Then /^who is X and who is O$/ do
-  TicTacToe::SYMBOLS.should include @game.player_symbol, @game.computer_symbol
+  TicTacToe::SYMBOLS.should include @game.player_symbol, @game.computer_symbol #
 end
 
-Given /^I have a started Tic\-Tac\-Toe game$/ do
+Given /^I have a started Tic\-Tac\-Toe game$/ do #
   @game = TicTacToe.new(:player)
   @game.player = "Renee"
 end
 
-Given /^it is my turn$/ do
+Given /^it is my turn$/ do #
   @game.current_player.should eq "Renee"
 end
 
-Given /^the computer knows my name is Renee$/ do
+Given /^the computer knows my name is Renee$/ do #
   @game.player.should eq "Renee"
 end
 
 Then /^the computer prints "(.*?)"$/ do |arg1|
-  @game.should_receive(:puts).with(arg1)
-  @game.indicate_palyer_turn
+  @game.should_receive(:puts).with(arg1) #
+  @game.indicate_player_turn
 end
 
 Then /^waits for my input of "(.*?)"$/ do |arg1|
-  @game.should_receive(:gets).and_return(arg1)
+  @game.should_receive(:gets).and_return(arg1) #
   @game.get_player_move
 end
 
-Given /^it is the computers turn$/ do
+Given /^it is the computers turn$/ do  #
   @game = TicTacToe.new(:computer, :O)
   @game.current_player.should eq "Computer"
 end
 
-Then /^the computer randomly chooses an open position for its move$/ do
+Then /^the computer randomly chooses an open position for its move$/ do #
   open_spots = @game.open_spots
   @com_move = @game.computer_move
   open_spots.should include(@com_move)
 end
 
-Given /^the computer is playing X$/ do
+Given /^the computer is playing X$/ do #
   @game.computer_symbol.should eq :X
 end
 
-Then /^the board should have an X on it$/ do
+Then /^the board should have an X on it$/ do #
   @game.current_state.should include 'X'
 end
 
