@@ -2,7 +2,7 @@ class TicTacToe
   attr_accessor :player, :computer, :player_symbol, :computer_symbol, :board
   SYMBOLS = [:X, :O]
   @current
-  @board = {A1: ' ', A2: ' ', A3: ' ', 
+  BOARD = {A1: ' ', A2: ' ', A3: ' ', 
             B1: ' ', B2: ' ', B3: ' ', 
             C1: ' ', C2: ' ', C3: ' '}
 
@@ -38,6 +38,8 @@ class TicTacToe
 
   def open_spots
     # Should work through the board, making an array of all open spots
-
+    BOARD.map do |spot, fill|
+      spot if fill == ' '
+    end
   end
 end
