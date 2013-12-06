@@ -33,12 +33,26 @@ class TicTacToe
   end
 
   def computer_move
-    open_spots.sample
+    move = open_spots.sample
+    BOARD[move] = @computer_symbol.to_s
+    move
   end
 
   def open_spots
     BOARD.map do |spot, fill|
       spot if fill == ' '
     end
+  end
+
+  def current_state
+    #current state is a display method, building a string that pleasingly displays the board
+    <<-board
+      1   2   3
+    A #{BOARD[:A1]} | #{BOARD[:A2]} | #{BOARD[:A3]} 
+     --- --- ---
+    B #{BOARD[:B1]} | #{BOARD[:B2]} | #{BOARD[:B3]} 
+     --- --- ---
+    C #{BOARD[:C1]} | #{BOARD[:C2]} | #{BOARD[:C3]} 
+    board
   end
 end
