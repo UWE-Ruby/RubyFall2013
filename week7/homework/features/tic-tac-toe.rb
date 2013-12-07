@@ -31,6 +31,7 @@ class TicTacToe
   end
 
   def get_player_move
+    gets
   end
 
   def computer_move
@@ -40,7 +41,7 @@ class TicTacToe
   end
 
   def player_move
-    move = get_player_move unless open_spots.include? get_player_move
+    move = get_player_move.to_sym unless open_spots.include? get_player_move
     @board[move] = @player_symbol.to_s
     move.to_sym
   end
