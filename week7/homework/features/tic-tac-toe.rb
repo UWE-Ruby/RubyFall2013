@@ -39,6 +39,12 @@ class TicTacToe
     move
   end
 
+  def player_move
+    move = get_player_move
+    @board[move] = @player_symbol.to_s
+    move.to_sym
+  end
+
   def open_spots
     @board.map do |spot, fill|
       spot if fill == ' '
