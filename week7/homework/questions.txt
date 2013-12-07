@@ -2,8 +2,16 @@
 Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
-1. What is method_missing and how can it be used?
+1. What is method_missing and how can it be used? Method_missing is a hook method. It is invoked when Ruby doesn't find a corresponding method by the time it runs out of superclasses. It typically results in an exception.
+
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
-3. When would you use DuckTypeing? How would you use it to improve your code?
+Eigenclass is synonymous with singleton class. Singleton methods live in the singleton class/Eigenclass that was created to define them. Which sounds weird. They also live in the world of Bridget Jones.
+
+3. When would you use DuckTypeing? How would you use it to improve your code? If you are using a process/file that takes too long to output a final result in a method you could pass in a something that appears to the Ruby interpreter to be like that time consuming file, but actually isn't, it could be as simple as a string, to take its place. The code would be simpler. This would speed up the process, i.e. the code. For this to work whatever is passed in instead of the original file (or whatever) must appear to the Ruby interpreter to be like the original, in other words it must walk like a duck and talk like a duck.
+
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+Class methods are called on a class and instance methods are called on an instance of a class. Both instance_eval and class_eval set self for the duration of the block. However, class_eval functions as though it is in the body of a class definition, so method definitions will define instance methods. In instance_eval performs as if it were in the the singleton class of self, resulting in defined methods becoming class methods.
+
 5. What is the difference between a singleton class and a singleton method?
+Singleton methods are specific to a particular object. When the singleton method is created is created for its particular object, Ruby creates a new anonymous class and defines that method in that class. This anonymous class is the singleton class.
