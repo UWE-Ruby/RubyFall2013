@@ -67,9 +67,13 @@ class TicTacToe
   end
 
   def determine_winner
-    [:X, :O].each do |token|
-      puts "Player #{token} just won!" if winning_lines token
-      @winner = true
+    if spots_open?
+      [:X, :O].each do |token|
+        @winner = true
+        @game_over = true
+      end
+    else
+      @winner = false
       @game_over = true
     end
   end
@@ -80,6 +84,14 @@ class TicTacToe
 
   def over?
     @game_over
+  end
+
+  def draw?
+    @game_over == true and @winner == false
+  end
+
+  def spots_open?
+    @board.has_value?(' ')
   end
 
   private
