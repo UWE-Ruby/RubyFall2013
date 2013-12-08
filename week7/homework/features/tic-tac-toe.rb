@@ -50,6 +50,7 @@ class TicTacToe
     if open_spots.include? entered_move
       move = entered_move
     else
+      puts "Sorry, that spot isn't available."
       move = player_move
     end
     @board[move] = @player_symbol.to_s
@@ -77,9 +78,9 @@ class TicTacToe
 
   def determine_winner
     if spots_open?
-      [:X, :O].each do |token|
-        @winner = (@winner or winning_lines token)
-        @game_over = (@winner or winning_lines token)
+      {@player_symbol=>@player, @computer_symbol=>"Computer"}.each do |symbol, winner|
+        @winner = winner if (@winner or winning_lines symbol)
+        @game_over = (@winner or winning_lines symbol)
       end
     else
       @winner = false
@@ -88,11 +89,11 @@ class TicTacToe
   end
 
   def player_won?
-    @winner
+    @winner == @player
   end
 
   def computer_won?
-    @winner
+    @winner == "Computer"
   end
 
   def over?
