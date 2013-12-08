@@ -73,8 +73,9 @@ class TicTacToe
   def determine_winner
     if spots_open?
       [:X, :O].each do |token|
-        @winner = winning_lines token
-        @game_over = winning_lines token
+        puts "winning_lines #{winning_lines token}"
+        @winner = (@winner or winning_lines token)
+        @game_over = (@winner or winning_lines token)
       end
     else
       @winner = false
@@ -105,20 +106,20 @@ class TicTacToe
   private
   def winning_lines symbol
     winning_lines = [[:A1, :A2, :A3],
-                    [:B1, :B2, :B3],
-                    [:C1, :C2, :C3],
-                    [:A1, :B1, :C1],
-                    [:A2, :B2, :C2],
-                    [:A3, :B3, :C3],
-                    [:A3, :B2, :C1],
-                    [:A1, :B2, :C3]]
+                     [:B1, :B2, :B3],
+                     [:C1, :C2, :C3],
+                     [:A1, :B1, :C1],
+                     [:A2, :B2, :C2],
+                     [:A3, :B3, :C3],
+                     [:A3, :B2, :C1],
+                     [:A1, :B2, :C3]]
     winning_lines.inject(false) do |won, line|
       line_wins = line.inject(true) do |winning, spot|
         # A single false creates a false value
-        winning = winning and @board[spot] == symbol
+        winning = (winning and @board[spot] == symbol)
       end
       # A single true creates a true value
-      won = won or line_wins
+      won = (won or line_wins)
     end
   end
 end
