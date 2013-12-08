@@ -53,8 +53,9 @@ class TicTacToe
   end
 
   def open_spots
-    @board.map do |spot, fill|
-      spot if fill == ' '
+    @board.inject(Array.new) do |remaining, (spot, fill)|
+      remaining << spot if fill == ' '
+      remaining
     end
   end
 
