@@ -3,7 +3,6 @@ class TicTacToe
   SYMBOLS = [:X, :O]
   @winner = false
   @game_over = false
-  @current
   
 
   def welcome_player
@@ -30,9 +29,11 @@ class TicTacToe
   end
 
   def indicate_player_turn
+    "Your Turn"
   end
 
   def get_player_move
+    puts "#{@player}'s Move:"
     gets
   end
 
@@ -79,6 +80,10 @@ class TicTacToe
   end
 
   def player_won?
+    @winner
+  end
+
+  def computer_won?
     @winner
   end
 
