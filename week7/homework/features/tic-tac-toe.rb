@@ -1,8 +1,9 @@
 class TicTacToe
-  attr_accessor :player, :computer, :player_symbol, :computer_symbol, :board
+  attr_accessor :player, :player_symbol, :computer_symbol, :board
   SYMBOLS = [:X, :O]
   @winner = false
   @game_over = false
+  @current
   
 
   def welcome_player
@@ -10,12 +11,12 @@ class TicTacToe
   end
 
   def current_player
-    if @current == @computer
-      @current = @player
+    @current ||= [@player, "Computer"].sample
+    if @current == @player
+      @current = "Computer"
     else
-      @current = @computer
+      @current = @player
     end
-    @current
   end
 
   def initialize *name
@@ -29,7 +30,7 @@ class TicTacToe
   end
 
   def indicate_player_turn
-    "Your Turn"
+    
   end
 
   def get_player_move
