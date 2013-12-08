@@ -1,13 +1,22 @@
 class TicTacToe
-	SYMBOLS = ["X","O"]
+	SYMBOLS = [:X,:O]
 
 	attr_accessor :player
 	attr_reader :welcome_player
 	attr_reader :player_symbol
 	attr_reader :computer_symbol
 	
-	def initialize (name = " ", )
+	def initialize (name = " " )
 		@player = name
+  		game_locations = { 
+
+  				:A1 => " ", :A1 => " ", :A1 => " ",
+  				:B1 => " ",  :B2 => " ",  :A1 => " ",
+  				:A1 => " ", :A1 => " ", :A1 => " ", 
+
+  				}
+  	move_counter = 0
+  		
 	end
 
 	def player
@@ -15,51 +24,66 @@ class TicTacToe
 	end
 
 	def welcome_player
-
 		@welcome_player =  "Welcome #{@player}"
 	end
 
-	def current_player
-		# If random number is less than .5 then compy if grater than @player
-	  t = rand(2)
-	  if t > 1 
-	  	computer_move
-	  else
-	  	@player
-	  end
+	def initial_player
+	
 
+	current_move= rand() > 0.5 ? computer_move : @player
+
+	end
+
+	def current_player
+		
+		case move_counter = 0 
+		
+		when move_counter = 0 
+			player_on_deck = rand() > 0.5 ? "Computer" : @player
+			move_counter +=1 
+		else
+			player_on_deck == "Computer" ? @player : "Computer"
+
+		end
+       return player_on_deck
+	end
+
+	def get_move
+		move = @player ? get_player_move : get_computer_move
 	end
 
 	def player_symbol
 
- 		t = rand(4)
-	  if t > 2 
-	  	player_symbol= "X"
-	  else
-	  	player_symbol= "O"
-	  end
-	  player_symbol
+ 	player_symbol= rand() > 0.5 ? :X : :O
+
 	end
 
 	def computer_symbol
-		t = rand(6)
-	  if t > 3
-	  	computer_symbol= "X"
-	  else
-	  	computer_symbol= "O"
-	  end
-	  computer_symbol
+
+ 	computer_symbol= rand() > 0.5 ? :X : :O
 
 	end
 
 	def get_player_move
-
+  	location = gets.chomp.to_sym
+  	game_locations[location] = player_symbol
+  	move = computer_move
+  	return move
 		
 	end
 
 	def board
 
-		
+	puts "----------------------------"
+	puts "#{@player}"	
+
+	puts "   1| 2 | 3\n"
+	puts " A| #{board_locations[:A1]} | #{board_locations[:A2]} | #{board_locations[:A3]} "
+	puts " ----------------------------"
+	puts " B| #{board_locations[:B1]} | #{board_locations[:B2]} | #{board_locations[:B3]} "
+	puts " ----------------------------"
+	puts " C| #{board_locations[:C1]} | #{board_locations[:C2]} | #{board_locations[:C3]} "
+	puts " ----------------------------"
 		
 	end
 

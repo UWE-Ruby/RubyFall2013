@@ -124,7 +124,7 @@ Then /^computer should ask me for another position "(.*?)"$/ do |arg1|
   @game.player_move.should eq arg1.to_sym
 end
 
-Given(/^it is the computer's turn$/) do
+Given /^ it is the computers turn $/ do
   pending # express the regexp above with the code you wish you had
 end
 
