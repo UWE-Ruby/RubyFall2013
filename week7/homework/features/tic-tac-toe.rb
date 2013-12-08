@@ -80,8 +80,10 @@ class TicTacToe
                     [:A1, :B2, :C3]]
     winning_lines.inject(false) do |won, line|
       line_wins = line.inject(true) do |winning, spot|
+        # A single false creates a false value
         winning = winning and @board[spot] == symbol
       end
+      # A single true creates a true value
       won = won or line_wins
     end
   end
