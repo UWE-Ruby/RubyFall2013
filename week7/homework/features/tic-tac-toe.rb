@@ -36,7 +36,7 @@ class TicTacToe
   end
 
   def get_player_move
-    gets
+    gets.upcase
   end
 
   def computer_move
@@ -46,9 +46,16 @@ class TicTacToe
   end
 
   def player_move
-    move = get_player_move.to_sym unless open_spots.include? get_player_move
+    entered_move = get_player_move.to_sym
+    puts entered_move
+    if open_spots.include? entered_move
+      move = entered_move
+    else
+      puts "you suck"
+      move = player_move
+    end
     @board[move] = @player_symbol.to_s
-    move.to_sym
+    move
   end
 
   def open_spots
