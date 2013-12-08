@@ -1,8 +1,8 @@
 class TicTacToe
   attr_accessor :player, :player_symbol, :computer_symbol, :board
   SYMBOLS = [:X, :O]
-  @winner = false
-  @game_over = false
+
+  @game_over
   @current
   
 
@@ -77,13 +77,16 @@ class TicTacToe
   end
 
   def determine_winner
-    if spots_open?
-      {@player_symbol=>@player, @computer_symbol=>"Computer"}.each do |symbol, winner|
-        @winner = winner if (@winner or winning_lines symbol)
-        @game_over = (@winner or winning_lines symbol)
-      end
-    else
-      @winner = false
+    @winner = false
+    winner_hash = {@player_symbol=>@player, @computer_symbol=>"Computer"}
+    winner_hash.each do |symbol, winner|
+      winning_play = winning_lines symbol
+      @winner = winner if winning_play
+      puts "#{symbol}: #{@game_over}, #{winning_play}"
+      @game_over = (@game_over or winning_play)
+    end
+    puts "open #{spots_open?}, player: #{player_won?}, Computer: #{computer_won?}, Game over: #{over?}, Draw: #{draw?}"
+    if spots_open? == false and @winner == false
       @game_over = true
     end
   end
@@ -101,7 +104,8 @@ class TicTacToe
   end
 
   def draw?
-    @game_over == true and @winner == false
+    puts "Draw?: #{@game_over}, #{@winner}"
+    (@game_over == true) and (@winner == false)
   end
 
   def spots_open?
@@ -121,7 +125,7 @@ class TicTacToe
     winning_lines.inject(false) do |won, line|
       line_wins = line.inject(true) do |winning, spot|
         # A single false creates a false value
-        winning = (winning and @board[spot] == symbol)
+        winning = (winning and @board[spot].to_sym == symbol)
       end
       # A single true creates a true value
       won = (won or line_wins)
