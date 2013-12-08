@@ -9,7 +9,6 @@ until @game.over?
 	case @game.current_player
 	when "Computer"
 		@game.computer_move
-    @game.current_state
 	when @game.player
 		@game.indicate_player_turn
 		@game.player_move
