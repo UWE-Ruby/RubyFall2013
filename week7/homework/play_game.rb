@@ -14,7 +14,7 @@ class TicTacToe
   def initialize(turn = nil, player_symbol = nil)
     @player_symbol = player_symbol
     @board = Hash.new
-    current_state.each {|b| @board[b] = nil }
+    initial_state.each {|b| @board[b] = nil }
     if turn == :player
       @player = "Renee"
       @current_player = @player
@@ -28,6 +28,11 @@ class TicTacToe
       @player_symbol = :O
     end
   end
+
+  # def get_player_move
+  #   @get_player_move
+  # end
+
 
   def welcome_player
     puts "Enter your name:"
@@ -47,11 +52,22 @@ class TicTacToe
   end
 
   def current_state
-    @state ||= ('A'..'C').map {|a| (1..3).map {|b| "#{a}#{b}" }}.flatten
+    @board.values
+    #@state ||= ('A'..'C').map {|a| (1..3).map {|b| "#{a}#{b}" }}.flatten
   end
 
+  def initial_state
+    ('A'..'C').map {|a| (1..3).map { |b| 
+      plot = "#{a}#{b}"
+      @board[plot] ? "#{plot}#{(@board[plot].to_s)}" : plot
+    }}.flatten
+  end
+
+
   def open_spots
-    current_state.delete_if {|a| a == 'X' || a == 'O'}
+    #current_state.delete_if {|a| a == 'X' || a == 'O'}
+    empty_spots = @board.select {|k,v| v.nil? }
+    empty_spots.keys
   end
 
   def spots_open?
@@ -60,7 +76,7 @@ class TicTacToe
 
   def computer_move
     @move = open_spots.sample
-    current_state[current_state.index(@move)] = computer_symbol.to_s
+    @board[@move] = computer_symbol.to_s
     @move
   end
 
@@ -76,22 +92,31 @@ class TicTacToe
   end
 
 
-  def player_move
-    @move = STDIN.gets.chomp
-    current_state[current_state.index(@move)] = player_symbol.to_s
+  def player_move(space = nil)
+    if space
+      @move = space
+    else
+      @move ||= STDIN.gets.chomp
+    end
+    @board[@move] = player_symbol.to_s
     @move
   end
 
   def indicate_player_turn
-    "#{@player}'s Move:"
-    get_player_move = STDIN.gets.chomp
+    message = "#{@player}'s Move:"
+    puts message
+    message
   end
 
   def determine_winner
-    if @board[:C1] == @board[:B2] && @board[:C1] == @board[:A3]
+    xs = @board.select {|k,v| v == 'X' }.keys
+    ys = @board.select {|k,v| v == 'Y' }.keys
+    if !spots_open?
+      @resolution = 'draw'
+    elsif @board[:C1] == @board[:B2] && @board[:C1] == @board[:A3]
       @resolution = 'player_won'
-
     else
+
     end
   end
 
