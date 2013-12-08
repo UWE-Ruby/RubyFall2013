@@ -1,5 +1,5 @@
 # Hint: require needs to be able to find this file to load it
-require "./simon_says.rb"
+require_relative "./simon_says"
 
 describe SimonSays do
   include SimonSays # Hint: Inclusion is different than SimonSays.new (read about modules)

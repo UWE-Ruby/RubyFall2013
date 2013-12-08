@@ -1,0 +1,22 @@
+ENV = Hash.new([])
+
+desc 'lollin'
+task :read do
+  File.open('names', 'r') do |lines|
+    lines.each do |line|
+      ENV[:names] << line
+      puts line
+    end
+  end
+end
+
+task :classy do
+  Dir.mkdir 'class'
+end
+
+task :balling => [:classy, :read] do
+  Dir.chdir 'class'
+  ENV[:names].each do |name|
+    Dir.mkdir name
+  end
+end

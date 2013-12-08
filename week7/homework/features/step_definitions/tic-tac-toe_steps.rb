@@ -1,6 +1,7 @@
+require File.join(File.dirname(__FILE__), '..', '..', 'play_game')
 require 'rspec/mocks/standalone'
 require 'rspec/expectations'
-Given /^I start a new Tic\-Tac\-Toe game$/ do
+Given /^I start a new TicTacToe game$/ do
   @game = TicTacToe.new
 end
 
@@ -20,7 +21,7 @@ Then /^who is X and who is O$/ do
   TicTacToe::SYMBOLS.should include @game.player_symbol, @game.computer_symbol
 end
 
-Given /^I have a started Tic\-Tac\-Toe game$/ do
+Given(/^I have a started TicTacToe game$/) do
   @game = TicTacToe.new(:player)
   @game.player = "Renee"
 end
@@ -35,7 +36,7 @@ end
 
 Then /^the computer prints "(.*?)"$/ do |arg1|
   @game.should_receive(:puts).with(arg1)
-  @game.indicate_palyer_turn
+  @game.indicate_player_turn
 end
 
 Then /^waits for my input of "(.*?)"$/ do |arg1|
@@ -43,13 +44,13 @@ Then /^waits for my input of "(.*?)"$/ do |arg1|
   @game.get_player_move
 end
 
-Given /^it is the computer's turn$/ do
+Given /^it is the computer.s turn$/ do
   @game = TicTacToe.new(:computer, :O)
   @game.current_player.should eq "Computer"
 end
 
 Then /^the computer randomly chooses an open position for its move$/ do
-  open_spots = @game.open_spots
+  open_spots = @game.open_spots.clone
   @com_move = @game.computer_move
   open_spots.should include(@com_move)
 end
@@ -68,21 +69,23 @@ Given /^I am playing X$/ do
 end
 
 When /^I enter a position "(.*?)" on the board$/ do |arg1|
-  @old_pos = @game.board[arg1.to_sym]
+ # @old_pos = @game.board[arg1.to_sym]
+  @game.player_move(arg1)
   @game.should_receive(:get_player_move).and_return(arg1)
-  @game.player_move.should eq arg1.to_sym
+  @game.player_move.should eq arg1
 end
 
 When /^"(.*?)" is not taken$/ do |arg1|
-  @old_pos.should eq " "
+  @old_pos.should eq nil
 end
 
-Then /^it is now the computer's turn$/ do
+Then /^it is now the computer.s turn$/ do
   @game.current_player.should eq "Computer"
 end
 
-When /^there are three X's in a row$/ do
+When /^there are three X.s in a row$/ do
   @game = TicTacToe.new(:computer, :X)
+  @game.player_symbol = :X
   @game.board[:C1] = @game.board[:B2] = @game.board[:A3] = :X
 end
 
@@ -118,7 +121,6 @@ When /^"(.*?)" is taken$/ do |arg1|
 end
 
 Then /^computer should ask me for another position "(.*?)"$/ do |arg1|
-  @game.board[arg1.to_sym] = ' '
   @game.should_receive(:get_player_move).twice.and_return(@taken_spot, arg1)
-  @game.player_move.should eq arg1.to_sym
+  @game.player_move(arg1).should eq arg1
 end

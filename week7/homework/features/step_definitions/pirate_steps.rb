@@ -1,3 +1,6 @@
+# require '../../pirate_translator.rb'
+require File.join(File.dirname(__FILE__), '..', '..', 'pirate_translator')
+
 Gangway /^I have a (\w+)$/ do |arg|
 	@translator = Kernel.const_get(arg).new
 end

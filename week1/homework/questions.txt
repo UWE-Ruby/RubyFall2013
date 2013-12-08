@@ -3,13 +3,30 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+  An object is the basic unit of an object oriented programming languages. They're used to store data and call methods assigned to them.
 
 2. What is a variable?
+  A variable is a reference to a value.
 
 3. What is the difference between an object and a class?
+  A class is a particular kind of object that is meant to generate "instances" (also objects) of itself. The class defines not only how the class behaves, but how its instances behave.
 
 4. What is a String?
+  A string is text data. They can be assigned to variables and passed into arguments.
 
 5. What are three messages that I can send to a string object? Hint: think methods
+  split(','), rstrip, to_i
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+  1) Surround some text with single quotes or inside a %q( ) block (you can use any non alphanumeric character as the delimiter in the block). These do not allow string interpolation and most escape sequences
+  Examples:
+    string = 'weeee'
+    string = %q< weeee >
+    string = %q# weeee #
+    string
+    #=> "weeee"
+  2) Surround some text with DOUBLE quotes or inside a %Q( ) or %( ) block. This enables string interpolation and most escape sequences.
+  Examples
+    string = "It\'s math time 1+1 = #{1+1}"
+    string
+    #=> "It's math time 1+1 = 2"
