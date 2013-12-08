@@ -85,6 +85,7 @@ end
 
 When /^there are three X.s in a row$/ do
   @game = TicTacToe.new(:computer, :X)
+  @game.player_symbol = :X
   @game.board[:C1] = @game.board[:B2] = @game.board[:A3] = :X
 end
 

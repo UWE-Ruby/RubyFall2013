@@ -109,14 +109,48 @@ class TicTacToe
   end
 
   def determine_winner
-    xs = @board.select {|k,v| v == 'X' }.keys
-    ys = @board.select {|k,v| v == 'Y' }.keys
-    if !spots_open?
-      @resolution = 'draw'
-    elsif @board[:C1] == @board[:B2] && @board[:C1] == @board[:A3]
-      @resolution = 'player_won'
-    else
+    x_analysis, o_analysis = Hash.new(0), Hash.new(0)
+    xs, os = @board.select {|k,v| v == 'X' }.keys, @board.select {|k,v| v == 'O' }.keys
+    xs.each {|x| x_analysis[x]+=1 }
+    os.each {|o| o_analysis[o]+=1 }
 
+    if @board[:C1] == @board[:B2] && @board[:C1] == @board[:A3]
+      #@resolution = "player_won"
+      puts @board[:C1]
+      puts player_symbol
+      if @board[:C1] == player_symbol
+        @resolution = 'player_won'
+      else
+        @resolution = 'computer_won'
+      end
+    elsif @board[:C3] == @board[:B2] && @board[:C3] == @board[:A1]
+      if @board[:C3] == player_symbol
+        @resolution = 'player_won'
+      else
+        @resolution = 'computer_won'
+      end
+    elsif x_analysis.values.include?(3)
+      x_wins
+    elsif o_analysis.values.include?(3)
+      o_wins
+    elsif !spots_open?
+      @resolution = 'draw'
+    end
+  end
+
+  def x_wins
+    if player_symbol == :X
+      @resolution == 'player_won'
+    elsif player_symbol == :O
+      @resolution == 'computer_won'
+    end
+  end
+
+  def o_wins
+    if player_symbol == :O
+      @resolution == 'player_won'
+    elsif player_symbol == :X
+      @resolution == 'computer_won'
     end
   end
 
