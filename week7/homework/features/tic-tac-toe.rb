@@ -63,4 +63,26 @@ class TicTacToe
     C #{@board[:C1]} | #{@board[:C2]} | #{@board[:C3]} 
     board
   end
+
+  def determine_winner
+    puts "Game won: #{winning_lines :X}"
+  end
+
+  private
+  def winning_lines symbol
+    winning_lines = [[:A1, :A2, :A3],
+                    [:B1, :B2, :B3],
+                    [:C1, :C2, :C3],
+                    [:A1, :B1, :C1],
+                    [:A2, :B2, :C2],
+                    [:A3, :B3, :C3],
+                    [:A3, :B2, :C1],
+                    [:A1, :B2, :C3]]
+    winning_lines.inject(false) do |won, line|
+      line_wins = line.inject(true) do |winning, spot|
+        winning = winning and @board[spot] == symbol
+      end
+      won = won or line_wins
+    end
+  end
 end
