@@ -32,8 +32,7 @@ class TicTacToe
   end
 
   def indicate_player_turn
-    
-    #puts "#{@player}'s Move:"
+    puts "#{@player}'s Move:"
   end
 
   def get_player_move
@@ -74,8 +73,8 @@ class TicTacToe
   def determine_winner
     if spots_open?
       [:X, :O].each do |token|
-        @winner = true
-        @game_over = true
+        @winner = winning_lines token
+        @game_over = winning_lines token
       end
     else
       @winner = false
