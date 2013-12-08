@@ -82,10 +82,8 @@ class TicTacToe
     winner_hash.each do |symbol, winner|
       winning_play = winning_lines symbol
       @winner = winner if winning_play
-      puts "#{symbol}: #{@game_over}, #{winning_play}"
       @game_over = (@game_over or winning_play)
     end
-    puts "open #{spots_open?}, player: #{player_won?}, Computer: #{computer_won?}, Game over: #{over?}, Draw: #{draw?}"
     if spots_open? == false and @winner == false
       @game_over = true
     end
@@ -104,7 +102,6 @@ class TicTacToe
   end
 
   def draw?
-    puts "Draw?: #{@game_over}, #{@winner}"
     (@game_over == true) and (@winner == false)
   end
 
