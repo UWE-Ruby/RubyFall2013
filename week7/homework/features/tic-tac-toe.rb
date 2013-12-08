@@ -73,7 +73,6 @@ class TicTacToe
   def determine_winner
     if spots_open?
       [:X, :O].each do |token|
-        puts "winning_lines #{winning_lines token}"
         @winner = (@winner or winning_lines token)
         @game_over = (@winner or winning_lines token)
       end
