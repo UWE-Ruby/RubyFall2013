@@ -1,6 +1,8 @@
 class TicTacToe
   attr_accessor :player, :computer, :player_symbol, :computer_symbol, :board
   SYMBOLS = [:X, :O]
+  @winner = false
+  @game_over = false
   @current
   
 
@@ -65,7 +67,19 @@ class TicTacToe
   end
 
   def determine_winner
-    puts "Game won: #{winning_lines :X}"
+    [:X, :O].each do |token|
+      puts "Player #{token} just won!" if winning_lines token
+      @winner = true
+      @game_over = true
+    end
+  end
+
+  def player_won?
+    @winner
+  end
+
+  def over?
+    @game_over
   end
 
   private
