@@ -7,6 +7,7 @@ class TicTacToe
   
 
   def welcome_player
+    current_state
     "Welcome #{@player}"
   end
 
@@ -20,6 +21,7 @@ class TicTacToe
   end
 
   def initialize *name
+    @current ||= name[0]
     name[1] ||= SYMBOLS.sample
     @player_symbol = (SYMBOLS.reject {|s| s != name[1]}).first
     @computer_symbol = (SYMBOLS.reject {|s| s == @player_symbol}).first
@@ -31,10 +33,10 @@ class TicTacToe
 
   def indicate_player_turn
     
+    #puts "#{@player}'s Move:"
   end
 
   def get_player_move
-    puts "#{@player}'s Move:"
     gets
   end
 
