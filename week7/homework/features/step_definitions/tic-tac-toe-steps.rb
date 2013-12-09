@@ -1,6 +1,8 @@
 require 'rspec/mocks/standalone'
 require 'rspec/expectations'
 require '/Users/adam/Documents/Git_Repos/RubyFall2013-1/week7/homework/TicTacToe_game.rb'
+
+# Scenario: Begin Game 
 Given /^I start a new Tic\-Tac\-Toe game$/ do
   @game = TicTacToe.new
 end
@@ -21,9 +23,11 @@ Then /^who is X and who is O$/ do
   TicTacToe::SYMBOLS.should include @game.player_symbol, @game.computer_symbol #
 end
 
+# Scenario: My Turn
+
 Given /^I have a started Tic\-Tac\-Toe game$/ do #
   @game = TicTacToe.new(:player)
-  @game.player = "Renee"
+  @game.player = "Renee" #
 end
 
 Given /^it is my turn$/ do #
@@ -50,7 +54,7 @@ Given /^it is the computers turn$/ do  #
 end
 
 Then /^the computer randomly chooses an open position for its move$/ do #
-  open_spots = @game.open_spots
+  open_spots = @game.open_spots #
   @com_move = @game.computer_move
   open_spots.should include(@com_move)
 end
@@ -71,7 +75,7 @@ end
 When /^I enter a position "(.*?)" on the board$/ do |arg1|
   @old_pos = @game.board[arg1.to_sym]
   @game.should_receive(:get_player_move).and_return(arg1)
-  @game.player_move.should eq arg1.to_sym
+  @game.player_move.should eq arg1.to_sym #
 end
 
 When /^"(.*?)" is not taken$/ do |arg1|
@@ -124,7 +128,7 @@ Then /^computer should ask me for another position "(.*?)"$/ do |arg1|
   @game.player_move.should eq arg1.to_sym
 end
 
-Given /^ it is the computers turn $/ do
+Given(/^it is the computer's turn$/) do
   pending # express the regexp above with the code you wish you had
 end
 
