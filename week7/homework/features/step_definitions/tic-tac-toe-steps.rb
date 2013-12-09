@@ -1,5 +1,8 @@
 require 'rspec/mocks/standalone'
 require 'rspec/expectations'
+
+require File.join(File.dirname(__FILE__), '../', '../', 'tic_tac_toe.rb')
+
 Given /^I start a new Tic\-Tac\-Toe game$/ do
   @game = TicTacToe.new
 end
