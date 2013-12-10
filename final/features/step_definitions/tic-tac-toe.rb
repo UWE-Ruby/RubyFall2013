@@ -8,6 +8,8 @@ class TicTacToe
     @computers_turn = current_player == :computer ? true : false
     @player_symbol = symbol.to_sym
     @computer_symbol = @player_symbol == SYMBOLS[0] ? SYMBOLS[1] : SYMBOLS[0];
+    @game_over = false
+    @player_won, @computer_won = false, false
 
     @wins = [      
       [:A1,:A2,:A3],
@@ -40,7 +42,7 @@ class TicTacToe
   def computer_move
     spot = computer_find_spot
     @board[spot] = @computer_symbol
-    @computers_turn = !@computers_turn
+    @computers_turn = false
     spot
   end
 
@@ -64,12 +66,13 @@ class TicTacToe
       r = spot_taken
     else
       @board[spot] = @player_symbol
+      @computers_turn = true
     end
     r
   end
 
   def spot_taken
-    print "spot already taken"
+    print "spot already taken:"
     player_move
   end
 
@@ -81,29 +84,44 @@ class TicTacToe
 
   def determine_winner
     @wins.each do |win|
-      if @board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]]
-        @player_won = @board[win[0]] == @player_symbol ? true : false
+      if (@board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]]) && @board[win[0]] != " "
+        @game_over = true
+        if @board[win[0]] == @player_symbol
+          @player_won = true
+        else
+          @computer_won = true
+        end
       end
     end
   end
 
   def spots_open?
-    @board.values.inject(false){|r, v| r = true if v == " "}
+    r = false
+    @board.each do |k, v|
+      if v == " "
+        r = true
+      end
+    end
+    r
+  end
+
+  def computer_won?
+    determine_winner
+    @computer_won
   end
 
   def player_won?
     determine_winner
-    @player_won || nil
+    @player_won
   end
 
   def over?
-    !spots_open? || player_won? != nil ? true : false
+    !spots_open? || @game_over ? true : false
   end
 
   def draw?
     r = false
-    if over? && player_won? == nil
-      puts "test"
+    if over? && player_won? == false && computer_won? == false
       r = true
     end
     r
@@ -111,7 +129,8 @@ class TicTacToe
 
   def current_state
     <<-eos
-        a   b   c"
+
+         a   b   c"
 
      1   #{@board[:A1].to_s} | #{@board[:B1].to_s} | #{@board[:C1].to_s}
         --- --- ---
