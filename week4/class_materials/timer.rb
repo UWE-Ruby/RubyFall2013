@@ -6,3 +6,4 @@ class Timer
 		(end_time - start_time) / n.to_f
 	end
 end
+

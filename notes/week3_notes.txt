@@ -1,0 +1,101 @@
+To implement Enumerable just make a method called each, which
+usually calls each on something else...
+
+@ sign before a variable makes it an instance variable
+
+looks for a method a called title= when you see myClass.title = "Hello"
+
+def title= t
+	@title = t
+end
+
+attr_accessor :property
+attr_reader :property
+attr_writer :property
+
+self. before a method name make its a class level method -- like a static method
+
+class variables are defined with two @@ signs
+
+@inst_var
+@@class_var
+
+three ways of declaring a class level method:
+
+myClass.myMethod() <--- you have to change the name of the method when you change the name of the class
+self.myMethod() <--you dont have to do the above
+
+self <<
+	def myMethod()
+	end
+
+^^in the above case you are adding a method to the self obj, weird syntax
+
+::new = class level 
+#new = instance level
+
+default values:
+
+def initialize title = "Not Set"
+	@title = title
+end
+
+||= is "or equals" 
+
+@@book_count ||= 0
+
+"if @@book_count is not set, set to 0, otherwise return @@book_count"
+
+ruby does not use ++
+
+use i += 3
+
+
+arrays and hashes
+
+.first and .last
+
+you can access from the end of the array like myArray[-2]
+
+.select { }
+
+.map and .collect
+
+a.map!{  }
+
+what does the bang do? it does it in-place (aka works on the original object, not a copy)
+
+on an array 
+
+h.each do |k, v| end
+
+hash.keys and h.values
+
+myArray.include?(1)
+myHash.has_key?(:hello => "Hello")
+
+h[:hello]
+h["hello"]
+
+read about symbols
+
+.count 
+
+.each vs .map
+
+.each returns the original array passed to it 
+.map returns the new 
+
+.inject and .reduce -- mean the same thing
+
+$monsters.inject(0){ |legs, m| legs += m[:legs] }
+
+0 is the start value, in this case, i can actually leave the start value out,
+if you leave it out it tags the first thing 
+
+
+legs is a reference to the running total
+
+dangers.inject(Hash.new(0)){ |hist, danger| hist[danger] += 1 }.
+
+semicolon in irb is a pretend line break
