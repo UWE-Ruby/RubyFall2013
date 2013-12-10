@@ -136,6 +136,8 @@ Then(/^it is now the computer's turn$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-When(/^there are three X's in a row$/) do
-  pending # express the regexp above with the code you wish you had
+When /^there are three X's in a row$/  do
+  @game = TicTacToe.new(:player, :X)
+  @game.board[:C1] = @game.board[:C2] = @game.board[:C3] = :X
 end
+
