@@ -1,0 +1,24 @@
+require './features/step_definitions/tic-tac-toe.rb'
+
+@game = TicTacToe.new
+puts "What is your name?"
+@game.player = gets.chomp
+puts @game.welcome_player
+
+until @game.over?
+	case @game.current_player
+	when "Computer"
+		@game.computer_move
+	when @game.player
+		@game.indicate_player_turn
+		@game.player_move
+		#puts 'Current Player:'
+		#puts @current_player
+	end
+	puts @game.current_state
+	@game.determine_winner
+end
+
+puts "You Won!" if @game.player_won?
+puts "I Won!" if @game.computer_won?
+puts "DRAW!" if @game.draw?

@@ -1,5 +1,5 @@
-#require 'rspec/mocks/standalone'
-#require 'rspec/expectations'
+require 'rspec/mocks/standalone'
+require 'rspec/expectations'
 Given /^I start a new Tic\-Tac\-Toe game$/ do
   @game = TicTacToe.new
 end
@@ -34,16 +34,16 @@ Given /^the computer knows my name is David$/ do
 end
 
 Then /^the computer prints "(.*?)"$/ do |arg1|
-  @game.should_receive(:puts).with(arg1)  #
-  @game.indicate_player_turn#
+  @game.should_receive(:puts).with(arg1)
+  @game.indicate_player_turn
 end
 
 Then /^waits for my input of "(.*?)"$/ do |arg1|
   @game.should_receive(:gets).and_return(arg1)
-  @game.get_player_move #
+  @game.get_player_move
 end
 
-Given /^it is the computer''s turn$/ do
+Given /^it is the computers turn$/ do
   @game = TicTacToe.new(:computer, :O)
   @game.current_player.should eq "Computer"
 end
@@ -77,11 +77,11 @@ When /^"(.*?)" is not taken$/ do |arg1|
   @old_pos.should eq " "
 end
 
-Then /^it is now the computer's turn$/ do
+Then /^it is now the computers turn$/ do
   @game.current_player.should eq "Computer"
 end
 
-When /^there are three X's in a row$/ do
+When /^there are three Xs in a row$/ do
   @game = TicTacToe.new(:computer, :X)
   @game.board[:C1] = @game.board[:B2] = @game.board[:A3] = :X
 end

@@ -1,0 +1,33 @@
+
+Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
+
+Questions:
+1. What is method_missing and how can it be used?
+
+"method_missing" allows you to respond to class definition and it's class hierarchy in different, customized ways.
+A custom response or action based on a specific condition can be utilized when a "method_missing" method is defined. For example, in an emergency situation, the  method defined with "method_missing" could perform specific action when the "method_missing" condition is met in that 'emergency' situation.
+
+2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+ 
+Singletons in Ruby lets you define methods that are specific to a particular object. When we create
+a singleton method a new anonymous class is created and inserted as the first link in an object's inheritance chain, being the first place Ruby will look for a method definition, then the superclass, etc. It is here in the 'anonymous class' where the singleton lives. 
+
+Eigenclass is an alternate name for this dynamically created anonymous class. The word 'eigen' comes from the German, roughly implying something like, "one's very own."
+
+3. When would you use DuckTypeing? How would you use it to improve your code?
+
+DuckTypeing is style of programming with it's basic premise being an object’s type is determined by what it can do, not by its class: "if an object walks like a duck and talks like a duck, then the interpreter is happy to treat it as if it were a duck." Therefore, Ducktypeing simply questions the value in testing the class of an object, for instance, or to check the type of arguments in a method call. Checking types of arguments can constrain the method's flexibility. Though this not a blanket rule and there are valid situations to test argument types or type of class, etc. DuckTypeing poses the question to developers to consider whether you’re getting a real benefit from the extra code "to write and maintain." Applying the DuckTypeing approach will rely more on Ruby's inherit framework and potentially allowing less defensive coding or over-coding to achieve a program's objective. Not only would this be cleaner and more maintainable, but also potentially more efficient and performance wise.
+
+4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+
+Basically, class methods are methods that are called on a class, often preceded with self. as self.method_name, or class << self def method_name, or within a class, def ClassName.method_name. Instance methods are methods that are called on an instance of a class, thus for an instance class a new instance must be created to use them (Classname.new)
+
+'class_eval' can only be called on classes or modules, and it 'evals' on the instances of the 
+classes or modules that create instance methods. 'class_eval' will fail if the class doesn't exist.
+ 
+'instance_eval' on the other hand evaluates code against a single object's instance. If we use instance_eval to define a method on a class, it will define a method for just that instance of class, not all classes.
+
+5. What is the difference between a singleton class and a singleton method?
+
+Singleton methods reside in the Singleton class, where as instance methods reside in the superclass. If defined, a Singleton is only utilized when the programmer wants to have class-level methods for unique objects within that class. Used extensively with metaprogramming, Singletons are often referred to as the implicit ancestor of every Ruby Object. When  we want to create unique behavior for an individual object we can create singleton methods for a specific object in the Singleton class that are not shared by other instances of the object. These are singleton methods as they belong to the single object only.
+
