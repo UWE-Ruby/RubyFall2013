@@ -5,16 +5,16 @@ Feature: Tic-Tac-Toe Game
 
 Scenario: Begin Game
 	Given I start a new Tic-Tac-Toe game
-	When I enter my name Renee
-	Then the computer welcomes me to the game with "Welcome Renee"
+	When I enter my name David
+	Then the computer welcomes me to the game with "Welcome David"
 		And randomly chooses who goes first
 		And who is X and who is O
 
 Scenario: My Turn
 	Given I have a started Tic-Tac-Toe game
 		And it is my turn
-		And the computer knows my name is Renee
-	Then the computer prints "Renee's Move:"
+		And the computer knows my name is David
+	Then the computer prints "David's Move:"
 		And waits for my input of "B2"
 
 Scenario: Computer's Turn

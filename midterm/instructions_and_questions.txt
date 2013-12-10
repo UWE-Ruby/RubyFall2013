@@ -11,12 +11,125 @@ Instructions for Mid-Term submission and Git Review (10pts):
  
  Questions (20pts):
  - What are the three uses of the curly brackets {} in Ruby?
+	
+	- Hash definition
+	- To denote a block of code as with the do/end
+	- Interpolation that allows Ruby code to appear within a string: #{1+2}
+	
  - What is a regular expression and what is a common use for them? 
+	
+	- Regular expressions are a powerful tool for working with text, specifically strings.
+	Though the Ruby String class is quite expansive with more than 100 methods for manipulating strings,
+	for those situations that the String class can't handle, the power of regular expressions can be 
+	utilized. 
+	
  - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
+
+	The basic difference is that Symbols are immutable and Strings are not. Mutable objects, like strings, can 
+	be changed after assignment while immutable objects can only be overwritten. As such, Strings are Ruby 
+	objects having a unique id and and their own place in memory. Symbol usage shares the same object id, and as 
+	such the same space on the memory heap. Every time a a string is created a new object is created, where as, a symbol is
+	is simply reused until the program operation has completed. As Symbols stay in memory throughout the program's
+	operation, it can be quickly accessed from memory instead of instantiating a new object for a string. 
+	
+	This impacts the overhead of Garbage collection as there is one symbol marked for clean up where as every sting object is marked.
+	
+	Symbols are not just faster then Strings in how they are stored and used, but also in how they are compared.
+	As Symbols of the same text share the same space on the heap, testing for equality is only a matter of comparing
+	the object id’s. Testing equality for Strings is more extensive as every String's actual data must be 
+	compared by the interpreter.
+	
+	Fixnum:A Fixnum holds Integer values that can be represented in a native machine word (minus 1 bit). 
+		If any operation on a Fixnum exceeds this range, the value is automatically converted to a Bignum.
+		Fixnum objects have immediate value meaning that when they are assigned or passed as parameters, t
+		he actual object is passed, rather than a reference to that object. 
+		Assignment does not alias Fixnum objects. There is effectively only one Fixnum object instance 
+		for any given integer value,
+	
+	Float:
+	
+	I remember my CompSci professor saying never to use floats for currency.
+
+	The reason for that is how the IEEE specification defines floats in binary format. Basically, it 
+	stores sign, fraction and exponent to represent a Float. It's like a scientific notation for binary
+	(something like +1.43*10^2). Because of that, it is impossible to store fractions and decimals in 
+	Float exactly. 	That's why there is a Decimal format. If you do this:
+
+	irb:001:0> "%.47f" % (1.0/10)
+	=> "0.10000000000000000555111512312578270211815834045" # not "0.1"!
+	whereas if you just do
+
+	irb:002:0> (1.0/10).to_s
+	=> "0.1" # the interpreter rounds the number for you
+	So if you are dealing with small fractions, like compounding interests, or maybe even geolocation, 
+	I would highly recommend Decimal format, since in decimal format 1.0/10 is exactly 0.1.
+
+	However, it should be noted that despite being less accurate, floats are processed faster. 
+	Here's a benchmark:
+
+		require "benchmark" 
+		require "bigdecimal" 
+    	
+		d = BigDecimal.new(3) 
+		f = Float(3)
+    	
+		time_decimal = Benchmark.measure{ (1..10000000).each { |i| d * d } } 
+		time_float = Benchmark.measure{ (1..10000000).each { |i| f * f } }
+    	
+		puts time_decimal 
+		#=> 6.770960 seconds 
+		puts time_float 
+		#=> 0.988070 seconds
+
+	Basically:
+	Use float when you don't care about precision too much. For example, some scientific simulations 
+	and calculations only need up to 3 or 4 significant digits. This is useful in trading off accuracy 
+	for speed. Since they don't need precision as much as speed, they would use float.
+
+	Use decimal if you are dealing with numbers that need to be precise and sum up to correct number 
+	(like compounding interests and money-related things). Remember: if you need precision, then you 
+	should always use decimal.
+
+	So if I understand correctly, float is in base-2 whereas decimal is in base-10? What would be a 
+	good use for float? What does your example do, and demonstrate? 
+	no. both of them are base 2. The difference is the structure. My example demonstrates that 
+	1.0/10 is 0.1 when represented by decimal data structure and 0.100000000000000005 
+	when represented by float data structure. So if you are working with numbers that need high 
+	precision than using Float will be a mistake. 
+
+	When should one use Float, and when Decimal? 
+
+	use float when you need speed and dont care about precision too much. for example some 
+	scientific simulations and calculations only care up to 3 or 4 significant digits. 
+	Since they dont need precision as much as speed, you would use float. but if you are dealing 
+	with numbers that need to be precise and sum up to correct number (like compunding interests 
+	and money related things), then you should always use decimal.
+
+
+
  - Are these two statements equivalent? Why or Why Not?
-   1. x, y = "hello", "hello"
-   2. x = y = "hello"
+   1. x, y = "hello", "hello" - This creates an array: 
+		irb > x,y = "hello"  => ["hello","hello"]. 
+		irb > x => "hello"
+		irb > y => "hello"
+   2. x = y = "hello"- This assignment creates one String object: 
+		irb > x = y = "hello" => "hello"
+		irb > x => "hello"  (same as example 1 for x)
+		irb > y => "hello"	(same as example 1 for y)
+	The difference is the #2 stores one String object. #1 stores an array causing more processing
+	overhead.
+	
+	 
 - What is the difference between a Range and an Array?
+	An array is an object that's a collection of arbitrary elements. A range is an object that has 
+	a "start" and an "end", and knows how to move from the start to the end without having to 
+	enumerate all the elements in between.
+	
+	
+	
+	
+	
+	
 - Why would I use a Hash instead of an Array?
 - What is your favorite thing about Ruby so far?
 - What is your least favorite thing about Ruby so far?

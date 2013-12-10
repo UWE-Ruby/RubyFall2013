@@ -6,10 +6,41 @@ Please Read:
 
 1. What is a symbol?
 
+A symbol in Ruby is an identifier corresponding to a set of characters often as a name for something. It is 
+constructed in Ruby by preceding the name with a colon. A particular name  will always generate the same symbol, regardless of how 
+that name is used within the program. The %s delimited notation can also be used to create a symbol.
+
 2. What is the difference between a symbol and a string?
+The basic difference is that Symbols are immutable and Strings are not. Mutable objects, like strings, can 
+be changed after assignment while immutable objects can only be overwritten. As such, Strings are Ruby 
+objects having a unique id and and their own place in memory. Symbol usage shares the same object id, and as 
+such the same space on the memory heap. Every time a a string is created a new object is created, where as, a symbol is
+is simply reused until the program operation has completed. As Symbols stay in memory throughout the program's
+operation, it can be quickly accessed from memory instead of instantiating a new object for a string. 
+
+This impacts the overhead of Garbage collection as there is one symbol marked for clean up where as every sting object is marked.
+
+Symbols are not just faster then Strings in how they are stored and used, but also in how they are compared.
+As Symbols of the same text share the same space on the heap, testing for equality is only a matter of comparing
+the object id’s. Testing equality for Strings is more extensive as every String's actual data must be 
+compared by the interpreter.
 
 3. What is a block and how do I call a block?
+A block is ruby code that is enclosed in {} or do/end notation and is called a 'closure' because
+of it's start/end delineation. A method calls a block by using the Ruby yield statement. 
+
+If it is required to reuse a block of code multiple times or if the method using a block
+requires a callback, a proc would be recommended over the block. 
 
 4. How do I pass a block to a method? What is the method signature?
 
+When calling the method, a block is included in that method call.  The '&block' notation is used in the method signature to assign a
+block to that variable in the method.
+ 
 5. Where would you use regular expressions?
+Regular expressions are a powerful tool for working with text, specifically strings.
+Though the Ruby String class is quite expansive with more than 100 methods for manipulating strings,
+for those situations that the String class can't handle, the power of regular expressions can be 
+utilized.
+
+

@@ -9,7 +9,16 @@ class Couch
 		define_method("how_many_#{s}") do
 			instance_variable_get("@#{s}").count
 		end
+		define_method("show_colors_#{s}") do
+		  puts "show colors"
+			instance_variable_get("@#{s}").each do color| puts color}
+		end
+	
+	
+		define_method("#{s.to_s.gsub('s','')}_colors)") do 
+		  instance_variable_get("@#{s}").each do color| puts color)
 	end
+
 
 	# def to_str
 	# 	"I am a Couch"
@@ -30,6 +39,8 @@ class Couch
 
 	# 	self.send(meth)
 	# end
+	
+
 
 
 end
