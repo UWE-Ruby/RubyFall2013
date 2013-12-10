@@ -4,10 +4,10 @@
     <list default="true" id="32cc92d9-a6be-4570-92ab-79385b473c32" name="Default" comment="" />
     <ignored path="homework.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TicTacToe_game.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386678010110" ignored="false" />
+    <file path="/TicTacToe_game.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386702991288" ignored="false" />
     <file path="/Ruby Console" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386655008735" ignored="false" />
     <file path="/tic-tac-toe.feature" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386654504347" ignored="false" />
-    <file path="/tic-tac-toe-steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386661851334" ignored="false" />
+    <file path="/tic-tac-toe-steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386702016347" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +26,15 @@
     <favorites_list name="homework" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7171875">
+    <splitter split-orientation="horizontal" split-proportion="0.7054688">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.56285715">
+        <splitter split-orientation="horizontal" split-proportion="0.5813953">
           <split-first>
             <leaf>
               <file leaf-file-name="TicTacToe_game.rb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="125" column="8" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.375">
+                    <state line="123" column="25" selection-start="2363" selection-end="2363" vertical-scroll-proportion="5.125">
                       <folding />
                     </state>
                   </provider>
@@ -47,7 +47,7 @@
               <file leaf-file-name="tic-tac-toe-steps.rb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="95" column="0" selection-start="2395" selection-end="2395" vertical-scroll-proportion="0.3316062">
+                    <state line="66" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-2.5416667">
                       <folding />
                     </state>
                   </provider>
@@ -62,7 +62,7 @@
           <file leaf-file-name="tic-tac-toe.feature" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/features/tic-tac-toe.feature">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="48" column="0" selection-start="1423" selection-end="1423" vertical-scroll-proportion="1.4274611">
+                <state line="22" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.3316062">
                   <folding />
                 </state>
               </provider>
@@ -391,7 +391,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39909297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32329637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32329637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -472,21 +472,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/tic-tac-toe.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1423" selection-end="1423" vertical-scroll-proportion="1.4274611">
+        <state line="22" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.3316062">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="0" selection-start="2395" selection-end="2395" vertical-scroll-proportion="0.3316062">
+        <state line="66" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-2.5416667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="8" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.375">
+        <state line="123" column="25" selection-start="2363" selection-end="2363" vertical-scroll-proportion="5.125">
           <folding />
         </state>
       </provider>

@@ -101,7 +101,7 @@ Then /^the game ends$/ do
 end
 
 Given /^there are not three symbols in a row$/ do
-  @game.board = {
+  @game.board_locations = {
       :A1 => :X, :A2 => :O, :A3 => :X,
       :B1 => :X, :B2 => :O, :B3 => :X,
       :C1 => :O, :C2 => :X, :C3 => :O
@@ -128,12 +128,10 @@ Then /^computer should ask me for another position "(.*?)"$/ do |arg1|
   @game.player_move.should eq arg1.to_sym
 end
 
-Given(/^it is the computer's turn$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
-Then(/^it is now the computer's turn$/) do
-  pending # express the regexp above with the code you wish you had
+Then /^it is now the computer's turn$/ do
+  @game.current_player= "Computer"
+  @game.computer_move
 end
 
 When /^there are three X's in a row$/  do
@@ -141,3 +139,8 @@ When /^there are three X's in a row$/  do
   @game.board[:C1] = @game.board[:C2] = @game.board[:C3] = :X
 end
 
+And /^it is the computer's turn$/ do
+  @game.current_player= "Computer"
+  @game.computer_symbol = :X
+  @game.computer_move
+end

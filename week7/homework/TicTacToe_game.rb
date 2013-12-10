@@ -6,7 +6,7 @@ class TicTacToe
   attr_accessor :location
 	attr_reader :welcome_player
 	attr_reader :player_symbol
-	attr_reader :computer_symbol
+	attr_accessor :computer_symbol
 	attr_accessor :board
 	attr_reader :first
   attr_accessor :board_locations
@@ -57,7 +57,7 @@ class TicTacToe
 	    @player_on_deck = @player
 	  end
 
-    player_on_deck == @player ? symbol = @player_symbol : symbol = @computer_symbol
+    @player_on_deck == @player ? symbol = @player_symbol : symbol = @computer_symbol
 
     @move_counter += 1
    @player_on_deck
@@ -89,11 +89,18 @@ class TicTacToe
 	end
 
 	def spots_open?
-    @board_locations.has_value?(" ")
+    @board_locations.has_value?(' ')
 
-	end
+  end
+
+  def  open_spots
+    @board_locations.select {|key,val| val == " "}.keys
+  end
 
 	def computer_move
+    @location = @board_locations.select {|key,val| val == " "}.keys.sample
+    @board_locations[@location] = computer_symbol
+    return @location
 	end
 
 	def player_move
@@ -104,49 +111,66 @@ class TicTacToe
   a= get_player_move.to_sym
 
    else
-     puts " Sorry this position has been taken. Select another position."
+   puts " Sorry this position has been taken. Select another position."
    a = get_player_move.to_sym
 
    end
-
-  a
-
+    @board_locations[a] = @player_symbol.to_s
+      return a
   end
 
 	def current_state
-    @board_locations[get_player_move.to_sym] = @player_symbol.to_s
-    @board_locations[get_player_move.to_sym]
+    #@board_locations[get_player_move.to_sym] = @player_symbol.to_s
+    @board_locations.to_s
 	end
 
 	def player_won?
 
-    c = @board_locations.select {|key,val| val == @player_symbol.to_s}.keys
-    d= @board_locations.select {|key,val| val == @computer_symbol.to_s}.keys
-    @winning_patterns.include?(c) ?   determine_winner   :   @winning_patterns.include?(d) ?  determine_winner : current_player
-
-
-
-
-
+     if @winner == " "
+     state =   FALSE
+     else
+       state =  TRUE
+     end
+       state
 	end
 
 	def over?
+    if player_won? == TRUE
+    state = TRUE
+    else
+    state = FALSE
+    end
+      state
 
 	end
 
 	def draw?
 
+    if spots_open? == TRUE
+      state = FALSE
+    else
+      state = TRUE
+    end
+    state
+
 	end
 
 	def determine_winner
-    if spots_open? == true
+    c = @board_locations.select {|key,val| val == @player_symbol.to_s}.keys
+    d = @board_locations.select {|key,val| val == @computer_symbol.to_s}.keys
+    winner = " "
+    case
+      when   @winning_patterns.include?(c)  == TRUE
+         @winner = @player
 
 
-    else
-      puts "game is a draw #{@player} and Computer both win!"
-      winner= "game is a draw #{@player} and Computer both win!"
+      when       @winning_patterns.include?(d)  == TRUE
+        winner = "Computer"
+      when    @winning_patterns.include?(c) || @winning_patterns.include?(d)  == FALSE
+      current_player
     end
-       winner =  @player_on_deck
+
+    player_won?
 
   end
 
