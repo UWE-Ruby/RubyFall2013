@@ -73,7 +73,7 @@ Given /^I am playing X$/ do
 end
 
 When /^I enter a position "(.*?)" on the board$/ do |arg1|
-  @old_pos = @game.board[arg1.to_sym]
+  @old_pos = @game.board_locations[arg1.to_sym]
   @game.should_receive(:get_player_move).and_return(arg1)
   @game.player_move.should eq arg1.to_sym #
 end
@@ -88,7 +88,7 @@ end
 
 When /^there are three Xs in a row$/ do
   @game = TicTacToe.new(:computer, :X)
-  @game.board[:C1] = @game.board[:B2] = @game.board[:A3] = :X
+  @game.board_locations[:C1] = @game.board_locations[:B2] = @game.board_locations[:A3] = :X
 end
 
 Then /^I am declared the winner$/ do
@@ -118,12 +118,12 @@ Then /^the game is declared a draw$/ do
 end
 
 When /^"(.*?)" is taken$/ do |arg1|
-  @game.board[arg1.to_sym] = :O
+  @game.board_locations[arg1.to_sym] = :O
   @taken_spot = arg1.to_sym
 end
 
 Then /^computer should ask me for another position "(.*?)"$/ do |arg1|
-  @game.board[arg1.to_sym] = ' '
+  @game.board_locations[arg1.to_sym] = ' '
   @game.should_receive(:get_player_move).twice.and_return(@taken_spot, arg1)
   @game.player_move.should eq arg1.to_sym
 end
@@ -136,7 +136,7 @@ end
 
 When /^there are three X's in a row$/  do
   @game = TicTacToe.new(:player, :X)
-  @game.board[:C1] = @game.board[:C2] = @game.board[:C3] = :X
+  @game.board_locations[:C1] = @game.board_locations[:C2] = @game.board_locations[:C3] = :X
 end
 
 And /^it is the computer's turn$/ do

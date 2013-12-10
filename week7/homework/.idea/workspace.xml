@@ -4,10 +4,10 @@
     <list default="true" id="32cc92d9-a6be-4570-92ab-79385b473c32" name="Default" comment="" />
     <ignored path="homework.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TicTacToe_game.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386702991288" ignored="false" />
+    <file path="/TicTacToe_game.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386705193943" ignored="false" />
     <file path="/Ruby Console" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386655008735" ignored="false" />
     <file path="/tic-tac-toe.feature" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386654504347" ignored="false" />
-    <file path="/tic-tac-toe-steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386702016347" ignored="false" />
+    <file path="/tic-tac-toe-steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386703594479" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,51 +26,28 @@
     <favorites_list name="homework" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7054688">
-      <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.5813953">
-          <split-first>
-            <leaf>
-              <file leaf-file-name="TicTacToe_game.rb" pinned="false" current="true" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="123" column="25" selection-start="2363" selection-end="2363" vertical-scroll-proportion="5.125">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="tic-tac-toe-steps.rb" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="66" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-2.5416667">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="tic-tac-toe.feature" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/features/tic-tac-toe.feature">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.3316062">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="TicTacToe_game.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="40" selection-start="278" selection-end="278" vertical-scroll-proportion="0.44235924">
+              <folding>
+                <marker date="1386705206000" expanded="true" signature="656:673" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic-tac-toe-steps.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="0" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -461,7 +438,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -479,15 +456,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-2.5416667">
+        <state line="95" column="0" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="25" selection-start="2363" selection-end="2363" vertical-scroll-proportion="5.125">
-          <folding />
+        <state line="11" column="40" selection-start="278" selection-end="278" vertical-scroll-proportion="0.44235924">
+          <folding>
+            <marker date="1386705206000" expanded="true" signature="656:673" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
