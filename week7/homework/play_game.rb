@@ -1,4 +1,4 @@
-require './features/step_definitions/tic-tac-toe.rb'
+require './features/tic-tac-toe.rb'
 
 @game = TicTacToe.new
 puts "What is your name?"
@@ -10,7 +10,7 @@ until @game.over?
 	when "Computer"
 		@game.computer_move
 	when @game.player
-		@game.indicate_palyer_turn
+		@game.indicate_player_turn
 		@game.player_move
 	end
 	puts @game.current_state
