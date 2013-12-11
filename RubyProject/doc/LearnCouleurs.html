@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class LearnCouleurs - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/learn_couleurs_game/learn_couleurs.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-comment_final_score">#comment_final_score</a>
+    
+    <li ><a href="#method-i-display_couleurs">#display_couleurs</a>
+    
+    <li ><a href="#method-i-display_new_color">#display_new_color</a>
+    
+    <li ><a href="#method-i-display_score">#display_score</a>
+    
+    <li ><a href="#method-i-over-3F">#over?</a>
+    
+    <li ><a href="#method-i-player_answer">#player_answer</a>
+    
+    <li ><a href="#method-i-selection">#selection</a>
+    
+    <li ><a href="#method-i-welcome_player">#welcome_player</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./learn_couleurs_game_gemspec.html">learn_couleurs_game.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./LearnCouleurs.html">LearnCouleurs</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class LearnCouleurs</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-current_couleur" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">current_couleur</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-over" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">over</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-player" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">player</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-score" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">score</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@player</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@couleurs</span> = { <span class="ruby-value">40</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;noir&quot;</span>, <span class="ruby-value">41</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;rouge&quot;</span>, <span class="ruby-value">42</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;vert&quot;</span>, <span class="ruby-value">43</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;jaune&quot;</span>, <span class="ruby-value">44</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;bleu&quot;</span>, <span class="ruby-value">47</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;gris&quot;</span>
+  }
+  <span class="ruby-ivar">@current_couleur</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@over</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@rounds</span> = <span class="ruby-value">-1</span>
+  <span class="ruby-ivar">@score</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@max_rounds</span> = <span class="ruby-value">5</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-comment_final_score" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">comment_final_score</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="comment_final_score-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comment_final_score</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rounds</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Essaie de jouer maintenant!&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@score</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;CATASTROPHE!!!&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@score</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@max_rounds</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;MOUAIS...&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@score</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@max_rounds</span><span class="ruby-operator">*</span><span class="ruby-value">3</span><span class="ruby-operator">/</span><span class="ruby-value">4</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;BIEN!&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@score</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@max_rounds</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;TRES BIEN!&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;PARFAIT!!!&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- comment_final_score-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- comment_final_score-method -->
+
+    
+      <div id="method-i-display_couleurs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">display_couleurs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="display_couleurs-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display_couleurs</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Liste couleurs:&quot;</span>
+  <span class="ruby-ivar">@couleurs</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;   \0033[&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;m   \0033[0m&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; = &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\n&quot;</span> }
+  <span class="ruby-ivar">@over</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- display_couleurs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- display_couleurs-method -->
+
+    
+      <div id="method-i-display_new_color" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">display_new_color</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="display_new_color-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display_new_color</span>
+  <span class="ruby-ivar">@current_couleur</span> = <span class="ruby-ivar">@couleurs</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sample</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Quelle couleur?&quot;</span>
+  <span class="ruby-identifier">couleur_code</span> = <span class="ruby-string">&quot;   \0033[&quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@current_couleur</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;m   \0033[0m\n&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">couleur_code</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- display_new_color-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- display_new_color-method -->
+
+    
+      <div id="method-i-display_score" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">display_score</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="display_score-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display_score</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Score: &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@score</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@max_rounds</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- display_score-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- display_score-method -->
+
+    
+      <div id="method-i-over-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">over?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="over-3F-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">over?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rounds</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@max_rounds</span>
+    <span class="ruby-ivar">@over</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@over</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- over-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- over-3F-method -->
+
+    
+      <div id="method-i-player_answer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">player_answer</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="player_answer-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">player_answer</span>
+  <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">answer</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@couleurs</span>[<span class="ruby-ivar">@current_couleur</span>]
+   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Oh non! Essaie encore:\n\n&quot;</span>
+   <span class="ruby-ivar">@score</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span>
+   <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-keyword">end</span>
+   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Bravo!\n\n&quot;</span>
+   <span class="ruby-ivar">@score</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+   <span class="ruby-ivar">@rounds</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- player_answer-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- player_answer-method -->
+
+    
+      <div id="method-i-selection" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">selection</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="selection-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">selection</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Reviser(r) ou Commencer(c)?&quot;</span>
+  <span class="ruby-identifier">selection</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">selection</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;r&quot;</span>
+      <span class="ruby-identifier">display_couleurs</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">selection</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;c&quot;</span>
+      <span class="ruby-ivar">@rounds</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">abort</span>(<span class="ruby-string">&quot;Invalide&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- selection-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- selection-method -->
+
+    
+      <div id="method-i-welcome_player" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">welcome_player</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="welcome_player-source">
+            <pre><span class="ruby-comment"># File lib/learn_couleurs_game/learn_couleurs.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">welcome_player</span>
+  <span class="ruby-identifier">welcome</span> = <span class="ruby-string">&quot;Bienvenue &quot;</span><span class="ruby-operator">+</span> <span class="ruby-ivar">@player</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- welcome_player-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- welcome_player-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
