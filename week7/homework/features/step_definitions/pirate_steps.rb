@@ -1,5 +1,8 @@
 Gangway /^I have a (\w+)$/ do |arg|
+	# 
 	@translator = Kernel.const_get(arg).new
+	# PirateTranslator object
+	@translator = PirateTranslator.new
 end
 
 Blimey /^I (\w+) '(.+)'$/ do |method, arg|
