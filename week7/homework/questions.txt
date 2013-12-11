@@ -3,6 +3,7 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+<<<<<<< HEAD
 
 	- It's a built-in hook method (sometimes called a callback). There are two main uses for the method_missing hook. The first is to intercept every use of an undefined method and handles it (either with NoMethodError or a NameError).  The second is to intercept all calls but handles only some of them.
 
@@ -38,3 +39,9 @@ Questions:
 	- Singleton method: a method which belongs to a single object rather than to an entire class and other objects.
 
 	- Singleton class: a class which defines a single object
+=======
+2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+3. When would you use DuckTypeing? How would you use it to improve your code?
+4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+5. What is the difference between a singleton class and a singleton method?
+>>>>>>> 8b3b197baa14a59c207aca832acf7ce570e9e099
