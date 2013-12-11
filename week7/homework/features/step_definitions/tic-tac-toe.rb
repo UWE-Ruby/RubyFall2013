@@ -107,9 +107,9 @@ class TicTacToe
 	# determine winner
 	def determine_winner
 		@winner = false
-		winning_play = winning_combo symbol
-		@game_over =  winning_play
-		@winner = winning_play
+		winning_game = winning_combo symbol
+		@game_over =  winning_game
+		@winner = winning_game
 	    if (spots_open? == false and @winner == false)
     	  @game_over = true
  	    end
