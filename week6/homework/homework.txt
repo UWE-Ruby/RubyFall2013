@@ -1,2 +1,18 @@
 Release a test gem to RubyGems.org and email me your gem name
 E-mail me your project idea 
+
+copy from email I sent to Renee
+-begin
+Scott Dodson 06 - homework, project proposal
+
+https://rubygems.org/gems/split_bills
+https://github.com/scottdodson/SplitBills.git
+
+I live in a live/work artists coop. One of the ongoing challenges of sharing the costs related to a common lease is the splitting of bills and rent between members. All users pay rent by the square footage they occupy, some have parking spaces and storage and all owe a monthly split of electrical, water and garbage bills.
+
+Calculation of the monthly split is something that comes up. I would also like to use this gem going forward within these Ruby certification classes. Other tasks will be importing CSV data from the bank, assigning deposits to members, tracking collections and payout and reporting member standings... I would also like to store it's records in YAML files
+
+Does this sound good?
+
+Scott
+-end

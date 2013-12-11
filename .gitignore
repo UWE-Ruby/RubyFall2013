@@ -1,0 +1,9 @@
+# Directories
+scratch/
+
+# RBEnv
+.rbenv_gemsets
+.ruby-gemset
+
+# OSX
+.DS_Store?
