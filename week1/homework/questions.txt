@@ -3,13 +3,23 @@ Chapter 3 Classes, Objects, and Variables
 p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
+A instance or 'thing' of any type that is defined in memory within the context of the program
 
 2. What is a variable?
+A name that is given to a specific object
 
 3. What is the difference between an object and a class?
+An object is a specific instance of a class.  A class may have specific attributes that are themselves objects of another class.
 
 4. What is a String?
+A string is one or more characters.  A string object is an object that is a member of the string class.
 
 5. What are three messages that I can send to a string object? Hint: think methods
+length (return length of string)
+index (return first character location of a hit on a substring or regex pattern)
+encode (convert character encoding)
 
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+single (') and double (") quotes...
+single quotes don't interpolate variables and only require escaping the single-quote(') or backslash(\)
+double quotes allow variable interpolation and have many more 'special' characters that either require escaping or that can be created through the use of backslash(\)
