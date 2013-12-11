@@ -37,6 +37,7 @@ class TicTacToe
     @spots_are_open = true
   end
 
+  # Welcome and set opponents symbols
   def welcome_player
     @@player_new = true
     @@contestants = { :player => @player, :computer => "Computer" }
@@ -51,6 +52,7 @@ class TicTacToe
     return "Welcome #{@player}"
   end
 
+  # Determine who the current player is
   def current_player
     if @player.is_a? Symbol
       @player = @@contestants[@player]
@@ -69,18 +71,17 @@ class TicTacToe
     end
   end
 
+  # Notify it is the player's turn
   def indicate_palyer_turn
     return "#{@player}\'s Move:"
   end
 
+  # Set player symbol
   def player_symbol
     if @symbol == ""
       @a = SYMBOLS.sample
       if @a.is_a? Symbol
         @a = @a.to_sym
-#        printf "\nPlayer symbol: #{@a}"
-#      else
-#        puts "a in else: #{@a}"
       end
       return @a
     else
@@ -89,16 +90,12 @@ class TicTacToe
     end
   end
 
+  # Set computer symbol
   def computer_symbol
     @b = SYMBOLS.reject{ |symbols| symbols == @a}.first
     if @b.is_a? Symbol
       @b = @b.to_sym
-#      puts "computer symbol: #{@b}"
-#    else
-#      puts "b in else: #{@b}"
     end
-
-#    puts "returned: #{@b}"
     return @b
   end
 
@@ -106,6 +103,7 @@ class TicTacToe
     return @@over
   end
 
+  # Get players input
   def get_player_move
     printf "\n#{@player}\'s Move:"
     @the_move = gets.chomp.to_sym
@@ -113,12 +111,14 @@ class TicTacToe
     return @the_move
   end
 
+  # Player makes a move
   def player_move
     get_player_move
     @board[@the_move] = @a
     return @the_move
   end
 
+  # Computer makes a move
   def computer_move
     cm_open = self.open_spots
     cm_ramdom = cm_open.sample
@@ -127,6 +127,7 @@ class TicTacToe
     return cm_ramdom
   end
 
+  # See if the position is already taken
   def check_move
     if @board[@the_move] != " "
       puts "Position already taken, choose another"
@@ -134,6 +135,7 @@ class TicTacToe
     end
   end
 
+  # Draw the board
   def current_state
     puts "     A   B   C\n"
     puts " 1   #{@board[:A1]} | #{@board[:B1]} | #{@board[:C1]} "
@@ -174,6 +176,7 @@ class TicTacToe
       count_my_moves = 0
     end
 
+    # Set the winner
     if a_winner == true
       if @player == "Computer" || @player == :computer
         @computer_won = true
@@ -219,10 +222,8 @@ class TicTacToe
       @draw = true
       @@over = true
     else
-      spots_array = spots_hash.keys   # array containing open positions
+      spots_array = spots_hash.keys
       return spots_array
     end
-
   end
-
 end
