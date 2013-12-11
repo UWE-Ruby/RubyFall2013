@@ -4,15 +4,13 @@ class TicTacToe
 
   SYMBOLS = [:X, :O]
 
-  attr_accessor :player, :computer, :board
+  attr_accessor :player, :computer, :board, :outside_player
 
   def initialize player = "", symbol = ""
     @player = player
-    puts "player is a: #{@player.class}"
-    puts "nit player: #{@player}"
+    @outside_player = false
+    @outside_player = true if @player != ""
     @symbol = symbol
-    puts "symbol is a: #{@symbol.class}"
-    puts "nit symbol: #{@symbol}"
 
     @board = {
       A1:" ",A2:" ",A3:" ",
@@ -32,88 +30,58 @@ class TicTacToe
       [:A1, :B2, :C3],
       [:A3, :B2, :C1]
     ]
-    @over = false
-    cm_key = ""
+    @@over = false
     @draw = false
     @player_won = false
+    @computer_won = false
     @spots_are_open = true
   end
 
   def welcome_player
-    puts "the player is: #{@player}"
     @@player_new = true
-#    @@contestants = { :player => @player, :computer => "Computer"}
-# The following is the problem.  @player is "player" or "computer"
-#    if @player 
-    @@contestants = { "player" => @player, "computer" => "Computer"}
-    @@the_players = [@player, "Computer"]
-#    puts "the_players: #{@@the_players}"
- #   puts "contestants: #{@@contestants}"
+    @@contestants = { :player => @player, :computer => "Computer" }
+    @@the_players = @@contestants.values
+    # newly added
+    player_symbol
+    computer_symbol
+    @the_sybmols = { :player => @a,
+                :computer => @b
+    }
+    puts
     return "Welcome #{@player}"
   end
 
   def current_player
-    puts "new contestants: #{@@contestants}"
-    puts "in current player"
-    if @@player_new && @player != ""
-      puts "inside if"
-      new_player_sym = @@contestants.keys.sample
-      puts "#{new_player_sym.class}"
-      @@player_new = false
-      a_new = @@contestants[new_player_sym]
-      puts "#{a_new}"
-      puts "Test #{a_new}\'s Move:"
-      return a_new
-    else
-      puts "in else"
-      if @player.is_a? Symbol
-        testit = @player.to_s
-        player_name = @@contestants[testit]
-#        puts "player_name: #{player_name}"
-#        puts "#{@@contestants[@player]}\'s Move:"
-#        puts "#{player_name}\'s Move:"
-        return player_name
+    if @player.is_a? Symbol
+      @player = @@contestants[@player]
+    end
+    if @outside_player == false
+      if @@player_new
+        new_player = @@contestants.values.sample
+        @@player_new = false
+        @player = new_player
       else
-        puts "#{@player}"
-      return @player
-
-      end
-      puts "#{@@contestants[@player]}\'s Move:"
-#      return @@contestants[@player]
+        next_player = @@the_players.reject{|i| i == @player}.join
+        @player = next_player
+     end
+    else
       return @player
     end
-    #original from here down
-#    puts "#{@player}\'s Move:"
-    
-#    puts "#{@@contestants[new_player_key]}\'s Move:"
- #   puts "Test #{@@contestants[@player]}\'s Move:"
- #   return @@contestants[@player]
- #   return @player
   end
 
   def indicate_palyer_turn
- #   puts "in indicate_palyer_turn"
- #   puts "the_players: #{the_players}"
-    if f = @@the_players.enum_for(:each_index).find { |i| @@the_players[i] =~ /@player/i}
-      @@the_players.unshift @@the_players.delete_at(f)
-#      puts "the new array: #{@the_players}"
-      next_player = @the_players.last
-    end
-
-    return "#{next_player}\'s Move:"
+    return "#{@player}\'s Move:"
   end
 
   def player_symbol
-    puts "inside player_symbol"
     if @symbol == ""
       @a = SYMBOLS.sample
       if @a.is_a? Symbol
         @a = @a.to_sym
-        puts "a: #{@a}"
-      else
-        puts "a in else: #{@a}"
+#        printf "\nPlayer symbol: #{@a}"
+#      else
+#        puts "a in else: #{@a}"
       end
-#      puts "returned: #{@a}"
       return @a
     else
       puts "the symbol: \"#{@symbol}\""
@@ -122,13 +90,12 @@ class TicTacToe
   end
 
   def computer_symbol
-    puts "inside computer_symbol"
     @b = SYMBOLS.reject{ |symbols| symbols == @a}.first
     if @b.is_a? Symbol
       @b = @b.to_sym
-      puts "b: #{@b}"
-    else
-      puts "b in else: #{@b}"
+#      puts "computer symbol: #{@b}"
+#    else
+#      puts "b in else: #{@b}"
     end
 
 #    puts "returned: #{@b}"
@@ -136,28 +103,35 @@ class TicTacToe
   end
 
   def over?
-    return @over
+    return @@over
   end
 
   def get_player_move
-    puts "#{@player}\'s Move:"
-    @the_move = gets.chomp
+    printf "\n#{@player}\'s Move:"
+    @the_move = gets.chomp.to_sym
+    check_move
     return @the_move
   end
 
   def player_move
-    puts "the move: #{@the_move}"
-    @board[@the_move] = @player_symbol
+    get_player_move
+    @board[@the_move] = @a
     return @the_move
   end
 
   def computer_move
-#    puts "computer symbol: #{@b}"
     cm_open = self.open_spots
     cm_ramdom = cm_open.sample
     @board[cm_ramdom.to_sym] = @b
-#    puts "computer chose: #{cm_ramdom}"
+    printf "\nComputer chose: #{cm_ramdom}\n\n"
     return cm_ramdom
+  end
+
+  def check_move
+    if @board[@the_move] != " "
+      puts "Position already taken, choose another"
+      get_player_move
+    end
   end
 
   def current_state
@@ -166,64 +140,89 @@ class TicTacToe
     puts "    --- --- ---"
     puts " 2   #{@board[:A2]} | #{@board[:B2]} | #{@board[:C2]} "
     puts "    --- --- ---"
-    puts " 3   #{@board[:A3]} | #{@board[:B3]} | #{@board[:C3]} "
-    return @board.values.to_s
+    puts " 3   #{@board[:A3]} | #{@board[:B3]} | #{@board[:C3]} \n"
   end
 
+  # Determine who the winner is
   def determine_winner
-#    puts "#{@board}"
-#    puts "in determine_winner"
-#    puts "current player: #{@player}"
-#    puts "current symbol: #{@symbol}"
-#    puts "player_won: #{@player_won}"
-    get_moves_array = @board.select{|k, v| v == @symbol}.keys
-#    puts "get_moves_array: #{get_moves_array}"
-#    puts "winning_moves: #{@winning_moves}"
-    if @winning_moves.include? get_moves_array
-      puts "#{@player} won"
-      @player_won = true
-      @over = true
+    if @player == "Computer" || @player == :computer
+      sym_to_check = @b
+    else
+      sym_to_check = @a
     end
+    get_moves_array = @board.select{|k, v| v == sym_to_check}.keys
+
+    count_winning_sets = 0
+    count_my_moves = 0
+    count_success = 0
+    a_winner = false
+
+    while count_winning_sets < @winning_moves.length
+      while count_my_moves < get_moves_array.length
+        if @winning_moves[count_winning_sets].include? get_moves_array[count_my_moves]
+          count_success += 1
+        end
+        if count_success == 3
+          a_winner = true
+          count_my_moves = get_moves_array.length
+          count_winning_sets = @winning_moves.length
+        end
+        count_my_moves += 1
+      end
+      count_success = 0
+      count_winning_sets += 1
+      count_my_moves = 0
+    end
+
+    if a_winner == true
+      if @player == "Computer" || @player == :computer
+        @computer_won = true
+      else
+        @player_won = true
+      end
+      @@over = true
+    end
+    check_open = spots_open?
   end
 
+  # Check for open spots
   def spots_open?
     spots_hash = @board.reject{|k, v| v != " "}
     if spots_hash.length == 0
       @spots_are_open = false
       @draw = true
-#      puts "spots_are_open: #{@spots_are_open}"
+      @@over = true
     end
     return @spots_are_open
   end
 
+  # Neither won
   def draw?
     @draw
-    @over = true
   end
 
+  # Player won
   def player_won?
-    @player_won
+    @player
   end
 
+  # Computer won
+  def computer_won?
+    @player
+  end
 
+  # Determine where the open spots are
   def open_spots
     spots_hash = @board.reject{|k, v| v != " "}
     if spots_hash.length == 0
       @spots_are_open = false
-#      puts "no spaces left"
       @draw = true
+      @@over = true
     else
       spots_array = spots_hash.keys   # array containing open positions
       return spots_array
     end
-#    if spots_array.lenth == 0
-#      @spots_open = false
-#    end
-#    open_array = Array.new
-#    all_key_array = @board.keys
-#    puts "all_key_array: #{all_key_array}"
-#    all_key_array.each{|i| @board[i]}
-    # This isn't finished yet
+
   end
 
 end
