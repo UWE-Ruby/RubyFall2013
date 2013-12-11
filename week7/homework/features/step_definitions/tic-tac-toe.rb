@@ -132,7 +132,7 @@ class TicTacToe
  
  	#if game is a draw
     def draw?
-     	(@game_over == true and @winner == false)
+     	@game_over == true and @winner == false
     end
 
 end
