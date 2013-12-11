@@ -1,6 +1,25 @@
 require "#{File.dirname(__FILE__)}/calculator"
 
-describe Calculator do
+class Calculator
+  def sum input
+    input.inject(0, :+) 
+  end
+
+  def multiply *inputs
+    inputs.flatten.inject(:*)
+  end
+
+  def pow base, exponent
+    base**exponent
+  end
+
+  def fac n
+    product =1
+    1. upto(n){|i| product *= *}
+    product    
+  end
+
+  Benchmark.bmbm do |results|
   
   before do
     @calculator = Calculator.new
@@ -27,6 +46,9 @@ describe Calculator do
   # Once the above tests pass, 
   # write tests and code for the following:
   describe "#multiply" do
+
+    (2..2).inject(&:*)
+
   	it "multiplies two numbers" do
 		@calculator.multiply(2,2).should eq 4
 	end

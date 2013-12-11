@@ -9,7 +9,21 @@ class Couch
 		define_method("how_many_#{s}") do
 			instance_variable_get("@#{s}").count
 		end
+
+	[:pillows, :cushions, :dogs].each do |s|
+		define_method("#{s. to_s.gsub('s', '')colors}") do
+			instance_variable_get("@#{}{s}").each do |color
 	end
+
+	def method_missing method_name, *args, &block
+		puts "You called #{method_name} with #{args}"
+		define_method method_name do |*args|
+			puts "hello there!"
+	end
+end
+self.send method_name
+		
+end
 
 	# def to_str
 	# 	"I am a Couch"

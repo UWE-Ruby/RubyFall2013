@@ -1,0 +1,23 @@
+Please read: 
+Chapter 3 Classes, Objects, and Variables 
+p.86-90 Strings (Strings section in Chapter 6 Standard Types)
+
+1. What is an object?
+An object is a representation in memory of a specific concept or thing that the Ruby interpreter knows about. 
+
+2. What is a variable?
+A variable is a name for a location in memory. It can contain, or point to, any type of object.
+
+3. What is the difference between an object and a class?
+An object is an instance of a class, or a specific thing of that class's type in memory. The class is the specifics that are common to all things of that type. The classification of a concept or a thing is a class. A specific thing or concept of a class's type in memory is an object. For example: All books have titles (Class). This book's title is "Harry Potter and the Goblet of Fire" (Object). 
+
+4. What is a String?
+A string is how Ruby understands text. It is a collection of characters (Bytes), and can be created by making an instance of the String class (String.new) or as a string literal ("",'', %Q[]).
+
+5. What are three messages that I can send to a string object? Hint: think methods
+chomp! - removes newline characters, or the specified characters, from the end of a string
+strip! - removes leading or trailing whitespace from a string
+split  - returns an array of strings made up of the original string separated on whitespace or the specified characters or regexp
+
+6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+Single quotes ex: '' and Double quotes ex: "". The single quotes allow for 2 escape characters: \' and \\ . The double quoted string literal allows for many different escaped special characters (like \n is a line break) and allows for string interpolation, or the injection of evaluated Ruby code into the string ex: "Hello #{my_name}". The single quoted string takes up much less memory than a double quoted string with interpolation. Without interpolation, both are about the same.
