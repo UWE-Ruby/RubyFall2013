@@ -11,6 +11,9 @@ Instructions for Mid-Term submission and Git Review (10pts):
  
  Questions (20pts):
  - What are the three uses of the curly brackets {} in Ruby?
+      Three uses are: Curly brackets can replace 'do' and 'end'; they represent the beginning and end of a block
+      They represent a placeholder for data being held by a variable (i.e., #{})
+
  - What is a regular expression and what is a common use for them? 
  - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
  - Are these two statements equivalent? Why or Why Not?

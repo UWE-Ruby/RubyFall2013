@@ -5,11 +5,25 @@ Please Read:
  - Chapter 22 The Ruby Language: basic types (symbols), variables and constants
 
 1. What is a symbol?
+A label that is used to identify a piece of data. A symbol is stored in memory one time. These work well inside hashes. This helps conserve memory.
 
 2. What is the difference between a symbol and a string?
+A symbol is stored in memory one time while a string is stored in memory each time it is called. Every time it creates a string a new Ruby object is created.
 
 3. What is a block and how do I call a block?
+   a block is code we want to be iterated each time through the loop denoted by curly braces or do and end. An iterator invokes a block of code repeatedly, including the block variable until we end our block of code.
+
+You can call the block by using yield after the iterator within the block. This invokes the code in the block. When the block exits, control picks back up immediately after the yield.
+
+In the definition of the block, the argument list appears between vertical bars. In this instance, the variable f receives the value passed to the yield, so the block prints successive members of the series. A block is always invoked from a function with the same name as that of the block. 
+
+A Ruby iterator can invoke a block of code.
 
 4. How do I pass a block to a method? What is the method signature?
+	You can invoke it using the yield statement. All methods that use blocks are iterators. Blocks are enclosed by curly braces.
 
 5. Where would you use regular expressions?
+
+You would use regular expressions when you are trying to match or find a set of strings or characters that match a specific pattern.
+
+A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern.
