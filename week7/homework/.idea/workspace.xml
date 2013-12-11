@@ -8,6 +8,22 @@
     <file path="/Ruby Console" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386655008735" ignored="false" />
     <file path="/tic-tac-toe.feature" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386654504347" ignored="false" />
     <file path="/tic-tac-toe-steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386703594479" ignored="false" />
+    <file path="/Dummy.txt" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386706431479" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/jamii.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386720277854" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/features/jamii_feature.feature" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386717101080" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/step_definitions/jamii_steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386713053305" ignored="false" />
+    <file path="/jamii_steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386716635584" ignored="false" />
+    <file path="/jamii_feature.feature" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386717101080" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/Gemfile" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386706080289" ignored="false" />
+    <file path="/jamii.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386719075744" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/support/env.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386713267850" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/features/step_definitions/jamii_steps.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386716652536" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/jamii_admin.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386720399813" ignored="false" />
+    <file path="/jamii_admin.rb" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386720399813" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/jamii.gemspec" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386720719825" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/NSBE_roster.csv" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386718606950" ignored="false" />
+    <file path="/NSBE_roster.csv" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386718601043" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../../dev/jamii_project/lib/roster.csv" changelist="32cc92d9-a6be-4570-92ab-79385b473c32" time="1386718615941" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,28 +42,43 @@
     <favorites_list name="homework" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TicTacToe_game.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="40" selection-start="278" selection-end="278" vertical-scroll-proportion="0.44235924">
-              <folding>
-                <marker date="1386705206000" expanded="true" signature="656:673" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tic-tac-toe-steps.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="0" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="tic-tac-toe.feature" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/features/tic-tac-toe.feature">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="7" selection-start="133" selection-end="142" vertical-scroll-proportion="0.19430052">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="tic-tac-toe-steps.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="41" column="2" selection-start="1023" selection-end="1050" vertical-scroll-proportion="-2.8367875">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="env.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="51" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -63,6 +94,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="726" />
@@ -119,6 +151,66 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="homework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="support" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="step_definitions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -357,14 +449,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="726" extended-state="6" />
+    <frame x="4" y="22" width="1280" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40923825" sideWeight="0.600907" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.67161715" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.67670363" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39909297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -438,7 +530,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/TicTacToe_game.rb</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -447,26 +546,40 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="40" selection-start="278" selection-end="278" vertical-scroll-proportion="0.44235924">
+          <folding>
+            <marker date="1386705206000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="43" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/features/tic-tac-toe.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.3316062">
+        <state line="5" column="7" selection-start="133" selection-end="142" vertical-scroll-proportion="0.19430052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="51" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/tic-tac-toe-steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="0" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
+        <state line="41" column="2" selection-start="1023" selection-end="1050" vertical-scroll-proportion="-2.8367875">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe_game.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="278" selection-end="278" vertical-scroll-proportion="0.44235924">
-          <folding>
-            <marker date="1386705206000" expanded="true" signature="656:673" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
