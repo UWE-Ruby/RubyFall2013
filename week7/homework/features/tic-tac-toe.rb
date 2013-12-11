@@ -3,6 +3,8 @@ class TicTacToe
 	attr_accessor :board
 	attr_accessor :player_symbol
 	attr_accessor :player_move
+	attr_accessor :player_symbol
+	attr_accessor :computer_symbol
 
 
 	SYMBOLS = :X, :O
@@ -10,6 +12,7 @@ class TicTacToe
 	def initialize(first_player=nil, player_symbol=nil)
 		@player_symbol = player_symbol
 		@first_player = first_player
+		get_player_move
 		@board = {
 		 "a1"=>" ","a2"=>" ","a3"=>" ",
 		 "b1"=>" ","b2"=>" ","b3"=>" ",
@@ -69,15 +72,11 @@ class TicTacToe
 	end
 
 	def get_player_move
-		@player_move
+		@player_move = :A1
 	end
 
-	def player_move(board_space = nil)
-    	if board_space.nil?
-    		@move = gets.chomp
-    	else
-    		@move = board_space
-    	end
+	def player_move
+		@move = @player_move
     	@board[@move] = player_symbol.to_s
     	@move
 	end
