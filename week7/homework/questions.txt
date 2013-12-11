@@ -3,7 +3,19 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+	helps provide a catching mechanism for NoMethodError exceptions.  
+	example def method_missing(method, *args, &block)
+		puts "there is no method called #{method} -- please try again."
+	end	
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+	Eigenclass is a hidden class associated with each specific instance of another class.
+		a new anonymous class is created to hold an object's singleton methods.
 3. When would you use DuckTypeing? How would you use it to improve your code?
+	
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+	a class method acts on a class directly and has no access to the individual instance variable methods
+	instance methods would have access to the actual variables of that instance
+	instance_eval will evaluate code against a singular instance of an object
+	class_eval in the context of the module or class 
 5. What is the difference between a singleton class and a singleton method?
+	I am feeling really turned around by the meta programming stuff.  I don't know that I have an answer for this one.  I am not even sure my answer for the others make sense

@@ -14,7 +14,6 @@ class Book
     @title = title
   end
 
-
   def test
     @test = "Hello!"
   end

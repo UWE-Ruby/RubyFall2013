@@ -1,5 +1,5 @@
 # Hint: require needs to be able to find this file to load it
-require "./simon_says.rb"
+require 'C:\Sites\RubyFall2013\week2\homework\simon_says.rb'
 
 describe SimonSays do
   include SimonSays # Hint: Inclusion is different than SimonSays.new (read about modules)
