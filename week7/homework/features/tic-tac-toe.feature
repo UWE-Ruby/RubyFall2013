@@ -1,6 +1,6 @@
 Feature: Tic-Tac-Toe Game
 	As a game player I like tic-tac-toe
-	In order to up my skills 
+	In order to up my skills
 	I would like to play agaist the computer
 
 Scenario: Begin Game
@@ -21,7 +21,7 @@ Scenario: Computer's Turn
 	Given I have a started Tic-Tac-Toe game
 		And it is the computer's turn
 		And the computer is playing X
-	Then the computer randomly chooses an open position for its move 
+	Then the computer randomly chooses an open position for its move
 		And the board should have an X on it
 
 Scenario: Making Moves
@@ -53,5 +53,5 @@ Scenario: Game is a draw
 	Given I have a started Tic-Tac-Toe game
 		And there are not three symbols in a row
 	When there are no open spaces left on the board
-	Then the game is declared a draw 
+	Then the game is declared a draw
 		And the game ends

@@ -39,19 +39,20 @@ Then /^the computer prints "(.*?)"$/ do |arg1|
 end
 
 Then /^waits for my input of "(.*?)"$/ do |arg1|
-  @game.should_receive(:gets).and_return(arg1)
-  @game.get_player_move
+  @game.should_receive(:gets)
+  @game.player_move
 end
 
 Given /^it is the computer's turn$/ do
-  @game = TicTacToe.new(:computer, :O)
+  @game = TicTacToe.new(:computer, :X)
   @game.current_player.should eq "Computer"
 end
 
 Then /^the computer randomly chooses an open position for its move$/ do
   open_spots = @game.open_spots
   @com_move = @game.computer_move
-  open_spots.should include(@com_move)
+  p @com_move.to_s
+  open_spots.should include(@com_move.to_s)
 end
 
 Given /^the computer is playing X$/ do
@@ -63,18 +64,19 @@ Then /^the board should have an X on it$/ do
 end
 
 Given /^I am playing X$/ do
-  @game = TicTacToe.new(:computer, :X)
+  @game = TicTacToe.new(:player, :X)
   @game.player_symbol.should eq :X
 end
 
 When /^I enter a position "(.*?)" on the board$/ do |arg1|
-  @old_pos = @game.board[arg1.to_sym]
-  @game.should_receive(:get_player_move).and_return(arg1)
-  @game.player_move.should eq arg1.to_sym
+  @args = arg1.scan(/./)
+  @old_pos = @game.the_matrix[@args[0]][(@args[1].to_i - 1)]
+  @game.should_receive(:gets).and_return(arg1)
+  @game.player_move.should eq arg1
 end
 
 When /^"(.*?)" is not taken$/ do |arg1|
-  @old_pos.should eq " "
+  @old_pos.should eq nil
 end
 
 Then /^it is now the computer's turn$/ do
@@ -82,8 +84,8 @@ Then /^it is now the computer's turn$/ do
 end
 
 When /^there are three X's in a row$/ do
-  @game = TicTacToe.new(:computer, :X)
-  @game.board[:C1] = @game.board[:B2] = @game.board[:A3] = :X
+  @game = TicTacToe.new(:player, :X)
+  @game.the_matrix["C"][0] = @game.the_matrix["B"][1] = @game.the_matrix["A"][2] = "X"
 end
 
 Then /^I am declared the winner$/ do
@@ -96,10 +98,10 @@ Then /^the game ends$/ do
 end
 
 Given /^there are not three symbols in a row$/ do
-  @game.board = {
-      :A1 => :X, :A2 => :O, :A3 => :X,
-      :B1 => :X, :B2 => :O, :B3 => :X,
-      :C1 => :O, :C2 => :X, :C3 => :O
+  @game.the_matrix = {
+      "A" => ["X","O","X"],
+      "B" => ["X","O","X"],
+      "C" => ["O","X","O"]
     }
     @game.determine_winner
 end
@@ -113,12 +115,15 @@ Then /^the game is declared a draw$/ do
 end
 
 When /^"(.*?)" is taken$/ do |arg1|
-  @game.board[arg1.to_sym] = :O
-  @taken_spot = arg1.to_sym
+  @args = arg1.scan(/./)
+  @game.the_matrix[@args[0]][(@args[1].to_i - 1)] = "O"
+  @taken_spot = arg1
 end
 
 Then /^computer should ask me for another position "(.*?)"$/ do |arg1|
-  @game.board[arg1.to_sym] = ' '
-  @game.should_receive(:get_player_move).twice.and_return(@taken_spot, arg1)
-  @game.player_move.should eq arg1.to_sym
+  @args = arg1.scan(/./)
+  @game.the_matrix[@args[0]][(@args[1].to_i - 1)] = nil
+  @game.should_receive(:player_move).twice.and_return(@taken_spot, arg1)
+  @game.player_move.should
+  @game.player_move.should eq arg1
 end
