@@ -5,9 +5,18 @@ class Couch
 		@dogs = dogs
 	end
 
+	# METAPROGRAMMING
+
 	[:pillows, :cushions, :dogs].each do |s|
+
+		# Define count methods for each type of instance
 		define_method("how_many_#{s}") do
 			instance_variable_get("@#{s}").count
+		end
+
+		# Define <type>_on_couch?
+		define_method("#{s}_on_couch?") do
+			not instance_variable_get("@#{s}").empty?
 		end
 	end
 

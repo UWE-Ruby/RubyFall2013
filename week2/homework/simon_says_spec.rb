@@ -1,10 +1,14 @@
-# Hint: require needs to be able to find this file to load it
+# Martin Nash
+
 require "./simon_says.rb"
 
 describe SimonSays do
-  include SimonSays # Hint: Inclusion is different than SimonSays.new (read about modules)
+
+  # This is a mixin. All methods in SimonSays are now available here.
+  include SimonSays
   
-  # Hint: We are just calling methods, we are not passing a message to a SimonSays object.
+
+  # TEST ECHO
   it "should echo hello" do
     echo("hello").should == "hello"
   end
@@ -13,7 +17,10 @@ describe SimonSays do
     echo("bye").should == "bye"
   end
 
-  it "should shout hello" do
+
+
+  # TEST SHOUT
+  it "should shout hello" do  
     shout("hello").should == "HELLO"
   end
   
@@ -21,6 +28,9 @@ describe SimonSays do
     shout("hello world").should == "HELLO WORLD"
   end
 
+
+
+  # TEST REPEAT
   it "should repeat" do
     repeat("hello").should == "hello hello"
   end
@@ -29,6 +39,9 @@ describe SimonSays do
     repeat("hello", 3).should == "hello hello hello"
   end
 
+
+
+  # TEST START_OF_WORD
   it "should return the first letter" do
     start_of_word("hello", 1).should == "h"
   end
@@ -37,6 +50,9 @@ describe SimonSays do
     start_of_word("Bob", 2).should == "Bo"
   end
 
+
+
+  # TEST FIRST_WORD
   it "should tell us the first word of 'Hello World' is 'Hello'" do
     first_word("Hello World").should == "Hello"
   end

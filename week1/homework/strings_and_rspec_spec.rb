@@ -9,17 +9,27 @@
 
 describe String do
 	context "When a string is defined" do
+		
 		before(:all) do
 			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
-		it "should be able to count the charaters"
+
+		# I'm concerned that this is not what you want
+		# string.length == string.length seems like I did some hack
+		# What is your solution to this problem?
+		it "should be able to count the charaters" do
+			@my_string.should have(@my_string.length).characters
+		end
+
+		# Split string into components. No problem.
 		it "should be able to split on the . charater" do
-			pending
-			result = #do something with @my_string here
+			result = @my_string.split(/\./)
 			result.should have(2).items	
 		end
+
+		# Would the string still be in UTF-8 if the é character were absent?
 		it "should be able to give the encoding of the string" do
-			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
+			@my_string.encoding.should eq Encoding.find("UTF-8")
 		end
 	end
 end
