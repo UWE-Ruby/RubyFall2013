@@ -15,7 +15,6 @@ class TicTacToe
 		@player_symbol = player_symbol
 		@current_player = current_player
 		@player = player
-		winning_columns
 		@board = {
 		 "a1"=>" ","a2"=>" ","a3"=>" ",
 		 "b1"=>" ","b2"=>" ","b3"=>" ",
@@ -81,63 +80,37 @@ class TicTacToe
 	end
 
 	def computer_won?
-		check_game
+		@computer_won
 	end
 
 	def player_won?
-		check_game
+		@player_won
 	end
-
-  
-	def check_game
-	game_over = nil
-	@winning_columns.each do |column|
-		if times_in_column(column, @computer) == 3
-			@computer_won = true
-		end
-		if times_in_column(column, @player) == 3
-			@player_won = true
-		end
-	end
-	end
-
-	def times_in_column arr, item
-	times = 0
-	arr.each do |i| 
-	times += 1 if @board[i] == item
-		unless @board[i] == item || @board[i] == " "
-			return 0
-			end
-		end
-	times
-	end
-
-	def winning_columns
-	@winning_columns = [
-		[:a1,:a2,:a3],
-		[:b1,:b2,:b3],
-		[:c1,:c2,:c3],
-
-		[:a1,:b1,:c1],
-		[:a2,:b2,:c2],
-		[:a3,:b3,:c3],
-
-		[:a1,:b2,:c3],
-		[:c1,:b2,:a3]
-	]
-	end
-
 
 	def spots_open?
 		@board.has_value?(' ')
 	end
 
 	def over?
-		if @player_won == true
-			return true
-		elsif @computer_won == true
-			return true
+		if (@board["a1"]==@board["a2"] && @board["a2"]==@board["a3"] && @board["a1"]==:X ) || (@board["b1"]==@board["b2"] && @board["b2"]==@board["b3"] && @board["b1"]==:X ) || (@board["c1"]==@board["c2"] && @board["c2"]==@board["c3"] && @board["c1"]==:X ) || (@board["a1"]==@board["b1"] && @board["b1"]==@board["c1"] && @board["a1"]==:X ) || (@board["a2"]==@board["b2"] && @board["a2"]==@board["c2"] && @board["a2"]==:X ) || (@board["a3"]==@board["b3"] && @board["a3"]==@board["c3"] && @board["a3"]==:X ) || (@board["a1"]==@board["b2"] && @board["a1"]==@board["c3"] && @board["a1"]==:X ) || (@board["a3"]==@board["b2"] && @board["a3"]==@board["c1"] && @board["a3"]==:X )
+			if @player_symbol == :X
+			  @player_won = true
+			elsif @computer_symbol == :X
+			  @computer_won = true
+			end
+			@over = true
+			elsif (@board["a1"]==@board["a2"] && @board["a2"]==@board["a3"] && @board["a1"]==:O ) || (@board["b1"]==@board["b2"] && @board["b2"]==@board["b3"] && @board["b1"]==:O ) || (@board["c1"]==@board["c2"] && @board["c2"]==@board["c3"] && @board["c1"]==:O ) || (@board["a1"]==@board["b1"] && @board["b1"]==@board["c1"] && @board["a1"]==:O ) || (@board["a2"]==@board["b2"] && @board["a2"]==@board["c2"] && @board["a2"]==:O ) || (@board["a3"]==@board["b3"] && @board["a3"]==@board["c3"] && @board["a3"]==:O ) || (@board["a1"]==@board["b2"] && @board["a1"]==@board["c3"] && @board["a1"]==:O ) || (@board["a3"]==@board["b2"] && @board["a3"]==@board["c1"] && @board["a3"]==:O )
+			if @player_symbol == :O
+			  @player_won = true
+			elsif @computer_symbol == :O
+			  @computer_won = true
+			end
+			@over = true
+			elsif @board.empty?
+			@draw = true
+			@over = true
 		end
+		@over
 	end
 
 	def draw?
@@ -149,9 +122,14 @@ class TicTacToe
 	end
 
 	def current_state
-		"#{@board}"
+		<<-board
+		"#{@board["a1"]}""#{@board["a2"]}""#{@board["a3"]}"
+		"#{@board["b1"]}""#{@board["b2"]}""#{@board["b3"]}"
+		"#{@board["c1"]}""#{@board["c2"]}""#{@board["c3"]}"
+		board
 	end
 
 	def determine_winner
+		over?
 	end
 end
