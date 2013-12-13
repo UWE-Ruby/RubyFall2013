@@ -4,15 +4,15 @@ class Converter
 		@unit = unit.to_f
 	end
 
-	def type=(type)
-		@type = type
+	def type=(scale)
+		@scale = scale
 	end
 
 	def convert
-		self.send("#{@type}_convertion")
+		self.send("#{@scale}_conversion")
 	end
 
-	def Celsius_convertion
-	    (@unit *  (9.0/5.0) + 32.0).round(1)	
+	def Celsius_conversion
+		@unit * 9/5 + 32
 	end
 end
