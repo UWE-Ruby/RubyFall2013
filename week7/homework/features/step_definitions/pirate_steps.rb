@@ -12,6 +12,7 @@ end
 
 Letgoandhaul /^it prints out '(.+)'$/ do |arg|
 	@result.split("\n ").first.should == arg
+	puts "#{arg}"
 end
 
 Letgoandhaul /^it also prints '(.+)'$/ do |arg|

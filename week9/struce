@@ -1,0 +1,81 @@
+jonashaskins@zadmins-MacBook-Pro-2~/RUBY_CLASS/RubyFall2013/week9$ irb
+1.9.3p392 :001 > Dog = Struct.new(:name, :owner, :age)
+ => Dog 
+1.9.3p392 :002 > d = Dog.new('Bradley', 'Jonas', '6')
+ => #<struct Dog name="Bradley", owner="Jonas", age="6"> 
+1.9.3p392 :003 > d.name
+ => "Bradley" 
+1.9.3p392 :004 > d.age
+ => "6" 
+1.9.3p392 :005 > d.owner
+ => "Jonas" 
+1.9.3p392 :006 > d.name = "Rockey the Dog"
+ => "Rockey the Dog" 
+1.9.3p392 :007 > d.name
+ => "Rockey the Dog" 
+1.9.3p392 :008 > d.age = '100'
+ => "100" 
+1.9.3p392 :009 > d.age
+ => "100" 
+1.9.3p392 :010 > 
+
+1.9.3p392 :016 > d.each_pair do |i|
+1.9.3p392 :017 >     puts i
+1.9.3p392 :018?>   end
+name
+owner
+age
+ => #<struct Dog name="Rockey the Dog", owner="Jonas", age="100"> 
+1.9.3p392 :019 > d.each_pair{|k,v| puts k}
+name
+owner
+age
+ => #<struct Dog name="Rockey the Dog", owner="Jonas", age="100"> 
+1.9.3p392 :020 > 
+
+
+
+
+jonashaskins@zadmins-MacBook-Pro-2~/RUBY_CLASS/RubyFall2013/week9$ irb
+1.9.3p392 :001 > Dog = Struct.new(:name, :owner, :age)
+ => Dog 
+1.9.3p392 :002 > d = Dog.new('Bradley', 'Jonas', '6')
+ => #<struct Dog name="Bradley", owner="Jonas", age="6"> 
+1.9.3p392 :003 > d.name
+ => "Bradley" 
+1.9.3p392 :004 > d.age
+ => "6" 
+1.9.3p392 :005 > d.owner
+ => "Jonas" 
+1.9.3p392 :006 > d.name = "Rockey the Dog"
+ => "Rockey the Dog" 
+1.9.3p392 :007 > d.name
+ => "Rockey the Dog" 
+1.9.3p392 :008 > d.age = '100'
+ => "100" 
+1.9.3p392 :009 > d.age
+ => "100" 
+1.9.3p392 :010 > 
+1.9.3p392 :011 >   
+1.9.3p392 :012 >   d.map{|a|a}
+ => ["Rockey the Dog", "Jonas", "100"] 
+1.9.3p392 :013 > d
+ => #<struct Dog name="Rockey the Dog", owner="Jonas", age="100"> 
+1.9.3p392 :014 > d.select{|a|a == 7}
+ => [] 
+1.9.3p392 :015 > d.select{|a|a == 7}
+ => [] 
+1.9.3p392 :016 > d.each_pair do |i|
+1.9.3p392 :017 >     puts i
+1.9.3p392 :018?>   end
+name
+owner
+age
+ => #<struct Dog name="Rockey the Dog", owner="Jonas", age="100"> 
+1.9.3p392 :019 > d.each_pair{|k,v| puts k}
+name
+owner
+age
+ => #<struct Dog name="Rockey the Dog", owner="Jonas", age="100"> 
+1.9.3p392 :020 > 
+
