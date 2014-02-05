@@ -1,4 +1,5 @@
-require "#{File.dirname(__FILE__)}/worker"
+#require "#{File.dirname(__FILE__)}/worker"
+require File.join(File.dirname(__FILE__), '..', '/homework/worker')
 
 describe Worker do
 
