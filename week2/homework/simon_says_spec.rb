@@ -3,12 +3,12 @@ require "./simon_says.rb"
 
 describe SimonSays do
   include SimonSays # Hint: Inclusion is different than SimonSays.new (read about modules)
-  
+
   # Hint: We are just calling methods, we are not passing a message to a SimonSays object.
   it "should echo hello" do
     echo("hello").should == "hello"
   end
-  
+
   it "should echo bye" do
     echo("bye").should == "bye"
   end
@@ -16,13 +16,13 @@ describe SimonSays do
   it "should shout hello" do
     shout("hello").should == "HELLO"
   end
-  
+
   it "should shout multiple words" do
     shout("hello world").should == "HELLO WORLD"
   end
 
   it "should repeat" do
-    repeat("hello").should == "hello hello"
+    repeat("hello", 2).should == "hello hello"
   end
 
   it "should repeat a number of times" do
@@ -32,7 +32,7 @@ describe SimonSays do
   it "should return the first letter" do
     start_of_word("hello", 1).should == "h"
   end
-  
+
   it "should return the first two letters" do
     start_of_word("Bob", 2).should == "Bo"
   end
