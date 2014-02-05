@@ -3,7 +3,16 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+A.  This is a hook method that Ruby will try to invoke on an object when a method call is made and Ruby can't find the method in the object's class or superclasses. It can be used to intercept and handle (or report) undefined methods, or it can be used with patterns to selectively forward particular method calls to a superclass.
+
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+A. An Eigenclass is a dynamically created anonymous class that holds an object's singleton methods. It is used when you need Ruby to find the object's singleton methods without disrupting the method lookup path.  Singleton methods are defined on the objects themselves, rather than in its class, therefore they are dynamic.
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+A.  Duck Typing is a useful technique in situations where you want flexibility, without having to check the type of the arguments, which generally doesn't add any value. Code is improved and more flexible when you don't have to include checks on the argument types.
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+A. A class method is defined within a class and the method can be used in any subclasses of that class.  Instance methods are created in a module and are available as instance methods of the class that includes the module. class_eval sets things up as if you were within a class definition. Any method definitions created there define instance methods. Calling instance_eval on a class differs because method definitions created there are class methods.
+
 5. What is the difference between a singleton class and a singleton method?
+A. A singleton method is a method that is specific to a particular object, while a singleton class is an anonymous class that Ruby creates when defining a singleton method.
