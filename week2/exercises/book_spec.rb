@@ -2,6 +2,24 @@ require './book'
 
 describe Book do
 
+<<<<<<< HEAD
+	context "::book_count" do		
+		it "should count how many books have been created"
+	end
+
+	before :each do
+		@book = Book.new
+	end
+
+	it "should respond to title" do
+		@book.should respond_to "title"
+	end
+
+	it "should allow me to set the title" do
+		@book.title = "Snow Crash"
+		@book.title.should eq "Snow Crash"
+	end
+=======
   
   context "::book_count" do
 
@@ -45,5 +63,6 @@ describe Book do
 
 
   end
+>>>>>>> e040d45f81ce3c4ddfed6debf5b753b82d0e59f7
 
 end
