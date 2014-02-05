@@ -3,7 +3,22 @@ Please Read Chapters 23 and 24 DuckTyping and MetaProgramming
 
 Questions:
 1. What is method_missing and how can it be used?
+When sending a message to an object if the object has no method corresponding to the message a NoMethodError exception is created. This exception can be avoided though by adding a method called method_missing to the object. This method allows to handle nicely unaswerable messages. It can be used by defining method_missing in the object's class, and we can pass the name of the wrongly called method, the array of arguments and the block that was originally passed (if any).
+  def method_missing(method, *args, &block)
+    #add here desired behavior in case of non-existing method
+  end
+
 2. What is and Eigenclass and what is it used for? Where Do Singleton methods live?
+An Eigenclass is an anonymous class created dynamically by Ruby when methods are created for a specific object and not shared by other instances of this object's class.
+Such methods are called Singleton methods and live in the Eigenclass.
+
 3. When would you use DuckTypeing? How would you use it to improve your code?
+I would use Ducktyping to keep my code concise (DRY).
+
 4. What is the difference between a class method and an instance method? What is the difference between instance_eval and class_eval?
+A class method is a method that is called on a class and an instance method is a method that is called on an instance of a class. Class_eval and instance_eval differ in the way they set up the environment for method definition. Class_eval sets the environment as if in the body of a class definition, so method definitions will define instance methods. On the contrary calling instance_eval on a class acts as if working inside the singleton class of self. Any methods defined will become class methods.
+
 5. What is the difference between a singleton class and a singleton method?
+A singleton class is a class which defines a single object.
+A singleton method is a method that belongs to a single object rather than to a whole class and other objects.
+
