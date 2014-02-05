@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/worker"
+require "./worker.rb"
 
 describe Worker do
 
@@ -23,7 +23,6 @@ describe Worker do
 		end
 		result.should == 5
 	end
-
 
 	it "executes a block 3 times and returns the result" do
 		n = 5

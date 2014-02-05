@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+require './pirate_translator'
+
+=======
+>>>>>>> upstream/master
 # language: en-pirate
 
 Ahoy matey!: Pirate Speak
