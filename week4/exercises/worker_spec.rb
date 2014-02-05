@@ -1,5 +1,4 @@
 require "#{File.dirname(__FILE__)}/worker"
-
 describe Worker do
 
 	it "executes a block and returns a string" do
@@ -24,7 +23,6 @@ describe Worker do
 		result.should == 5
 	end
 
-
 	it "executes a block 3 times and returns the result" do
 		n = 5
 		result = Worker.work(3) do
@@ -34,3 +32,4 @@ describe Worker do
 	end
 
 end
+

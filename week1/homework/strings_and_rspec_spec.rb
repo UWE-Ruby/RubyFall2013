@@ -12,15 +12,28 @@ describe String do
 		before(:all) do
 			@my_string = "Renée is a fun teacher. Ruby is a really cool programming language"
 		end
-		it "should be able to count the charaters"
+<<<<<<< HEAD
+		
+		it "should be able to count the charaters" do
+		  @my_string.count("R").should eq 2
+	  end
+	  
+=======
+		it "should be able to count the characters" do
+			@my_string.should have(@my_string.size).characters
+		end
+>>>>>>> 02ccc7d94fdfc30a6d2d7e93c8bee3f07a3da618
 		it "should be able to split on the . charater" do
-			pending
-			result = #do something with @my_string here
+			result = @my_string.split('.')
 			result.should have(2).items	
 		end
+		
 		it "should be able to give the encoding of the string" do
-			pending 'helpful hint: should eq (Encoding.find("UTF-8"))'
+			@my_string.encoding.should eq (Encoding.find("UTF-8"))
 		end
+		
+		it "should be equal the upper case version" do
+	    @my_string.upcase.should eq "RENéE IS A FUN TEACHER. RUBY IS A REALLY COOL PROGRAMMING LANGUAGE"
+	  end
 	end
 end
-
