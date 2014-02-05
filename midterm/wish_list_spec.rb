@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/wish_list"
+require "#{File.dirname(__FILE__)}/wish_list.rb"
 
 describe WishList do
   before :each do

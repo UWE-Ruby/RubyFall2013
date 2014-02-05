@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/turkey"
+require "#{File.dirname(__FILE__)}/turkey.rb"
 
 describe Turkey do
 
@@ -20,7 +20,7 @@ describe Turkey do
 
 end
 
-require "#{File.dirname(__FILE__)}/thanksgiving_dinner"
+require "#{File.dirname(__FILE__)}/thanksgiving_dinner.rb"
 
 describe ThanksgivingDinner do
 

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'test_gem'
+
+h = HelloWorld.new
+
+h.test
+
+h.test_args ARGV.first

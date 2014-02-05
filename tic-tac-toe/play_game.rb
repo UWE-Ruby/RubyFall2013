@@ -1,4 +1,5 @@
-require './features/step_definitions/tic-tac-toe.rb'
+#require './features/step_definitions/tic-tac-toe-steps.rb'
+require './tic-tac-toe.rb'
 
 @game = TicTacToe.new
 puts "What is your name?"

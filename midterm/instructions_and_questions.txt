@@ -11,15 +11,37 @@ Instructions for Mid-Term submission and Git Review (10pts):
  
  Questions (20pts):
  - What are the three uses of the curly brackets {} in Ruby?
+  Curly braces in Ruby are used for delimiting blocks (by convention, single line blocks--multiline blocks are typically done with do/end), string interpolation (e.g. "hello #{world}", where world is a variable or expression), and defining hashes.
+
  - What is a regular expression and what is a common use for them? 
+ Regular expressions are a set of symbols used to search out specific patterns of text. A regular expression might be used to verify that input is shaped like an email address, or pick out any capitalized words in a sentence.
+
  - What is the difference between how a String, a symbol, a FixNum, and a Float are stored in Ruby?
+  Strings are stored as literal objects, each instance of which is unique. If an identical string is assigned twice, i.e. a = "hello", b = "hello", there will be two objects with different memory addresses.
+
+  In contrast, any symbol with an identical name is assigned to the same memory address.
+
+  There is a similar distinction between FixNums and Floats--FixNums of the same value have the same memory address, and floats of the same value do not.
+
  - Are these two statements equivalent? Why or Why Not?
    1. x, y = "hello", "hello"
    2. x = y = "hello"
+
+   The two statements are not equivalent. #1 saves them as two different objects. If x is altered, for example if x.chop! is called, removing the last character, y will be unaffected.
+   In #2, both variables point to the same object. If x.chop! is called, y will also be affected--it points to the same string that just got chopped.
+
+
 - What is the difference between a Range and an Array?
+Ranges define a set of numbers in a certain order incrementing in a certain way. Their specific values are calculated at run-time. Until then they are stored as a Range object. An array can contain objects in any order and can be changed at any time. Arrays can contain any kind of object as elements, but the objects that define a range must respond to the 'succ' method to define the next object in succession.
+
 - Why would I use a Hash instead of an Array?
+Hashes are more versatile in use--instead of keeping track of the order of the array and make sure it's not disrupted as you move things around, you can simply assign keys and Ruby will keep it straight. On the other hand, hashes are much more expensive, processor-wise.
+
 - What is your favorite thing about Ruby so far?
+Its forgiveness--I find myself using a lot of Python syntax by mistake (for example, I put method arguments in parens) and Ruby usually doesn't care.
+
 - What is your least favorite thing about Ruby so far?
+When something in Ruby is opaque, it is REALLY opaque. The syntax allows for very elegant code, but it can be difficult to understand what is going on.
 
  Programming Problems (10pts each):
  - Write a passing rspec file called even_number_spec.rb that tests a class called EvenNumber.
