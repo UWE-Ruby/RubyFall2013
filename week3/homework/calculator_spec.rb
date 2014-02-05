@@ -36,10 +36,12 @@ describe Calculator do
   	end
   end
   
-  it "raises one number to the power of another number" do
-  	p = 1
-	32.times{ p *= 2 } 
-	@calculator.pow(2,32).should eq p 
+  describe "#power" do
+    it "raises one number to the power of another number" do
+    	p = 1
+  	32.times{ p *= 2 } 
+  	@calculator.pow(2,32).should eq p 
+    end
   end
   
   # http://en.wikipedia.org/wiki/Factorial
@@ -64,5 +66,4 @@ describe Calculator do
     end
 
   end
-
 end
