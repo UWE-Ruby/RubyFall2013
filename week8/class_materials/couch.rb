@@ -11,6 +11,22 @@ class Couch
 		end
 	end
 
+
+	[:pillows, :cushions, :dogs].each do |var|
+	define_method("how_many_#{var}") do 
+			instance_variable_get("@#{var}").size
+		end
+
+	end
+
+
+#  non dry way
+	# def how_many_pillows
+	# 	@pillows.size
+
+	# end
+
+
 	# def to_str
 	# 	"I am a Couch"
 	# end

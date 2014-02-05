@@ -22,7 +22,7 @@ describe SimonSays do
   end
 
   it "should repeat" do
-    repeat("hello").should == "hello hello"
+    repeat("hello", 2).should == "hello hello"
   end
 
   it "should repeat a number of times" do
