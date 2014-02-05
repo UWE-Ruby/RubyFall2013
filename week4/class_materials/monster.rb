@@ -1,5 +1,7 @@
 require './named_thing.rb'
 class Monster
+	
+	#NamedThing module
 	include NamedThing
 	attr_accessor :vulnerabilities, :dangers
     attr_reader :nocturnal, :legs

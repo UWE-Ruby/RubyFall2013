@@ -1,3 +1,22 @@
 Blocks, Procs, Lambdas, and Closures: http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/
 
+blocks are methods with no name
+syntax:
+- {}
+- do
+    <code>
+  end
+
+call a block by using yield
+can also use call
+block_given? to check if a block exits
+
+block with parameters
+- yield(x)
+- call(x)
+- {|x|}
+- do |x|
+    <code>
+  end
+
 

@@ -4,12 +4,31 @@ p.86-90 Strings (Strings section in Chapter 6 Standard Types)
 
 1. What is an object?
 
+   Objects are instances of the class.  Objects have a state (attributes), behavior (methods), and identity (unique identifier).  Objects are instances that have identical methods but differing data.
+
 2. What is a variable?
+
+   Variables are used to keep track of objects.  Each variable holds a reference to an object.  Ruby supports four types of variables: Global Variables, Instance Variables, Class Variables and Local Variables 
 
 3. What is the difference between an object and a class?
 
+   Objects contain information about something in the program. Objects provide actions (functions and methods) which manipulate that information.
+
+   Classes contains the blue print of how to build an object and information about what defines an object.
+
+   For example, recipe for a blueberry pie.  Recipe is the class and blueberry pie is the object.
+
 4. What is a String?
 
-5. What are three messages that I can send to a string object? Hint: think methods
+   Strings are objects of class String.  Stings are simply sequence of characters and are created using string literals - sequences of characters between delimiters.  Strings can also hold binary data.
 
+5. What are three messages that I can send to a string object? Hint: think methods
+   1. %q (single-quote)
+   2. %Q (double-quote)
+   3. here documents
+   
 6. What are two ways of defining a String literal? Bonus: What is the difference between the two?
+
+   Double-quoted stings allow substitution and backlash notation but single-quoted strings don't allow substitution and allow backlash notation only for \\ and \'.
+
+    
